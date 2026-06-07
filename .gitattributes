@@ -1,0 +1,18 @@
+# Normalize text files consistently across Windows and GitHub.
+* text=auto
+
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.jsonl text eol=lf
+*.csv text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+
+# Raw evidence is intentionally preserved but should not dominate GitHub views.
+janus_io_o1_runs/** linguist-generated=true
+experiments/**/proofs/** linguist-generated=true

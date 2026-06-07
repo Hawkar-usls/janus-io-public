@@ -1,0 +1,47 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.env
+*.key
+*.pem
+*.tmp
+*.bak
+.DS_Store
+
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Janus Io raw experiment logs and proof archives can be large and may contain
+# local paths or operational identifiers. Commit them intentionally with
+# `git add -f` after review; existing tracked evidence remains tracked.
+janus_io_o1_runs/**/*.log
+janus_io_o1_runs/**/raw_log.txt
+janus_io_o1_runs/**/proofs/
+janus_io_o1_runs/**/*.tmp.*
+janus_io_o1_runs/A4_*/
+janus_io_o1_runs/A5_*/
+janus_io_o1_runs/A6_*/
+janus_io_o1_runs/A7_*/
+janus_io_o1_runs/A8_*/
+janus_io_o1_runs/A9_*/
+janus_io_o1_runs/A10_*/
+janus_io_o1_runs/tail_reports/
+experiments/**/logs/
+experiments/**/proofs/*
+!experiments/o1-01/proofs/README.md
+experiments/**/scratch/
+*.redacted
+output/
+
+# Local scratch notes from interactive runs.
+ST.txt
+statCM.txt

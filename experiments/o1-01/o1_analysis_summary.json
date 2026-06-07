@@ -1,0 +1,165 @@
+{
+  "agents": {
+    "A0_RANDOM_PURE": {
+      "accepted": 185,
+      "accepted_per_MH": 0.10138758456349319,
+      "best_z": 30,
+      "hps_mean": 2309577.337893297,
+      "hps_std": 175564.22174320597,
+      "reject_rate": 0.0,
+      "rejected": 0,
+      "sources": [
+        "janus_io_o1_runs/o1_report.json",
+        "janus_io_o1_runs/o1_report.json#session_summary",
+        "janus_io_o1_runs/o1_events.jsonl",
+        "janus_io_o1_runs/A0_RANDOM_PURE/a0_random_pure_session_summary.json",
+        "janus_io_o1_runs/A0_RANDOM_PURE/a0_random_pure_lab.csv",
+        "janus_io_o1_runs/A0_RANDOM_PURE/proofs/accepted_index.json",
+        "janus_io_o1_runs/A0_RANDOM_PURE/slot_000000_A0_RANDOM_PURE_20260526_020436.log",
+        "janus_io_o1_runs/A0_RANDOM_PURE/slot_000000_A0_RANDOM_PURE_20260526_020645.log"
+      ],
+      "submitted": 185,
+      "total_MH": 1824.681008,
+      "total_hashes": 1824681008,
+      "z24_per_MH": 0.26854008884384684,
+      "z28_per_MH": 0.1309817984360804,
+      "z30_per_MH": 0.04548740280416181,
+      "z32_per_MH": 0.0,
+      "z_threshold_counts": {
+        "z24": 490,
+        "z28": 239,
+        "z30": 83,
+        "z32": 0
+      }
+    },
+    "A1_LINEAR_PURE": {
+      "accepted": 265,
+      "accepted_per_MH": 0.11691916995345132,
+      "best_z": 31,
+      "hps_mean": 2960103.487236404,
+      "hps_std": 94995.96256968306,
+      "reject_rate": 0.0,
+      "rejected": 0,
+      "sources": [
+        "janus_io_o1_runs/o1_report.json",
+        "janus_io_o1_runs/o1_report.json#session_summary",
+        "janus_io_o1_runs/o1_events.jsonl",
+        "janus_io_o1_runs/A1_LINEAR_PURE/a1_linear_pure_session_summary.json",
+        "janus_io_o1_runs/A1_LINEAR_PURE/a1_linear_pure_lab.csv",
+        "janus_io_o1_runs/A1_LINEAR_PURE/proofs/accepted_index.json",
+        "janus_io_o1_runs/A1_LINEAR_PURE/slot_000002_A1_LINEAR_PURE_20260526_023648.log"
+      ],
+      "submitted": 265,
+      "total_MH": 2266.523104,
+      "total_hashes": 2266523104,
+      "z24_per_MH": 0.28369443879271394,
+      "z28_per_MH": 0.1588335893707263,
+      "z30_per_MH": 0.13280252889052394,
+      "z32_per_MH": 0.0,
+      "z_threshold_counts": {
+        "z24": 643,
+        "z28": 360,
+        "z30": 301,
+        "z32": 0
+      }
+    },
+    "A2_ZIM_ONLY": {
+      "accepted": 178,
+      "accepted_per_MH": 0.09815847639692306,
+      "best_z": 29,
+      "hps_mean": 2539475.8600823046,
+      "hps_std": 127455.21645242754,
+      "reject_rate": 0.02197802197802198,
+      "rejected": 4,
+      "sources": [
+        "janus_io_o1_runs/o1_report.json",
+        "janus_io_o1_runs/o1_report.json#session_summary",
+        "janus_io_o1_runs/o1_events.jsonl",
+        "janus_io_o1_runs/A2_ZIM_ONLY/a2_zim_only_session_summary.json",
+        "janus_io_o1_runs/A2_ZIM_ONLY/a2_zim_only_lab.csv",
+        "janus_io_o1_runs/A2_ZIM_ONLY/proofs/accepted_index.json",
+        "janus_io_o1_runs/A2_ZIM_ONLY/slot_000004_A2_ZIM_ONLY_20260526_030650.log"
+      ],
+      "submitted": 182,
+      "total_MH": 1813.39408,
+      "total_hashes": 1813394080,
+      "z24_per_MH": 0.259182493857044,
+      "z28_per_MH": 0.09595266793856523,
+      "z30_per_MH": 0.0,
+      "z32_per_MH": 0.0,
+      "z_threshold_counts": {
+        "z24": 470,
+        "z28": 174,
+        "z30": 0,
+        "z32": 0
+      }
+    },
+    "A3_JANUS_FULL": {
+      "accepted": 766,
+      "accepted_per_MH": 0.10815215402110116,
+      "best_z": 33,
+      "hps_mean": 2737162.7454289733,
+      "hps_std": 164707.30871202657,
+      "reject_rate": 0.009345794392523364,
+      "rejected": 2,
+      "sources": [
+        "janus_io_o1_runs/o1_report.json",
+        "janus_io_o1_runs/o1_report.json#session_summary",
+        "janus_io_o1_runs/o1_events.jsonl",
+        "janus_io_o1_runs/A3_JANUS_FULL/a3_janus_full_session_summary.json",
+        "janus_io_o1_runs/A3_JANUS_FULL/a3_janus_full_lab.csv",
+        "janus_io_o1_runs/A3_JANUS_FULL/proofs/accepted_index.json",
+        "janus_io_o1_runs/A3_JANUS_FULL/slot_000001_A3_JANUS_FULL_20260526_022146.log",
+        "janus_io_o1_runs/A3_JANUS_FULL/slot_000003_A3_JANUS_FULL_20260526_025149.log",
+        "janus_io_o1_runs/A3_JANUS_FULL/slot_000005_A3_JANUS_FULL_20260526_032152.log",
+        "janus_io_o1_runs/A3_JANUS_FULL/slot_000007_A3_JANUS_FULL_20260526_035154.log"
+      ],
+      "submitted": 214,
+      "total_MH": 7082.614368,
+      "total_hashes": 7082614368,
+      "z24_per_MH": 0.27645158952130033,
+      "z28_per_MH": 0.16067513221411633,
+      "z30_per_MH": 0.12198885257732558,
+      "z32_per_MH": 0.02414362707259569,
+      "z_threshold_counts": {
+        "z24": 1958,
+        "z28": 1138,
+        "z30": 864,
+        "z32": 171
+      }
+    },
+    "A4_DUAL_LOCK_TEST": {
+      "accepted": 233,
+      "accepted_per_MH": 0.10416270505648938,
+      "best_z": 33,
+      "hps_mean": 2947540.2249718783,
+      "hps_std": 92176.64203119662,
+      "reject_rate": 0.0,
+      "rejected": 0,
+      "sources": [
+        "janus_io_o1_runs/o1_report.json",
+        "janus_io_o1_runs/o1_report.json#session_summary",
+        "janus_io_o1_runs/o1_events.jsonl",
+        "janus_io_o1_runs/A4_DUAL_LOCK_TEST/a4_dual_lock_test_session_summary.json",
+        "janus_io_o1_runs/A4_DUAL_LOCK_TEST/a4_dual_lock_test_lab.csv",
+        "janus_io_o1_runs/A4_DUAL_LOCK_TEST/proofs/accepted_index.json",
+        "janus_io_o1_runs/A4_DUAL_LOCK_TEST/slot_000006_A4_DUAL_LOCK_TEST_20260526_033653.log"
+      ],
+      "submitted": 233,
+      "total_MH": 2236.885072,
+      "total_hashes": 2236885072,
+      "z24_per_MH": 0.2597361872867825,
+      "z28_per_MH": 0.18329059688051777,
+      "z30_per_MH": 0.08941004725878916,
+      "z32_per_MH": 0.08941004725878916,
+      "z_threshold_counts": {
+        "z24": 581,
+        "z28": 410,
+        "z30": 200,
+        "z32": 200
+      }
+    }
+  },
+  "generated_at_utc": "2026-05-26T01:41:17Z",
+  "input_root": "janus_io_o1_runs"
+}
