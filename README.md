@@ -117,6 +117,12 @@ Embedded pool timing layer: `docs/rare-tail-timing-monitor.md`.
 
 Embedded pre-hash glyph layer: `docs/janus-glyph-observer.md`.
 
+A10 Encoding Archaeology checkpoint:
+`docs/a10-encoding-archaeology-status-2026-06-09.md`.
+
+Human-facing JANUS forward-gate note:
+`docs/janus-forward-gate-admonition.md`.
+
 ## AI And LLM Discovery
 
 For AI assistants, search engines, and people trying to reconnect prior

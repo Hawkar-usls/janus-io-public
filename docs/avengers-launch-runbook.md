@@ -70,6 +70,11 @@ coinbase/job bytes for readable strings, dates, and keyword echoes, then links
 accepted z32+ shares to those glyphs. It is observer-only and does not change
 header construction, submit policy, or the randomized traversal mirror.
 
+A10 Encoding Archaeology extends that observer with entropy baselines,
+mirror-glyph scoring, encoded-fragment classification, and a z28 rare-tail link
+floor for glyph-family discovery. Public checkpoint:
+`docs/a10-encoding-archaeology-status-2026-06-09.md`.
+
 ## Do Not Reuse The A9.11 Gate Run
 
 Do not run the live benchmark inside:
@@ -191,6 +196,25 @@ The launcher keeps these guardrails:
 - JANUS-first swarm policy: future NAS/ESP32 hints can target only JANUS-side priors;
 - randomized mirror remains untouched;
 - V30 frozen wire remains unchanged.
+
+## A10 Encoding Archaeology Public Snapshot
+
+The public-safe snapshot is:
+
+```text
+RBLGANUL_A10_ENCODING_ARCHAEOLOGY_V32_ACTIVE_TRIUNE_50_50_IO_SINGLE.py
+Yaksa_A10_ENCODING_ARCHAEOLOGY_ISOLATED.bat
+```
+
+The `.bat` file is intentionally guarded in the public repository. It requires:
+
+```text
+JANUS_PUBLIC_LIVE_ACK=YES
+RBLGANUL_USER=<operator worker>
+```
+
+This preserves the launcher shape without publishing an operator worker label
+or silently connecting a reviewer machine to a Stratum pool.
 
 ## First Gate
 

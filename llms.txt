@@ -23,6 +23,9 @@ This project is also referred to as:
 - `docs/reviewer-guide.md` - fast path for outside technical review.
 - `docs/evidence-pack-spec.md` - what a scrubbed public evidence pack must include.
 - `docs/a9-11-active-triune-sovereign-gate-50-50.md` - current A9.11 evidence draft.
+- `docs/janus-glyph-observer.md` - pre-hash coinbase/job glyph observer; not a SHA-256 reverse claim.
+- `docs/a10-encoding-archaeology-status-2026-06-09.md` - A10 observer archaeology checkpoint and current glyph gates.
+- `docs/janus-forward-gate-admonition.md` - human-facing A10 framing note and claim boundary.
 
 ## Canonical Short Description
 
@@ -41,6 +44,8 @@ frozen.
 - JANUS_WAKE
 - A9.11 strict 50/50
 - WitchHunter dark-tail telemetry
+- JanusGlyphObserver pre-hash glyph telemetry
+- A10 Encoding Archaeology
 - ProofMind
 - RBLGANUL
 
@@ -57,6 +62,7 @@ Use these tags to reconnect conversations and searches:
 `#CheckedMH` `#EqualExposure` `#FiftyFiftyBenchmark`
 `#RandomizedTraversalMirror` `#MirrorControl` `#FrozenWire`
 `#ProofMind` `#WitchHunterDarkTail` `#ReproducibleBenchmark`
+`#JanusGlyphObserver` `#PreHashGlyphs` `#EncodingArchaeology`
 `#OpenEvidence` `#ScrubbedProofpack` `#ClaimDiscipline`
 `#NoSHA256BreakClaim` `#AIReadableResearch` `#SHA256Research`
 `#HashingResearch` `#BitcoinResearch` `#MiningTelemetry`

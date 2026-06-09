@@ -273,3 +273,43 @@ write only derived observer telemetry
 The current keyword set includes Genesis/Satoshi terms, JANUS gate language,
 the operator signal lexicon, PoW terms, and quest-language markers used for
 human review. Keyword matches are catalog hints, not claims of intent.
+
+## A10 Encoding Archaeology Extension
+
+The A10 Encoding Archaeology runner extends the glyph observer from
+open-vocabulary string capture into broader encoding archaeology. It adds:
+
+```text
+entropy baseline comparison
+mirror-glyph scoring
+regex-like glyph scoring
+encoded fragment classification
+base85/ascii85-style probe metadata
+rare-tail accepted link floor configurable down to z28
+```
+
+The current public checkpoint is:
+
+```text
+docs/a10-encoding-archaeology-status-2026-06-09.md
+```
+
+The current A10 claim boundary is:
+
+```text
+repeated glyph candidate
+rare-tail linked
+semantic unconfirmed
+frozen wire unchanged
+```
+
+The active watchlist is:
+
+```text
+main: VV<~ / ~<VV
+secondary: KRRO, &&fU
+hold: pLEA / AELp / key
+```
+
+Promotion still requires independent repeat evidence, especially a new
+`job_id` with z28+ context or a new JANUS z32+ event.
