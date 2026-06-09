@@ -1,0 +1,24 @@
+{
+  "schema": "janus-pool-behavior-window-set-1",
+  "note": "Initial reproducible operator/Codex interaction windows. Quiet is the complement inside the same local run.",
+  "windows": [
+    {
+      "label": "interaction",
+      "start_utc": "2026-06-08T15:30:00Z",
+      "end_utc": "2026-06-08T16:10:00Z",
+      "note": "publication/report prep activity window around local Git activity"
+    },
+    {
+      "label": "interaction",
+      "start_utc": "2026-06-08T20:00:00Z",
+      "end_utc": "2026-06-08T22:32:00Z",
+      "note": "glyph observer / pLEA discovery and live review window"
+    },
+    {
+      "label": "interaction",
+      "start_utc": "2026-06-09T00:47:00Z",
+      "end_utc": "2026-06-09T02:44:47Z",
+      "note": "A10 report, pLEA mirror family, restart, live check, and final closeout window"
+    }
+  ]
+}

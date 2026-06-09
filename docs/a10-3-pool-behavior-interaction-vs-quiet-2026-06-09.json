@@ -1,0 +1,130 @@
+{
+  "interaction": {
+    "lab_rows": 5464,
+    "submitted_delta": 1627,
+    "accepted_delta": 1608,
+    "rejected_delta": 19,
+    "reject_pct": 1.1677934849416103,
+    "job_changes": 415,
+    "unique_jobs_seen": 417,
+    "hps_avg": 2679509.51,
+    "lab_best_z": 34,
+    "accepted_proofs": 1610,
+    "proof_best_z": 34,
+    "proof_tails": {
+      "z23": 1610,
+      "z24": 810,
+      "z25": 428,
+      "z26": 212,
+      "z28": 53,
+      "z30": 14,
+      "z32": 3,
+      "z33": 2,
+      "z34": 1
+    },
+    "proof_tail_per_1000": {
+      "z23": 1000.0,
+      "z24": 503.1056,
+      "z25": 265.8385,
+      "z26": 131.677,
+      "z28": 32.9193,
+      "z30": 8.6957,
+      "z32": 1.8634,
+      "z33": 1.2422,
+      "z34": 0.6211
+    },
+    "proof_groups": {
+      "janus_bunnyhop_scout": 456,
+      "randomized_traversal_mirror": 820,
+      "janus_bunnyhop_rescout": 115,
+      "unknown": 161,
+      "janus_broad_mixture": 58
+    },
+    "proof_job_age_ms_avg": 18497.6,
+    "proof_job_age_ms_median": 16654.5,
+    "glyph_rows": 8938,
+    "glyph_families": {
+      "plea_mirror_family": 20
+    },
+    "glyph_family_job_ntime": {
+      "plea_mirror_family": 1
+    },
+    "glyph_keywords": {
+      "plea": 10,
+      "aelp": 10
+    }
+  },
+  "quiet": {
+    "lab_rows": 22889,
+    "submitted_delta": 7285,
+    "accepted_delta": 7210,
+    "rejected_delta": 75,
+    "reject_pct": 1.029512697323267,
+    "job_changes": 1251,
+    "unique_jobs_seen": 1255,
+    "hps_avg": 2688964.22,
+    "lab_best_z": 35,
+    "accepted_proofs": 7210,
+    "proof_best_z": 35,
+    "proof_tails": {
+      "z23": 7210,
+      "z24": 3619,
+      "z25": 1791,
+      "z26": 892,
+      "z28": 206,
+      "z30": 55,
+      "z32": 14,
+      "z33": 5,
+      "z34": 2,
+      "z35": 1
+    },
+    "proof_tail_per_1000": {
+      "z23": 1000.0,
+      "z24": 501.9417,
+      "z25": 248.405,
+      "z26": 123.7171,
+      "z28": 28.5714,
+      "z30": 7.6283,
+      "z32": 1.9417,
+      "z33": 0.6935,
+      "z34": 0.2774,
+      "z35": 0.1387
+    },
+    "proof_groups": {
+      "janus_bunnyhop_scout": 606,
+      "randomized_traversal_mirror": 3640,
+      "unknown": 1533,
+      "janus_bunnyhop_rescout": 918,
+      "janus_broad_mixture": 513
+    },
+    "proof_job_age_ms_avg": 18506.18,
+    "proof_job_age_ms_median": 16677,
+    "glyph_rows": 11320,
+    "glyph_families": {},
+    "glyph_family_job_ntime": {},
+    "glyph_keywords": {
+      "key": 9
+    }
+  },
+  "windows": [
+    {
+      "label": "interaction",
+      "start_utc": "2026-06-08T15:30:00Z",
+      "end_utc": "2026-06-08T16:10:00Z",
+      "note": "publication/report prep activity window around local Git activity"
+    },
+    {
+      "label": "interaction",
+      "start_utc": "2026-06-08T20:00:00Z",
+      "end_utc": "2026-06-08T22:32:00Z",
+      "note": "glyph observer / pLEA discovery and live review window"
+    },
+    {
+      "label": "interaction",
+      "start_utc": "2026-06-09T00:47:00Z",
+      "end_utc": "2026-06-09T02:44:47Z",
+      "note": "A10 report, pLEA mirror family, restart, live check, and final closeout window"
+    }
+  ],
+  "run_dir": "janus_io_o1_runs\\A10_AVENGERS_KOMBUCHA_STRESS_JANUS_VS_RANDOM_50_50_PRIVATE"
+}

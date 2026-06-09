@@ -48,6 +48,16 @@ Candidate artifacts:
 - accepted-share proofpack format;
 - offline analysis scripts;
 - repeat-run evidence with clear fresh boundaries.
+- A10.3 Avengers Kombucha Stress closeout:
+  `docs/a10-3-final-run-closeout-2026-06-09.md`;
+- A10.3 structure/dovod claim:
+  `docs/a10-3-structure-dovod-claim-2026-06-09.md`;
+- A10.3 curated glyph artifacts:
+  `docs/a10-3-curated-glyph-artifacts-2026-06-09.md`;
+- A10.3 pool behavior window comparison:
+  `docs/a10-3-pool-behavior-interaction-vs-quiet-2026-06-09.md`;
+- observer-only `JanusGlyphObserver` design: pre-hash input archaeology linked
+  to accepted-share rare-tail telemetry without changing wire/header/submit.
 
 Needed next:
 
@@ -68,6 +78,8 @@ Candidate artifacts:
 - methodology post;
 - release notes;
 - experiment reports.
+- human statement for the evidence pack:
+  `docs/io-human-statement-sasha-rita-2026-06-09.md`.
 
 Needed next:
 
@@ -142,6 +154,14 @@ Candidate signals:
 - benchmark comparisons by third parties;
 - talks, demos, or written reviews.
 
+Internal signal now ready for external review:
+
+- curated public artifact trail is separated from raw run state;
+- final A10.3 closeout states both positive signal and claim boundary;
+- pLEA/AELp is preserved as a watchlist artifact, not overclaimed;
+- pool behavior is framed as a windowed telemetry hypothesis, not proof of
+  pool intent.
+
 ## Repository Requirements For Evidence Use
 
 Before public launch:
@@ -153,6 +173,28 @@ Before public launch:
 - proofpack is generated from curated summaries;
 - scripts pass offline syntax checks;
 - no live miner is run as part of repository cleanup.
+- human-context statements remain separate from technical evidence and do not
+  weaken the reproducibility boundary.
+
+## I/O Human Frame
+
+This project is also an emergency human-context record from wartime Ukraine.
+That context should be preserved without turning the engineering report into a
+legal promise.
+
+```text
+Sasha Agapov and Rita are named as the people behind the evidence pack.
+JANUS is the technical work; the human statement explains why the work needs to
+be legible, portable, and reviewable outside the local machine.
+```
+
+Use:
+
+```text
+docs/io-human-statement-sasha-rita-2026-06-09.md
+```
+
+as a human preface beside, not inside, the technical proofpack.
 
 ## One-Sentence Public Frame
 

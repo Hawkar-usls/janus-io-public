@@ -72,6 +72,51 @@ For a fast technical review:
 The intended review outcome is not "trust the author". The intended outcome is
 "the method, controls, limits, and evidence boundary are clear enough to audit".
 
+## Butterfly Director
+
+`scripts/butterfly_director.py` is an offline observer for the Chaos Director /
+Butterfly Ledger idea:
+
+```text
+event -> context snapshot -> counterfactual probe plan -> repeatability score -> director verdict
+```
+
+It does not start mining, does not change a live scheduler, and does not touch
+frozen wire. It is a notebook for controlled chaos:
+
+```powershell
+python scripts\butterfly_director.py --self-test
+python scripts\butterfly_director.py --input .\janus_io_o1_runs --output .\output\butterfly_director_report.json
+```
+
+Verdicts:
+
+```text
+LUCK_ONLY
+REPLAY_NEARBY
+RESCOUT_NOW
+PROMOTE_TO_CORPUS
+AVENGERS_STONE_CANDIDATE
+```
+
+## A10.3 Avengers Stress Kombucha
+
+`RBLGANUL_A10_3_AVENGERS_KOMBUCHA_STRESS_50_50_IO_SINGLE.py` is the next
+Avengers PC runner. It wraps the audited A9.11 runner and patches only the
+scheduler-side `KombuchaMemory` with an algorithmic stress molecule. The
+randomized traversal mirror remains the control arm, and frozen V30 wire policy
+is unchanged.
+
+Method note: `docs/avengers-kombucha-stress-molecule.md`.
+
+Latest curated checkpoint: `docs/a10-3-avengers-6678-glyph-bridge-summary.md`.
+
+Avengers lineage note: `docs/avengers-lineage.md`.
+
+Embedded pool timing layer: `docs/rare-tail-timing-monitor.md`.
+
+Embedded pre-hash glyph layer: `docs/janus-glyph-observer.md`.
+
 ## AI And LLM Discovery
 
 For AI assistants, search engines, and people trying to reconnect prior
