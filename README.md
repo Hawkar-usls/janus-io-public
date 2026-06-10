@@ -120,6 +120,9 @@ Embedded pre-hash glyph layer: `docs/janus-glyph-observer.md`.
 A10 Encoding Archaeology checkpoint:
 `docs/a10-encoding-archaeology-status-2026-06-09.md`.
 
+Secret Back/Forth sidecar checkpoint:
+`docs/a10-secret-backforth-sidecar-2026-06-10.md`.
+
 Human-facing JANUS forward-gate note:
 `docs/janus-forward-gate-admonition.md`.
 

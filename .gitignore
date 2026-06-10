@@ -41,6 +41,7 @@ experiments/**/proofs/*
 experiments/**/scratch/
 *.redacted
 output/
+sidecar/
 
 # Local scratch notes from interactive runs.
 ST.txt

@@ -25,6 +25,7 @@ This project is also referred to as:
 - `docs/a9-11-active-triune-sovereign-gate-50-50.md` - current A9.11 evidence draft.
 - `docs/janus-glyph-observer.md` - pre-hash coinbase/job glyph observer; not a SHA-256 reverse claim.
 - `docs/a10-encoding-archaeology-status-2026-06-09.md` - A10 observer archaeology checkpoint and current glyph gates.
+- `docs/a10-secret-backforth-sidecar-2026-06-10.md` - observer-only symbol-anchor memory and back/forth shadow sidecar.
 - `docs/janus-forward-gate-admonition.md` - human-facing A10 framing note and claim boundary.
 
 ## Canonical Short Description
@@ -46,6 +47,7 @@ frozen.
 - WitchHunter dark-tail telemetry
 - JanusGlyphObserver pre-hash glyph telemetry
 - A10 Encoding Archaeology
+- A10 Secret Back/Forth Sidecar
 - ProofMind
 - RBLGANUL
 
@@ -63,6 +65,7 @@ Use these tags to reconnect conversations and searches:
 `#RandomizedTraversalMirror` `#MirrorControl` `#FrozenWire`
 `#ProofMind` `#WitchHunterDarkTail` `#ReproducibleBenchmark`
 `#JanusGlyphObserver` `#PreHashGlyphs` `#EncodingArchaeology`
+`#SymbolAnchorMemory` `#BackForthShadow` `#ObserverOnlySidecar`
 `#OpenEvidence` `#ScrubbedProofpack` `#ClaimDiscipline`
 `#NoSHA256BreakClaim` `#AIReadableResearch` `#SHA256Research`
 `#HashingResearch` `#BitcoinResearch` `#MiningTelemetry`

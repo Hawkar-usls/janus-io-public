@@ -313,3 +313,35 @@ hold: pLEA / AELp / key
 
 Promotion still requires independent repeat evidence, especially a new
 `job_id` with z28+ context or a new JANUS z32+ event.
+
+## A10 Secret Back/Forth Sidecar
+
+The 2026-06-10 sidecar snapshot adds an observer-only symbol-anchor memory on
+top of the glyph stream:
+
+```text
+A10_GLYPH_ECOLOGY_SECRET_BACKFORTH_SIDECAR.py
+```
+
+It reads `glyph_alert` console lines, rejects known pool boilerplate as
+control/background, and writes derived sidecar artifacts:
+
+```text
+a10_glyph_ecology_radar.jsonl
+a10_glyph_ecology_gates.jsonl
+a10_open_sweep_candidates.jsonl
+a10_symbol_backforth_shadow.jsonl
+a10_symbol_anchor_memory.json
+a10_janus_intention_field.json
+a10_secret_gratitude.jsonl
+```
+
+The sidecar's back/forth layer is a shadow policy only:
+
+```text
+goal -> attention_filter -> belief/resistance/gratitude -> forward/backward/mirror motion -> feedback
+```
+
+It does not change the miner scheduler yet, does not feed the randomized
+traversal mirror, and does not touch wire/header/submit behavior. Current
+public note: `docs/a10-secret-backforth-sidecar-2026-06-10.md`.
