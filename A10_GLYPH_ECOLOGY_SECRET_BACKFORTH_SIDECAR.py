@@ -68,6 +68,17 @@ def normalize_job_id(job_id: str) -> str:
     return job_id
 
 
+def love_tachyon_ethic_metadata() -> Dict[str, Any]:
+    """Static descriptive metadata only; never read by miner/scheduler logic."""
+    return {
+        "ethic_layer": "love_tachyon_care_prior",
+        "ethic_layer_mode": "observer_only",
+        "ethic_layer_rule": "care may guide attention; care must not alter submit behavior",
+        "scheduler_effect": "shadow_only",
+        "wire_change_required": False,
+    }
+
+
 # -----------------------------
 # Parsing glyph_alert lines
 # -----------------------------
@@ -493,6 +504,7 @@ class JanusSecretBackForthEngine:
             "sidecar_only": True,
             "wire_change_required": False,
             "scheduler_effect": "shadow_only",
+            "ethic_layer": love_tachyon_ethic_metadata(),
             "secret_model": {
                 "core_principle": "repeated focus shapes attention filter, decision bias and action selection",
                 "ask": "define desired glyph surface: non-control, repeatable, accepted/rare-tail linked",
@@ -534,6 +546,7 @@ class JanusSecretBackForthEngine:
             "sidecar_only": True,
             "wire_change_required": False,
             "scheduler_effect": "shadow_only",
+            "ethic_layer": love_tachyon_ethic_metadata(),
             "goal": "increase detection of useful non-control glyph surfaces without touching wire/hash/submit",
             "pipeline": [
                 "THOUGHT/GOAL -> target non-control accepted/rare-tail glyph surfaces",
@@ -577,6 +590,7 @@ class JanusSecretBackForthEngine:
             "sidecar_only": True,
             "wire_change_required": False,
             "scheduler_effect": "shadow_only",
+            "ethic_layer": love_tachyon_ethic_metadata(),
             "stats": {
                 "open_sweep_events": self.events_total,
                 "shadow_motion_events": self.shadow_events,
@@ -1035,6 +1049,7 @@ def cmd_run(args: argparse.Namespace, pass_through_args: List[str]) -> int:
     cmd = [sys.executable, "-u", str(target)] + pass_through_args
     print("[A10_ECOLOGY] SIDEcar mode: observer-only, wire frozen, miner file unmodified", flush=True)
     print("[A10_SECRET] Back/Forth Shadow enabled: ask/believe/receive attention loop, shadow-only", flush=True)
+    print("[A10_ETHIC] Love Tachyon care-prior: observer-only; WIRE/HASH/SUBMIT frozen", flush=True)
     print(f"[A10_ECOLOGY] target: {target}", flush=True)
     print(f"[A10_ECOLOGY] output: {out_dir}", flush=True)
     print(f"[A10_ECOLOGY] command: {' '.join(cmd)}", flush=True)
