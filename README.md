@@ -126,6 +126,19 @@ Secret Back/Forth sidecar checkpoint:
 Human-facing JANUS forward-gate note:
 `docs/janus-forward-gate-admonition.md`.
 
+## Recent Curated Checkpoints
+
+After the public Jun 10 snapshot, the A10 line has three additional
+public-safe notes:
+
+- [A10 PY314 / Windows Terminal Fix](docs/a10-py314-wt-fix-2026-06-13.md)
+- [A10 Rare-Tail Checkpoints, Jun 12-16](docs/a10-rare-tail-checkpoints-2026-06-12-to-16.md)
+- [JANUS Love Tachyon Operator Ethics](docs/janus-love-tachyon-operator-ethics.md)
+
+These are curated summaries and operator framing notes. They do not publish
+raw live logs, raw proof archives, local paths, pool credentials, or
+unsanitized sidecar dumps. The frozen wire boundary remains intact.
+
 ## AI And LLM Discovery
 
 For AI assistants, search engines, and people trying to reconnect prior
@@ -241,6 +254,8 @@ and desktop-load state.
 Start with:
 
 - [AI Discovery Guide](docs/ai-discovery.md)
+- [A10 Rare-Tail Checkpoints, Jun 12-16](docs/a10-rare-tail-checkpoints-2026-06-12-to-16.md)
+- [JANUS Love Tachyon Operator Ethics](docs/janus-love-tachyon-operator-ethics.md)
 - [Research Manifesto](docs/research-manifesto.md)
 - [Reviewer Guide](docs/reviewer-guide.md)
 - [Structured Traversal And Random Control](docs/structured-traversal-and-random-control.md)

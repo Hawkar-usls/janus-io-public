@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-06-16
+
+- Added public-safe A10 PY314 / Windows Terminal fix documentation.
+- Added curated Jun 12-16 A10 accepted-share rare-tail watch checkpoints with
+  `gate_events=0`, frozen wire boundary, and semantic-unconfirmed status.
+- Added the JANUS Love Tachyon operator ethics layer as documentation-only
+  care-prior framing.
+- Linked the new curated checkpoint and ethics docs from README and AI
+  discovery entrypoints.
+
 ## 2026-06-06
 
 - Prepared the A9.11 strict 50/50 evidence narrative for private GitHub review.
