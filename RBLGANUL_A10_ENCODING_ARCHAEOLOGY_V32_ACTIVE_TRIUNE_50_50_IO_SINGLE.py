@@ -5203,7 +5203,7 @@ class DualLockMemory:
         self.best_z[k] = max(int(self.best_z.get(k, 0)), int(cand.get("zbits", 0) or 0))
         self.save()
 
-    def save(self) -> None:
+    def save(self, force: bool = False) -> None:
         try:
             atomic_json(self.path, {
                 "version": VERSION,
