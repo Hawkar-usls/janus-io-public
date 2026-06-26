@@ -1,0 +1,9 @@
+﻿{
+  "observer_only": true,
+  "miner_untouched": true,
+  "wire_hash_submit_frozen": true,
+  "summary": {
+    "nodes_known": 1,
+    "nodes_live": 1
+  }
+}

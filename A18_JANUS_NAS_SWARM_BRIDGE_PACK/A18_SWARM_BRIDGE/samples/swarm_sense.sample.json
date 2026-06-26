@@ -1,0 +1,8 @@
+﻿{
+  "observer_only": true,
+  "source": "sanitized_sample",
+  "node_id": "ExampleWorker",
+  "hash_rate": 0,
+  "best_bits": 0,
+  "rssi": -60
+}

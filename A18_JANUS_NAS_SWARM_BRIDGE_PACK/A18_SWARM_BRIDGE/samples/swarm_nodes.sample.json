@@ -1,0 +1,12 @@
+﻿{
+  "observer_only": true,
+  "nodes": [
+    {
+      "node_id": "Buzz",
+      "role": "master",
+      "online": true,
+      "health": "live",
+      "rssi": -55
+    }
+  ]
+}

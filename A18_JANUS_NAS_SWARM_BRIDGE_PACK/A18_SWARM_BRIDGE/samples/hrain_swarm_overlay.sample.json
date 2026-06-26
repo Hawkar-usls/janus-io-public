@@ -1,0 +1,11 @@
+﻿{
+  "observer_only": true,
+  "miner_untouched": true,
+  "wire_hash_submit_frozen": true,
+  "mirror_untouched": true,
+  "source": "NAS_Brain/Buzz/ESP32_M5_swarm",
+  "nodes": [],
+  "events": [],
+  "alerts": [],
+  "summary": {}
+}

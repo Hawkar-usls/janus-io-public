@@ -1,0 +1,7 @@
+﻿{
+  "nas_base_url": "http://YOUR_NAS_HOST:YOUR_NAS_PORT",
+  "poll_seconds": 5,
+  "timeout_seconds": 2,
+  "write_outputs": true,
+  "read_only": true
+}
