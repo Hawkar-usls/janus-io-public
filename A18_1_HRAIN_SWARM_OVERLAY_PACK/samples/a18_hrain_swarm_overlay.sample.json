@@ -1,0 +1,55 @@
+{
+  "schema": "JANUS/A18/swarm-bridge/v1",
+  "layer": "A18_JANUS_NAS_SWARM_BRIDGE",
+  "observer_only": true,
+  "miner_untouched": true,
+  "wire_hash_submit_frozen": true,
+  "mirror_untouched": true,
+  "source": "NAS_Brain/Buzz/ESP32_M5_swarm",
+  "nodes": [
+    {
+      "node_id": "Buzz",
+      "role": "master",
+      "online": true,
+      "health": "live",
+      "rssi": -55,
+      "trust": 82,
+      "stress": 18,
+      "oxytokin": 71
+    },
+    {
+      "node_id": "PEA4",
+      "role": "camera_presence_observer",
+      "online": false,
+      "health": "unknown",
+      "rssi": null
+    },
+    {
+      "node_id": "ExampleWorker",
+      "role": "worker",
+      "online": false,
+      "health": "stale",
+      "rssi": -71,
+      "best_bits": 21
+    }
+  ],
+  "events": [
+    {
+      "kind": "node_state",
+      "node_id": "Buzz",
+      "role": "master",
+      "health": "live"
+    }
+  ],
+  "alerts": [
+    {
+      "kind": "node_not_live",
+      "node_id": "ExampleWorker",
+      "health": "stale"
+    }
+  ],
+  "summary": {
+    "nodes_known": 3,
+    "nodes_live": 1
+  }
+}
