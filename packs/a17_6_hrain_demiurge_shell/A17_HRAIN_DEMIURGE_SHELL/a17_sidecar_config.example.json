@@ -1,0 +1,40 @@
+{
+  "version": "A17_HRAIN_DEMIURGE_SIDECAR_SHELL_20260625",
+  "observer_only": true,
+  "wire_hash_submit_frozen": true,
+  "mirror_untouched": true,
+  "miner_not_modified": true,
+  "stratum_proxy": false,
+  "sidecar_mode": "tail_only_live_shell",
+  "ui_style": "HRain bubble/caviar/spore broth with nucleus bubbles and LOD",
+  "limits": {
+    "poll_sec": 4,
+    "rediscover_sec": 60,
+    "max_files": 160,
+    "initial_tail_bytes": 800000,
+    "max_read_bytes": 420000,
+    "max_lines_per_file": 3200,
+    "backend_compact_nodes": 2200,
+    "backend_compact_links": 4200,
+    "transition_max_edges": 256,
+    "hypotheses_top": 12
+  },
+  "prime_pow_lessons": {
+    "primecoin": "structured proof chains and continuous difficulty intuition",
+    "cuckoo_cycle": "graph-native PoW, cycles, memory-bound traversal",
+    "equihash": "asymmetric PoW, cheap verification, memory binding",
+    "janus_hrain": "semantic graph pressure and route ecology; output-only before A14.3"
+  },
+  "catgpt_optional": {
+    "included": true,
+    "source": "CatGPT_pack_ascii_bat(1).zip",
+    "files": [
+      "CatGPT.py",
+      "CatGPT.bat",
+      "CatGPT_DEMO_ONLY.bat",
+      "cat_observations_template.csv",
+      "current_cat_state_template.json",
+      "README_CatGPT.txt"
+    ]
+  }
+}

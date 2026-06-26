@@ -1,0 +1,46 @@
+{
+  "version": "A17_6_SAMPLE",
+  "meta": {
+    "observer_only": true,
+    "wire_hash_submit_frozen": true,
+    "mirror_untouched": true,
+    "sample": true
+  },
+  "nodes": [
+    {
+      "id": "HRAIN_CORE",
+      "label": "HRain Core",
+      "kind": "core",
+      "group": "core",
+      "score": 100
+    },
+    {
+      "id": "JANUS_ROUTE_SAMPLE",
+      "label": "Sample Janus Route",
+      "kind": "route",
+      "group": "janus",
+      "score": 34
+    },
+    {
+      "id": "MIRROR_CONTROL_SAMPLE",
+      "label": "Sample Mirror Control",
+      "kind": "safety",
+      "group": "mirror",
+      "score": 28
+    }
+  ],
+  "links": [
+    {
+      "source": "HRAIN_CORE",
+      "target": "JANUS_ROUTE_SAMPLE",
+      "kind": "sample_observation",
+      "weight": 3
+    },
+    {
+      "source": "HRAIN_CORE",
+      "target": "MIRROR_CONTROL_SAMPLE",
+      "kind": "control_boundary",
+      "weight": 2
+    }
+  ]
+}

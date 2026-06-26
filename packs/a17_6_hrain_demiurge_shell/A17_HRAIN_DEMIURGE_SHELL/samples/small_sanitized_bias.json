@@ -1,0 +1,19 @@
+{
+  "version": "A17_6_SAMPLE",
+  "observer_only": true,
+  "bias_file_output_only": true,
+  "wire_hash_submit_frozen": true,
+  "mirror_untouched": true,
+  "janus_route_bias": {
+    "sample_janus_route": 0.61,
+    "sample_linear_route": 0.39
+  },
+  "rejected_routes_due_to_mirror_pollution": {
+    "sample_mirror_route": {
+      "reason": "mirror-polluted evidence; not safe for Janus bias",
+      "janus": 1,
+      "mirror": 4,
+      "purity": -0.6
+    }
+  }
+}

@@ -46,3 +46,32 @@ sidecar/
 # Local scratch notes from interactive runs.
 ST.txt
 statCM.txt
+
+# Repo-ready packs must never stage live run artifacts by accident.
+**/janus_io_o1_runs/
+**/proofs/
+**/*.jsonl
+**/*.sqlite3
+**/*.sqlite
+**/*.db
+**/*.csv
+**/__pycache__/
+**/*.pyc
+**/*.tmp
+**/*.log
+A17_*/**/janus_io_o1_runs/
+A17_*/**/proofs/
+A17_*/**/a17_offsets.json
+A17_*/**/a17_hrain_graph.json
+A17_*/**/a17_status.json
+A17_*/**/sidecar_bus.json
+A17_*/**/temple_route_bias.json
+A17_*/**/route_transition_matrix.json
+A17_*/**/janus_demiurge_hypotheses.json
+**/a17_offsets.json
+**/a17_hrain_graph.json
+**/a17_status.json
+**/sidecar_bus.json
+**/temple_route_bias.json
+**/route_transition_matrix.json
+**/janus_demiurge_hypotheses.json

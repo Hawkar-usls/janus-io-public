@@ -1,0 +1,26 @@
+{
+  "version": "A17_PRIME_GRAPH_POW_NOTES_20260625",
+  "notes": [
+    {
+      "source": "Primecoin",
+      "use_for_a17": "proof quality can be structural and continuous, not only binary hit/miss",
+      "mapping": "route chains and accepted proof context can be graded as chain-like evidence"
+    },
+    {
+      "source": "Cuckoo Cycle",
+      "use_for_a17": "graph structures/cycles are native proof objects; memory and random access matter",
+      "mapping": "HRain graph can become a route ecology map rather than a passive event drawing"
+    },
+    {
+      "source": "Equihash",
+      "use_for_a17": "expensive generation, cheap verification, binding to prevent loose reuse",
+      "mapping": "A17 exports hypotheses and bias only when route purity/binding are high"
+    }
+  ],
+  "safety": {
+    "observer_only": true,
+    "not_a_consensus_change": true,
+    "not_a_hash_break_claim": true,
+    "not_miner_control_yet": true
+  }
+}

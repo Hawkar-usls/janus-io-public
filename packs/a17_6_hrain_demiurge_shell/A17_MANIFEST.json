@@ -1,0 +1,40 @@
+{
+  "version": "A17_6_HRAIN_DEMIURGE_REPO_READY_VIDEO_SAFE_20260626",
+  "created_at": "2026-06-25 18:38:52",
+  "entrypoint": "RUN_ALL_A17.bat",
+  "fallback_entrypoint": "RUN_ALL_A17_NO_WT.bat",
+  "contains": [
+    "A14_2_PURE_ROUTE_LOCK_PACK (local/private, not bundled)",
+    "A17_HRAIN_DEMIURGE_SHELL",
+    "optional_catgpt_import"
+  ],
+  "features": [
+    "Hybrid Canvas glow/link layer + SVG node layer",
+    "Client cluster LOD: clusters/constellation/detail",
+    "Presentation VIDEO mode",
+    "VIDEO_SAFE performance preset",
+    "CINEMA/NORMAL/WIDE/DEEP detail modes",
+    "FREEZE mode for recording",
+    "Non-saturating route bias scoring"
+  ],
+  "safety": {
+    "observer_only": true,
+    "stratum_proxy": false,
+    "miner_not_modified": true,
+    "wire_hash_submit_frozen": true,
+    "mirror_untouched": true,
+    "bias_file_output_only": true
+  },
+  "fix": "A17.6 repo-ready cleanup: public-safe shell pack, sanitized samples, OneDrive-safe atomic JSON writes, VIDEO_SAFE preset.",
+  "patched_files": [
+    "RUN_ALL_A17.ps1"
+  ],
+  "fixes": [
+    "Replaced static layout with native HRain D3 force simulation.",
+    "Added LOD caps to avoid browser collapse.",
+    "Restored neuron aura/core/nucleus style.",
+    "Added live impulse sparks and grid mode.",
+    "Preserved observer-only sidecar boundaries."
+  ],
+  "basis": "Uploaded old HRain v76/v77/JANUS GALAXY HTML versions + A17.4 backend"
+}

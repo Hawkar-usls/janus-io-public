@@ -1,0 +1,9 @@
+{
+  "version": "A17_6_SAMPLE",
+  "stage": "sample",
+  "observer_only": true,
+  "stratum_proxy": false,
+  "wire_hash_submit_frozen": true,
+  "mirror_untouched": true,
+  "message": "sanitized public sample; not live telemetry"
+}
