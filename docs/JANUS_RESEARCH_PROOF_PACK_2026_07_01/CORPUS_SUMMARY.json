@@ -1,0 +1,175 @@
+{
+  "claim_level": "telemetry_only_no_advantage_profit_or_superiority_claim",
+  "corpus": {
+    "accepted_proof_files_total_in_run_dir": 1247,
+    "fresh_boundary_marker_utc": "2026-06-30T22:21:44Z",
+    "fresh_files_since_marker_by_mtime": 47,
+    "fresh_started_at_utc": "2026-07-01T09:28:10Z",
+    "previous_accepted_proof_files_at_fresh_boundary": 1201,
+    "recommended_min_fresh_proofs": 5000,
+    "run_label": "A17.8 HRain Live Swarm Overlay / A14.2 Pure Route Lock"
+  },
+  "generated_at_utc": "2026-07-01T12:38:39Z",
+  "mirror_untouched": true,
+  "observer_only": true,
+  "open_work": [
+    "Expose duplicates_janus and duplicates_mirror as read-only compact counters.",
+    "Add cumulative corpus accounting distinct from fresh windows.",
+    "Continue collecting fresh 50/50 windows until the 5000+ proof target is reached.",
+    "Stabilize Buzz roster breath and worker rejoin guards without touching miner wire semantics."
+  ],
+  "runtime_health": {
+    "accepted": 45,
+    "best_hps_ewma": 2329474,
+    "best_z": 28,
+    "hps_ewma": 2207058,
+    "hps_last": 2193671,
+    "load_state": "COOLDOWN",
+    "proofmind_mode": "SURVIVE",
+    "reject_rate": 0.0625,
+    "rejected": 3,
+    "submitted": 48
+  },
+  "schema": "JANUS/public-research-proof-pack/v1",
+  "source_note": "Summarized from local A17.8 runtime JSON and accepted proof files. Private machine details and operational identifiers are omitted from public artifacts.",
+  "strict_fresh_50_50": {
+    "interpretation": "Current strict fresh window is the arbiter for normalized comparison; cumulative corpus is tracked separately.",
+    "janus": {
+      "accepted": 19,
+      "accepted_per_mh": 0.11091718376646921,
+      "accepted_tail_per_mh": {
+        "z23": 0.11091718376646921,
+        "z24": 0.046701972112197565,
+        "z25": 0.017513239542074087,
+        "z26": 0.017513239542074087,
+        "z28": 0.0,
+        "z30": 0.0,
+        "z32": 0.0,
+        "z33": 0.0,
+        "z34": 0.0,
+        "z35": 0.0,
+        "z36": 0.0,
+        "z37": 0.0,
+        "z38": 0.0,
+        "z39": 0.0,
+        "z40": 0.0
+      },
+      "accepted_tails": {
+        "z23": 19,
+        "z24": 8,
+        "z25": 3,
+        "z26": 3,
+        "z28": 0,
+        "z30": 0,
+        "z32": 0,
+        "z33": 0,
+        "z34": 0,
+        "z35": 0,
+        "z36": 0,
+        "z37": 0,
+        "z38": 0,
+        "z39": 0,
+        "z40": 0
+      },
+      "best_z": 27,
+      "mh": 171.298976,
+      "rejected": 0,
+      "submitted": 19
+    },
+    "mirror": {
+      "accepted": 26,
+      "accepted_per_mh": 0.15178140936464207,
+      "accepted_tail_per_mh": {
+        "z23": 0.15178140936464207,
+        "z24": 0.11091718376646921,
+        "z25": 0.04086422559817287,
+        "z26": 0.023350986056098783,
+        "z28": 0.005837746514024696,
+        "z30": 0.0,
+        "z32": 0.0,
+        "z33": 0.0,
+        "z34": 0.0,
+        "z35": 0.0,
+        "z36": 0.0,
+        "z37": 0.0,
+        "z38": 0.0,
+        "z39": 0.0,
+        "z40": 0.0
+      },
+      "accepted_tails": {
+        "z23": 26,
+        "z24": 19,
+        "z25": 7,
+        "z26": 4,
+        "z28": 1,
+        "z30": 0,
+        "z32": 0,
+        "z33": 0,
+        "z34": 0,
+        "z35": 0,
+        "z36": 0,
+        "z37": 0,
+        "z38": 0,
+        "z39": 0,
+        "z40": 0
+      },
+      "best_z": 28,
+      "mh": 171.298976,
+      "rejected": 3,
+      "submitted": 29
+    },
+    "written_at_utc": "2026-07-01T12:37:57Z"
+  },
+  "swarm_stack": {
+    "a18_known": 0,
+    "a18_live": 0,
+    "absent_expected": [
+      "YaksGateS3",
+      "PEA4",
+      "Core2Home",
+      "ECHO_PYRAMID_BT",
+      "RFAnchorAux",
+      "BlindEye",
+      "A9FieldSense",
+      "CardputerElite",
+      "Buzz",
+      "Gladius",
+      "BH",
+      "Golcron",
+      "ZimGeek"
+    ],
+    "body_state": "stale",
+    "buzz_roster_state": "stale",
+    "h0_near_roster_gap": false,
+    "stable_nodes": [],
+    "weak_nodes": []
+  },
+  "version": "2026-07-01",
+  "wire_hash_submit_frozen": true,
+  "z_tail": {
+    "dark_highest_z": 26,
+    "dark_janus_events": 1,
+    "dark_mirror_events": 0,
+    "dashboard_best_z": 28,
+    "glyph_best_z": 34,
+    "glyph_by_group": {
+      "janus_broad_mixture": 11104,
+      "randomized_traversal_mirror": 12514
+    },
+    "rare_best_z_all_time_in_pack": 34,
+    "rare_by_group": {
+      "janus_broad_mixture": {
+        "best_z": 34,
+        "count": 2,
+        "z32_plus": 2,
+        "z33_plus": 1,
+        "z34_plus": 1,
+        "z35_plus": 0,
+        "z36_plus": 0,
+        "z37_plus": 0,
+        "z38_plus": 0,
+        "z39_plus": 0
+      }
+    }
+  }
+}

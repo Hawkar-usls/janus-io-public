@@ -231,6 +231,14 @@ Experimental and private-first. No SHA-256 shortcut is claimed. The current
 GitHub-safe path is to commit code, docs, and curated summaries separately from
 raw accepted-share corpus artifacts.
 
+Current curated public evidence:
+
+- [JANUS Research Proof Pack, 2026-07-01](docs/JANUS_RESEARCH_PROOF_PACK_2026_07_01/README.md)
+  publishes a sanitized A17.8 / HRain / Buzz swarm snapshot with strict
+  50/50 accounting, z-tail telemetry, reliability notes, and accepted-proof
+  samples. Claim level: telemetry only, with no advantage, profit, or
+  superiority claim.
+
 ## License
 
 Apache License 2.0. See [LICENSE](LICENSE).
