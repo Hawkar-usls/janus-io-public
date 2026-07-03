@@ -135,6 +135,14 @@ public-safe notes:
 - [A10 Rare-Tail Checkpoints, Jun 12-16](docs/a10-rare-tail-checkpoints-2026-06-12-to-16.md)
 - [JANUS Love Tachyon Operator Ethics](docs/janus-love-tachyon-operator-ethics.md)
 
+Current A18 public-safe checkpoint:
+
+- [A18.11 Historic Tail Revival](docs/a18-11-historic-tail-revival.md)
+  preserves the strongest current scheduler profile as telemetry only. It keeps
+  strict randomized 50/50 mirror control, frozen WIRE/HASH/SUBMIT semantics,
+  and reports the current early positive signal without making an advantage,
+  profit, or superiority claim.
+
 These are curated summaries and operator framing notes. They do not publish
 raw live logs, raw proof archives, local paths, pool credentials, or
 unsanitized sidecar dumps. The frozen wire boundary remains intact.

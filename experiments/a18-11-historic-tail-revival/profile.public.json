@@ -1,0 +1,82 @@
+{
+  "schema": "JANUS/public/a18-11-historic-tail-revival-profile/v1",
+  "profile": "A18_11_HISTORIC_TAIL_REVIVAL",
+  "status": "telemetry_only",
+  "claim_level": "no_advantage_profit_or_superiority_claim",
+  "safety": {
+    "wire_hash_submit_frozen": true,
+    "mirror_untouched": true,
+    "hash_algorithm_unchanged": true,
+    "submit_semantics_unchanged": true,
+    "pool_wire_unchanged": true,
+    "observer_layers_only": true
+  },
+  "base_profile": "A18_4_VARIANT_REVIVAL_ARENA",
+  "intent": "Replay historically strong Janus tail routes while preserving strict randomized mirror control.",
+  "run_identity": {
+    "public_name": "A18_11_HISTORIC_TAIL_REVIVAL_V1",
+    "worker_label_public": "A18_11_TAIL_REVIVAL"
+  },
+  "historic_tail_anchors": [
+    {
+      "route": "a14_navigator:janus_dispatcher::bitrev/s7/canonical",
+      "role": "primary preferred route",
+      "evidence_note": "route memory showed positive accepted and z-tail behavior"
+    },
+    {
+      "route": "a14_navigator:linear_proof::linear/s4/canonical",
+      "role": "linear tail replay",
+      "evidence_note": "historical rare-tail memory included linear z32-like behavior"
+    },
+    {
+      "route": "a14_navigator:zim_reverse_s6::zim_reverse/s6/canonical",
+      "role": "zim reverse deep-tail replay",
+      "evidence_note": "route memory included z30-plus behavior"
+    }
+  ],
+  "revival_knobs": {
+    "a11_exploration_floor": 0.1,
+    "a11_historical_prior_weight": 0.07,
+    "a14_nav_lock_after_accepted": 6,
+    "a14_nav_lock_prob": 0.78,
+    "a14_nav_explore_floor": 0.045,
+    "a14_nav_topk": 16,
+    "a14_nav_min_mh": 0.08,
+    "a14_nav_rollback_window": 44,
+    "summary_every_rounds": 5,
+    "summary_every_seconds": 120
+  },
+  "lane_weights": {
+    "linear_proof_weight": 32,
+    "janus_weight": 34,
+    "dual_lock_weight": 18,
+    "zim_s6_weight": 16,
+    "dual_lock_linear_s6_weight": 38,
+    "dual_lock_zim_s6_weight": 42,
+    "dual_lock_knight_s11_weight": 20
+  },
+  "route_replay": {
+    "preferred_route": "a14_navigator:janus_dispatcher::bitrev/s7/canonical",
+    "preferred_route_boost": 0.22,
+    "seed_files_public_description": [
+      "strategy rates",
+      "best brain",
+      "dual lock memory",
+      "tail events",
+      "rare tail timing summary"
+    ]
+  },
+  "strict_validation_metrics": [
+    "accepted_per_mh",
+    "z24_plus_per_mh",
+    "z26_plus_per_mh",
+    "z28_plus_per_mh",
+    "z30_plus_per_mh",
+    "z32_plus_per_mh",
+    "rejects",
+    "duplicates_when_exposed",
+    "reconnect_count",
+    "stale_round_drops",
+    "repeat_windows"
+  ]
+}

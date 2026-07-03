@@ -1,0 +1,55 @@
+{
+  "schema": "JANUS/public/a18-11-historic-tail-revival-snapshot/v1",
+  "profile": "A18_11_HISTORIC_TAIL_REVIVAL",
+  "status": "healthy_research_run",
+  "claim_level": "telemetry_only_no_advantage_profit_or_superiority_claim",
+  "wire_hash_submit_frozen": true,
+  "mirror_untouched": true,
+  "snapshot": {
+    "round": 880,
+    "submitted": 272,
+    "accepted": 269,
+    "rejected": 3,
+    "reject_rate": 0.011029411764705883,
+    "best_z": 30,
+    "accepted_per_mh_total": 0.11479597602225637,
+    "socket_alive": true,
+    "reconnect_count": 0,
+    "stale_round_drops": 0
+  },
+  "strict_50_50": {
+    "janus": {
+      "accepted": 149,
+      "rejected": 3,
+      "submitted": 152,
+      "mh": 1171.643856,
+      "accepted_per_mh": 0.12717175038896802,
+      "best_z": 30,
+      "z28_plus": 4,
+      "z30_plus": 1,
+      "z32_plus": 0,
+      "z34_plus": 0
+    },
+    "mirror": {
+      "accepted": 120,
+      "rejected": 0,
+      "submitted": 120,
+      "mh": 1171.643856,
+      "accepted_per_mh": 0.10242020165554473,
+      "best_z": 28,
+      "z28_plus": 2,
+      "z30_plus": 0,
+      "z32_plus": 0,
+      "z34_plus": 0
+    },
+    "interpretation": "early_positive_telemetry_not_final_claim"
+  },
+  "confidence": {
+    "effect_size_rate_difference": 0.024751548733423126,
+    "ci95_low": -0.0026849451234409495,
+    "ci95_high": 0.0521880425902872,
+    "confidence_mirror_better": 0.038516978759613636,
+    "verdict": "not_final_advantage_claim_ci_overlaps_zero"
+  },
+  "known_runtime_note": "Swarm roster sidecar can be degraded independently of the mining core; this snapshot concerns scheduler telemetry."
+}
