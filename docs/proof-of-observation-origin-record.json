@@ -1,0 +1,99 @@
+{
+  "schema": "JANUS/proof-of-observation-origin-record/v1",
+  "canonical_name": "JANUS Proof-of-Observation",
+  "canonical_public_record_date": "2026-07-10",
+  "repository": "Hawkar-usls/janus-io-public",
+  "record_status": "public_specification_and_implementation_lineage",
+  "claim_level": "telemetry_and_methodology_only",
+  "project_priority_statement": "First canonical public record of Proof-of-Observation inside the JANUS research line.",
+  "global_priority_boundary": "No global historical-priority claim is made without a separate literature and prior-art review.",
+  "definition": "An observer and evidence-gating method that records machine telemetry in an integrity-linked chain, separates facts from derived metrics and claims, requires explicit provenance and exact exposure for rate claims, uses independent holdouts, and fails closed when evidence is incomplete.",
+  "canonical_principles": [
+    "Do not trust an impression. Trust the chain of observations.",
+    "Hash-chain integrity protects history from silent rewriting; claim gates protect understanding from self-deception.",
+    "Unknown is not zero.",
+    "Assigned work is not completed work.",
+    "A beautiful heatmap is not proof.",
+    "Do not predict the hash. Test whether the tails preserve conditional structure."
+  ],
+  "required_layers": [
+    "facts",
+    "derived_metrics",
+    "claims",
+    "source_provenance",
+    "deterministic_integrity",
+    "uncertainty",
+    "comparability",
+    "independent_repetition",
+    "holdout_discipline",
+    "fail_closed_claims"
+  ],
+  "organism_state_model": {
+    "heart": "compute process, heartbeat, hashing availability",
+    "breath": "swarm continuity and recovery rhythm",
+    "memory": "NAS, DB, JSONL and persistence availability",
+    "tail": "rare-tail telemetry, exposure, controls and claim gates"
+  },
+  "implementation_lineage": [
+    {
+      "id": "A18.21",
+      "name": "HASH_CAUSTIC_OBSERVER",
+      "status": "observer_pass_rate_layer_partial",
+      "result": {
+        "events_parsed": 402,
+        "occupied_coordinate_cells": 390,
+        "exposure_qualified_discovery_candidates": 0,
+        "holdout_candidates": 0,
+        "fdr_surviving_candidates": 0,
+        "rate_direction_status": "NOT_EVALUABLE",
+        "null_rejected": false,
+        "null_evaluation_status": "INSUFFICIENT_EXPOSURE",
+        "claim_level": "telemetry_only"
+      }
+    },
+    {
+      "id": "A18.22",
+      "name": "COORDINATE_EXPOSURE_LEDGER",
+      "status": "historical_exposure_audit_valid_negative",
+      "result": {
+        "result": "PARTIAL / EXACT EXPOSURE NOT RECOVERABLE",
+        "coordinate_catalog_cells": 390,
+        "tail_event_cells": 327,
+        "zero_tail_exposed_cells": 0,
+        "exact_counter_records": 0,
+        "derived_exact_range_records": 0,
+        "unknown_exposure_records": 390,
+        "proof_eligible_exposure": false
+      }
+    },
+    {
+      "id": "A18.23",
+      "name": "EXACT_EXPOSURE_SHADOW_EMITTER",
+      "status": "planned_offline_validation_layer",
+      "purpose": "Emit disabled-by-default exact integer hashes_attempted deltas after proven completed hash batches, bound to frozen coordinate keys and sealed windows."
+    }
+  ],
+  "hash_chain_boundary": {
+    "proves": [
+      "recorded observer-ledger integrity after commitment"
+    ],
+    "does_not_prove": [
+      "source telemetry truth",
+      "clock correctness",
+      "statistical independence",
+      "causal advantage",
+      "SHA-256 predictability",
+      "machine consciousness",
+      "profitability"
+    ]
+  },
+  "forbidden_public_claims": [
+    "SHA-256 is broken",
+    "JANUS predicts winning nonces",
+    "a visual cluster proves causal advantage",
+    "Proof-of-Observation proves machine consciousness",
+    "a valid hash chain makes source telemetry true",
+    "mining profit is established"
+  ],
+  "current_scientific_boundary": "Tail events and their recorded coordinates are observable, but exact historical per-window and per-coordinate exposure is not recoverable from the current artifacts; therefore exposure-normalized rate and advantage gates remain closed."
+}
