@@ -1,0 +1,53 @@
+{
+  "schema": "JANUS/A18.43/hardware-preservation-claim-gates/v0.1.0",
+  "engineering_claim": {
+    "name": "REDUCED_UNNECESSARY_WORK",
+    "requires": [
+      "matched CONTINUOUS / SHAM / NATIVE scenarios",
+      "same useful-work accounting",
+      "strict waste taxonomy",
+      "no frozen semantic changes",
+      "replication"
+    ]
+  },
+  "energy_claim": {
+    "name": "REDUCED_ENERGY_PER_USEFUL_WORK",
+    "requires": [
+      "calibrated or stable power telemetry",
+      "time-aligned samples",
+      "joule integration",
+      "matched useful work",
+      "uncertainty report",
+      "replication"
+    ],
+    "blocked_without_power_sensor": true
+  },
+  "thermal_claim": {
+    "name": "REDUCED_THERMAL_STRESS",
+    "requires": [
+      "stable temperature sensor identity",
+      "matched ambient conditions or explicit limitation",
+      "thermal peak and degree-seconds",
+      "cooldown policy",
+      "replication"
+    ]
+  },
+  "wear_claim": {
+    "name": "EXTENDED_HARDWARE_LIFE",
+    "status": "NOT_DIRECTLY_CLAIMABLE_IN_SHORT_CHALLENGE",
+    "requires_future": [
+      "longitudinal hours",
+      "thermal cycles",
+      "fan instability",
+      "hardware errors",
+      "maintenance events",
+      "device health passport"
+    ]
+  },
+  "forbidden_inference": [
+    "lower instantaneous temperature automatically proves longer life",
+    "lower power automatically proves more valid proofs per joule",
+    "fewer completed batches automatically means less useful work",
+    "a working gate proves mining profitability"
+  ]
+}
