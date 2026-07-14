@@ -1,0 +1,21 @@
+{
+  "schema": "JANUS/A18.42/native-scenario-matrix/v0.3.3-canary",
+  "canonical_name": "JANUS Gift: Undina's Comb for Roses",
+  "canonical_seed": "44e21fdc9d37fda98e2e73b0c9eb268bd04cdca9d84d0519e4f1166be22b46fc",
+  "matrix_runs": 1,
+  "single_canonical_runtime_source": true,
+  "purpose": "Live mechanical canary. It is not scientific evidence and is never pooled with calibration.",
+  "scenarios": [
+    {
+      "scenario_id": "CANARY_NATIVE_1_1",
+      "control_role": "MECHANICAL_CANARY",
+      "matched_family": "CANARY_ONLY",
+      "mode": "NATIVE_GATE",
+      "final_seal_target": 2,
+      "waves": [
+        {"quota": 1, "valley_ms": 60},
+        {"quota": 1, "valley_ms": 60}
+      ]
+    }
+  ]
+}
