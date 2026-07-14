@@ -1,0 +1,21 @@
+BEFORE PREFLIGHT
+[ ] OpenHardwareMonitor.exe is running as Administrator.
+[ ] CPU and GPU sensors are visible in its window.
+[ ] No other benchmark or game is intentionally changing load.
+[ ] This package is extracted into its own folder.
+
+RUN
+[ ] Start PREFLIGHT_ONLY.cmd.
+[ ] Do not start the miner manually during the 15-second sampling window.
+
+SEND BACK
+[ ] output/A18_43_PREFLIGHT_REPORT.json
+[ ] output/SENSOR_INVENTORY.json
+[ ] output/HARDWARE_SAMPLES.jsonl
+[ ] output/PACKAGE_PREFLIGHT.json
+
+DO NOT CLAIM YET
+[ ] energy saving
+[ ] lower hardware wear
+[ ] longer device life
+[ ] mining profitability
