@@ -1,0 +1,41 @@
+{
+  "schema": "JANUS/A18.43/next-live-wave-hardware-matrix/v0.1.3",
+  "status": "DRAFT_BLOCKED_UNTIL_CORRECTED_PREFLIGHT",
+  "families": [
+    "CONTINUOUS_BASELINE",
+    "SHAM_TIMING_CONTROL",
+    "NATIVE_GATE_PRESERVATION"
+  ],
+  "wave_fields": [
+    "epoch",
+    "planned_quota",
+    "admissions",
+    "completions",
+    "preceding_native_valley_pass",
+    "old_inflight_at_reopen",
+    "strict_reopened_crest",
+    "post_target_tail_batches",
+    "final_boundary_foam_batches",
+    "reconnect_delta",
+    "process_pid_continuity",
+    "gate_event_chain_status"
+  ],
+  "hardware_fields": [
+    "cpu_package_power_w",
+    "cpu_package_energy_joules",
+    "cpu_package_temp_c",
+    "cpu_thermal_degree_seconds",
+    "gpu_core_temp_c",
+    "gpu_load_percent",
+    "gpu_fan_rpm",
+    "gpu_fan_percent"
+  ],
+  "primary_bridge_endpoints": [
+    "tail_batches_per_useful_batch",
+    "foam_batches_per_boundary",
+    "cpu_package_joules_per_useful_batch",
+    "cpu_thermal_degree_seconds_per_useful_batch",
+    "time_to_clean_valley",
+    "time_to_first_new_epoch_completion"
+  ]
+}
