@@ -1,0 +1,60 @@
+{
+  "schema": "JANUS/A18.43/hardware-preservation-scenario-matrix-draft/v0.1.0",
+  "status": "DRAFT_NOT_AUTHORIZED_FOR_LIVE_RUN",
+  "randomization_seed_sha256": "44e21fdc9d37fda98e2e73b0c9eb268bd04cdca9d84d0519e4f1166be22b46fc",
+  "families": [
+    {
+      "family": "PRESERVATION_MATCHED_TRIPLET",
+      "scenarios": [
+        {
+          "scenario_id": "CONTINUOUS_BASELINE",
+          "mode": "CONTINUOUS",
+          "description": "Uninterrupted canonical work baseline."
+        },
+        {
+          "scenario_id": "SHAM_TIMING_CONTROL",
+          "mode": "SHAM",
+          "description": "Same observation and timing schedule without true admission gating."
+        },
+        {
+          "scenario_id": "NATIVE_GATE_PRESERVATION",
+          "mode": "NATIVE_GATE",
+          "description": "Native admission HOLD/DRAIN/REOPEN using the frozen A18.42 mechanism."
+        }
+      ]
+    }
+  ],
+  "matching_requirements": [
+    "same approved miner source",
+    "same workers and batch size",
+    "same pool and difficulty context where controllable",
+    "same planned useful-work target",
+    "same observer and exact-exposure rules",
+    "same cooldown policy",
+    "randomized scenario order"
+  ],
+  "primary_endpoints": [
+    "unnecessary_work_batches",
+    "unnecessary_hashes_estimate",
+    "useful_work_fraction",
+    "valid_useful_work_per_cpu_second"
+  ],
+  "secondary_endpoints_when_sensors_allow": [
+    "energy_joules",
+    "joules_per_useful_completed_batch",
+    "temperature_peak_c",
+    "temperature_degree_seconds_above_threshold",
+    "fan_rpm_instability",
+    "time_in_thermal_throttling"
+  ],
+  "waste_taxonomy": [
+    "post_target_overflow",
+    "stale_work",
+    "duplicate_work",
+    "reconnect_invalidated_work",
+    "queue_overshoot",
+    "shutdown_latency_work",
+    "unaccountable_or_unsubmittable_work"
+  ],
+  "live_gate": "BLOCKED_UNTIL_PREFLIGHT_REVIEW"
+}
