@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: "JANUS I0"
+message: "Please cite the repository and the specific curated status or proof-pack document used."
+type: software
+authors:
+  - family-names: "Agapov"
+    given-names: "Oleksandr"
+    alias: "Hawkar"
+repository-code: "https://github.com/Hawkar-usls/janus-io-public"
+url: "https://github.com/Hawkar-usls/janus-io-public"
+license: "Apache-2.0"
+version: "research-snapshot-2026-07-14"
+date-released: 2026-07-14
+abstract: >-
+  Experimental Proof-of-Work measurement and scheduler-research infrastructure
+  for exact exposure accounting, rare-tail telemetry, integrity-linked observer
+  ledgers, randomized controls, and fail-closed evidence gating. JANUS I0 does
+  not claim a SHA-256 break, nonce prediction, mining advantage, or profitability.
+keywords:
+  - proof-of-work
+  - measurement
+  - telemetry
+  - reproducibility
+  - evidence integrity
+  - scheduler research
+  - proof-of-observation

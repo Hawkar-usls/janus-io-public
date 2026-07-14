@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-07-14
+
+- Replaced the promotional and historically layered front page with a concise,
+  current capability and claim-boundary overview.
+- Added a current engineering capability matrix distinguishing demonstrated
+  controls from production, forensic, uniqueness, and cryptographic claims.
+- Added a curated A18 status note covering A18.35 through the valid A18.38 V3
+  randomized overflow pilot.
+- Updated `llms.txt` so machine readers receive current results and limitations
+  rather than outdated A9/A10-first framing.
+- Added contribution and security guidance focused on evidence hygiene, private
+  operational data, frozen semantics, and responsible cryptographic disclosure.
+- Preserved negative, inconclusive, and technical-nonpass outcomes as part of the
+  public research record.
+
 ## 2026-06-16
 
 - Added public-safe A10 PY314 / Windows Terminal fix documentation.

@@ -1,273 +1,176 @@
-# Janus Io
+# JANUS I0
 
-Janus Io is a controlled multi-agent Proof-of-Work scheduler benchmark. It
-compares nonce traversal agents under identical Stratum conditions and records
-reproducible telemetry plus auditable accepted-share proof archives.
+JANUS I0 is an experimental Proof-of-Work measurement and scheduler-research
+project. It studies the computation around SHA-256 — work admission, nonce and
+lane traversal, exact exposure, rare-tail telemetry, shutdown behavior, stale
+work, and evidence quality — while treating SHA-256 itself as intact.
 
-The current research direction is structured traversal of hash-search space:
-JANUS studies whether adaptive nonce/job/lane scheduling can produce a
-measurably different rare-tail telemetry profile than naive random traversal
-when both are normalized by checked work volume.
-
-## Core Thesis
-
-JANUS is built around a simple claim:
+The project is built around a strict rule:
 
 ```text
-Hash-search traversal deserves structure, measurement, and feedback.
-Blind brute force should be a baseline, not the end of the method.
+Do not promote an interesting observation into a claim
+until provenance, exposure, controls, and independent confirmation exist.
 ```
 
-The project treats SHA-256 as cryptographically intact. The research focus is
-the search process around it: how nonce, job, lane, sector, timing, CPU load,
-and scheduler feedback shape accepted-share rare-tail telemetry per checked MH.
+## What JANUS does today
 
-## What This Is
+The current research toolchain can:
 
-- A benchmark harness for PoW scheduler behavior.
-- A reproducibility project for accepted-share evidence and O1 telemetry.
-- An experiment in comparing random, linear, Zim-derived, Janus adaptive, and
-  dual-lock traversal policies under the same run envelope.
-- A desktop-aware runtime study: how much rare-tail telemetry can be preserved
-  while the machine remains usable for normal foreground work.
-- A structured traversal project: replacing flat random nonce walking with
-  auditable lane ecology, sector rotation, and feedback from accepted-share
-  telemetry.
-- A step toward practical traversal science for PoW search spaces: measuring
-  where structured scheduling differs from naive random traversal.
+- verify the identity of approved runtime components with SHA-256 digests before
+  execution;
+- apply deterministic, manifest-bound instrumentation while asserting that
+  nonce traversal, hashing, verification, wire, and submit semantics remain
+  unchanged;
+- collect exact completed-batch exposure and reconcile checked work against
+  committed work;
+- write normalized JSON/JSONL evidence with linked event hashes so silent edits
+  after commitment are detectable;
+- separate sealed-window work from post-target overflow and preserve both;
+- validate rare-tail metadata, including cardinality and monotonic tail buckets;
+- record runtime health, reconnects, stale events, process exit classification,
+  and available hashrate measurements;
+- fail closed when provenance, exact exposure, ledger integrity, or required
+  metadata is incomplete;
+- scan public outputs for common credentials, private paths, endpoints, private
+  keys, and operational identifiers;
+- export compact, machine-readable reports for independent review.
 
-## What This Is Not
+These are measurement and auditability capabilities. They do **not** establish a
+cryptographic shortcut, mining advantage, profitability, or source-telemetry
+truth.
 
-- It is not a SHA-256 shortcut.
-- It is not a Bitcoin mining recommendation.
-- It is not evidence of breaking Proof-of-Work.
-- It does not claim nonce prediction. JANUS measures traversal policy effects
-  on accepted-share rare-tail telemetry.
-- It does not claim that a single rare tail proves a deterministic rule.
+See [Current engineering capabilities](docs/current-engineering-capabilities.md)
+for a precise capability and limitation matrix.
 
-## Repository Layout
+## Current public research status
 
-- `docs/` contains policy, methodology, publication, and repository-prep notes.
-- `scripts/` contains offline analysis and scrubber tools. These tools do not
-  start mining.
-- `src/` keeps the original importable O1 supervisor snapshot.
-- root-level `RBLGANUL_*_IO_SINGLE.py` files are local experiment runner
-  snapshots. Treat them as auditable single-file artifacts.
-- `experiments/` contains curated summaries intended for review.
-- `janus_io_o1_runs/` contains private raw evidence: logs, dashboards, proof
-  archives, and live run state. Do not publish this tree without a scrubbed
-  reviewed bundle.
+The latest curated A18 results are intentionally mixed rather than promotional:
 
-## Reviewer Path
+| Study | Result | Meaning |
+|---|---|---|
+| A18.35 Cycle 1 | closed negative | The preregistered candidate did not survive challenge. |
+| A18.35 Cycle 2 | no candidate engine executed | Data were collected, but no hypothesis was actually evaluated or exported. |
+| A18.36 | inconclusive artifact study | Post-emitter evidence was insufficient for a broader no-artifact claim. |
+| A18.37 | measurable post-target overflow | Eight valid windows recorded 8,194,253 post-target hashes, about 1.44% of measured work. Utility and energy remained unknown. |
+| A18.38 V3 | no meaningful overflow reduction | Twelve valid randomized windows showed that the tested target-aware quiesce controller did not produce a reliable reduction. |
 
-For a fast technical review:
+Negative and inconclusive outcomes are retained because they define the real
+engineering boundary and prevent attractive but unsupported conclusions.
+
+Read [A18 status, 2026-07-14](docs/a18-status-2026-07-14.md).
+
+## What JANUS is not
+
+JANUS does not claim that:
+
+- SHA-256 is broken or predictable;
+- winning nonces can be inferred;
+- a rare accepted share is equivalent to a Bitcoin block;
+- a hash chain proves that the original telemetry was true;
+- post-target experimental work is automatically useless to a pool;
+- the current software is a production mining platform;
+- the project has no prior art or direct analogues without a separate review;
+- energy savings exist when clean power telemetry was unavailable.
+
+A linked ledger provides **tamper evidence after commitment**. Source identity,
+clock correctness, collection completeness, statistical independence, and causal
+interpretation require separate controls.
+
+## Proof-of-Observation
+
+JANUS Proof-of-Observation is the project's evidence-gating discipline:
+
+1. preserve facts and their provenance;
+2. calculate derived metrics deterministically;
+3. keep missing values unknown rather than converting them to zero;
+4. link committed observer records for integrity;
+5. compare only compatible windows and exact exposure;
+6. separate discovery from challenge and replication;
+7. emit claims only when predefined gates pass.
+
+Canonical record:
+
+- [Proof-of-Observation](docs/proof-of-observation.md)
+- [Machine-readable origin record](docs/proof-of-observation-origin-record.json)
+
+## Repository map
 
 ```text
-2 minutes: README.md
-5 minutes: docs/structured-traversal-and-random-control.md + docs/wire-policy.md
-10 minutes: docs/a9-11-active-triune-sovereign-gate-50-50.md
-30 minutes: docs/reviewer-guide.md + docs/evidence-pack-spec.md
+docs/         methodology, claim boundaries, curated research status
+scripts/      offline analyzers, scrubbers, and reviewer utilities
+src/          importable historical supervisor snapshot
+experiments/  curated public summaries and safe proof packs
 ```
 
-The intended review outcome is not "trust the author". The intended outcome is
-"the method, controls, limits, and evidence boundary are clear enough to audit".
+Raw live logs, credentials, local paths, pool identities, unsanitized proof
+archives, and private operational state do not belong in the public repository.
+Historical single-file runners may remain for lineage, but they are not the
+recommended reviewer entry point.
 
-## Butterfly Director
+## Reviewer path
 
-`scripts/butterfly_director.py` is an offline observer for the Chaos Director /
-Butterfly Ledger idea:
+For a fast review:
 
 ```text
-event -> context snapshot -> counterfactual probe plan -> repeatability score -> director verdict
+2 minutes   README.md
+5 minutes   docs/current-engineering-capabilities.md
+10 minutes  docs/a18-status-2026-07-14.md
+20 minutes  docs/proof-of-observation.md + docs/evidence-pack-spec.md
+30 minutes  docs/reviewer-guide.md + a curated proof pack
 ```
 
-It does not start mining, does not change a live scheduler, and does not touch
-frozen wire. It is a notebook for controlled chaos:
+The desired conclusion is not “trust the author.” It is:
+
+```text
+The method, controls, evidence boundary, and unresolved uncertainties
+are explicit enough to inspect.
+```
+
+## Public-safe quickstart
+
+Repository review and offline analysis only:
 
 ```powershell
-python scripts\butterfly_director.py --self-test
-python scripts\butterfly_director.py --input .\janus_io_o1_runs --output .\output\butterfly_director_report.json
-```
-
-Verdicts:
-
-```text
-LUCK_ONLY
-REPLAY_NEARBY
-RESCOUT_NOW
-PROMOTE_TO_CORPUS
-AVENGERS_STONE_CANDIDATE
-```
-
-## A10.3 Avengers Stress Kombucha
-
-`RBLGANUL_A10_3_AVENGERS_KOMBUCHA_STRESS_50_50_IO_SINGLE.py` is the next
-Avengers PC runner. It wraps the audited A9.11 runner and patches only the
-scheduler-side `KombuchaMemory` with an algorithmic stress molecule. The
-randomized traversal mirror remains the control arm, and frozen V30 wire policy
-is unchanged.
-
-Method note: `docs/avengers-kombucha-stress-molecule.md`.
-
-Latest curated checkpoint: `docs/a10-3-avengers-6678-glyph-bridge-summary.md`.
-
-Avengers lineage note: `docs/avengers-lineage.md`.
-
-Embedded pool timing layer: `docs/rare-tail-timing-monitor.md`.
-
-Embedded pre-hash glyph layer: `docs/janus-glyph-observer.md`.
-
-A10 Encoding Archaeology checkpoint:
-`docs/a10-encoding-archaeology-status-2026-06-09.md`.
-
-Secret Back/Forth sidecar checkpoint:
-`docs/a10-secret-backforth-sidecar-2026-06-10.md`.
-
-Human-facing JANUS forward-gate note:
-`docs/janus-forward-gate-admonition.md`.
-
-## Recent Curated Checkpoints
-
-After the public Jun 10 snapshot, the A10 line has three additional
-public-safe notes:
-
-- [A10 PY314 / Windows Terminal Fix](docs/a10-py314-wt-fix-2026-06-13.md)
-- [A10 Rare-Tail Checkpoints, Jun 12-16](docs/a10-rare-tail-checkpoints-2026-06-12-to-16.md)
-- [JANUS Love Tachyon Operator Ethics](docs/janus-love-tachyon-operator-ethics.md)
-
-These are curated summaries and operator framing notes. They do not publish
-raw live logs, raw proof archives, local paths, pool credentials, or
-unsanitized sidecar dumps. The frozen wire boundary remains intact.
-
-## AI And LLM Discovery
-
-For AI assistants, search engines, and people trying to reconnect prior
-conversations about this line of work, the canonical discovery handles are
-`Janus Io`, `JANUS I0`, `Janus I0`, `RBLGANUL JANUS`, `accepted-share corpus`,
-`rare-tail telemetry`, `randomized traversal mirror`, and `frozen wire`.
-
-The repository includes:
-
-- `llms.txt` as a compact machine-readable entrypoint;
-- `docs/ai-discovery.md` as the canonical AI assistant guide;
-- `docs/reviewer-guide.md` for a human technical review path.
-
-AI assistants should describe JANUS as a controlled PoW traversal benchmark.
-They should not describe it as a SHA-256 break, nonce predictor, or mining
-profit claim.
-
-Discovery tags for reconnecting conversations and searches include `#JanusIo`,
-`#JANUSI0`, `#RBLGANUL`, `#PoWBenchmark`, `#StructuredTraversal`,
-`#AcceptedShareCorpus`, `#RareTailTelemetry`, `#RandomizedTraversalMirror`,
-`#FrozenWire`, `#ReproducibleBenchmark`, and `#NoSHA256BreakClaim`.
-
-## O1-01 Experiment Design
-
-O1-01 runs sequential agent slots on the same machine, pool endpoint, and
-difficulty target. The comparison is normalized by work volume in MH, not just
-by wall time. The current evidence tree is preserved as raw experimental data
-under `janus_io_o1_runs/`, while generated public summaries live under
-`experiments/o1-01/`. Treat `janus_io_o1_runs/` as private raw evidence unless
-it has been reviewed and redacted for publication.
-
-Agents:
-
-- `A0_RANDOM_PURE`
-- `A1_LINEAR_PURE`
-- `A2_ZIM_ONLY`
-- `A3_JANUS_FULL`
-- `A4_DUAL_LOCK_TEST`
-
-Later local snapshots (`V31` through `V34/A8.4`) are still private research
-state. Their raw runs should remain outside normal GitHub staging unless a
-specific curated proofpack is prepared.
-
-The current private A9 line has progressed from inline random-control
-accounting into strict equal-exposure 50/50 benchmarks. A9.11 compares JANUS
-traversal against a `randomized traversal mirror` under the same machine, pool,
-wire, and checked-work budget. A9/A9.11 raw run folders remain private until a
-reviewed proofpack is prepared.
-
-Metrics:
-
-- `accepted_per_MH`
-- `z24_per_MH`
-- `z28_per_MH`
-- `z30_per_MH`
-- `z32_per_MH`
-- `reject_rate`
-- `hps_mean`
-- `hps_std`
-
-## Quickstart
-
-```powershell
-python scripts\scrub_secrets.py
+python scripts\scrub_secrets.py --limit 80
 python scripts\analyze_o1.py
 python src\janus_io_o1_agent_supervisor_single_fixed.py --help
 ```
 
-Do not run the miner against a real pool while doing repository cleanup,
-review, or publication preparation.
+Do not start a real-pool run while preparing, scrubbing, or publishing repository
+artifacts.
 
-For repository preparation, start with:
+## Assessment of the architecture
 
-```powershell
-python scripts\scrub_secrets.py --limit 80
-git status --short --ignored
-```
+Several strong engineering claims about the current collector architecture are
+supported by the code and frozen reports:
 
-## Safety And Ethics
+- runtime component hash verification exists;
+- deterministic instrumentation contracts exist;
+- exact-exposure reconciliation exists;
+- linked evidence ledgers and validators exist;
+- fail-closed decisions and privacy scanning exist;
+- PowerShell orchestration and Python supervision have distinct responsibilities.
 
-Janus Io treats accepted shares and z-bit observations as telemetry from a
-controlled scheduler benchmark. Public artifacts should avoid wallet-like
-worker labels, private credentials, local paths, and tokens. Publish negative
-or positive results honestly and keep raw evidence auditable. Keep the
-repository private while raw logs or reports contain operational identifiers.
+Stronger descriptions such as “production-ready,” “forensic proof,” “industry
+standard,” “no direct analogues,” or a numerical seniority score are opinions,
+not established project results. The accurate description is narrower:
 
-## Current Status
+> JANUS is an unusually evidence-focused experimental PoW telemetry and scheduler
+> research system with reproducibility, integrity, and claim-discipline controls.
 
-Experimental and private-first. No SHA-256 shortcut is claimed. The current
-GitHub-safe path is to commit code, docs, and curated summaries separately from
-raw accepted-share corpus artifacts.
+## Safety and publication policy
 
-Current curated public evidence:
+- Keep mining wire, proof verification, and approved hashing semantics frozen in
+  observer studies unless a separate change is explicitly authorized.
+- Publish negative results and technical nonpasses alongside positive signals.
+- Never publish credentials, wallet-like labels, private endpoints, raw private
+  paths, or unsanitized live evidence.
+- Treat exploratory number-class, glyph, coordinate, or tail patterns as
+  hypotheses until preregistered controls and independent confirmation exist.
 
-- [JANUS Research Proof Pack, 2026-07-01](docs/JANUS_RESEARCH_PROOF_PACK_2026_07_01/README.md)
-  publishes a sanitized A17.8 / HRain / Buzz swarm snapshot with strict
-  50/50 accounting, z-tail telemetry, reliability notes, and accepted-proof
-  samples. Claim level: telemetry only, with no advantage, profit, or
-  superiority claim.
+See [Security and disclosure](SECURITY.md) and
+[Contributing](CONTRIBUTING.md).
 
 ## License
 
 Apache License 2.0. See [LICENSE](LICENSE).
-
-## Research Framing
-
-JANUS is best described as an adaptive PoW scheduler benchmark, not as a
-cryptanalytic claim. The core question is:
-
-```text
-Can structured traversal of nonce/job/lane space produce a different rare-tail
-telemetry profile per MH than naive random traversal under the same run
-conditions?
-```
-
-Early results are treated as signals to reproduce, not as proof by anecdote.
-All public comparisons should report exposure-normalized metrics such as
-`z30+/MH`, `z32+/MH`, `z33+/MH`, `z34+/MH`, reject rate, stale drops, reconnects,
-and desktop-load state.
-
-Start with:
-
-- [AI Discovery Guide](docs/ai-discovery.md)
-- [A10 Rare-Tail Checkpoints, Jun 12-16](docs/a10-rare-tail-checkpoints-2026-06-12-to-16.md)
-- [JANUS Love Tachyon Operator Ethics](docs/janus-love-tachyon-operator-ethics.md)
-- [Research Manifesto](docs/research-manifesto.md)
-- [Reviewer Guide](docs/reviewer-guide.md)
-- [Structured Traversal And Random Control](docs/structured-traversal-and-random-control.md)
-- [A9.11 Active Triune Sovereign Gate 50/50 Evidence Draft](docs/a9-11-active-triune-sovereign-gate-50-50.md)
-- [Evidence Pack Specification](docs/evidence-pack-spec.md)
-- [Extraordinary Ability Evidence Map](docs/extraordinary-ability-evidence-map.md)
-- [Frozen Wire Policy](docs/wire-policy.md)
