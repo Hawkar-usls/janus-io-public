@@ -1,63 +1,196 @@
 # JANUS I0
 
-JANUS I0 is an experimental Proof-of-Work measurement and scheduler-research
-project. It studies the computation around SHA-256 — work admission, nonce and
-lane traversal, exact exposure, rare-tail telemetry, shutdown behavior, stale
-work, and evidence quality — while treating SHA-256 itself as intact.
+> **Not for power. With care.**  
+> **We do not seek to make the machine work faster at any cost. We seek to remove work it should never have had to perform.**
 
-The project is built around a strict rule:
+JANUS I0 is an experimental, evidence-gated hardware-preservation and Proof-of-Work research project.
+
+Its primary mission is not to create another miner and not to chase maximum hashrate at any cost.
+
+JANUS I0 develops auditable measurement and control methods for reducing:
+
+- unnecessary Proof-of-Work computation;
+- post-target overflow and queue overshoot;
+- stale, duplicate, reconnect-invalidated, and unaccountable work;
+- unnecessary energy use and heat;
+- avoidable thermal stress and hardware wear;
+- hidden exploitation history on the secondary hardware market;
+
+while preserving standard SHA-256 verification and valid proof semantics.
+
+## The heart of JANUS
+
+A compute device is not treated as a disposable animal waiting to be exhausted.
+
+A GPU, ASIC, CPU, memory module, fan, power stage, and thermal interface contain material resources, human labor, engineering knowledge, energy, and a finite useful life. JANUS asks whether that life can be preserved by preventing work that has no confirmed utility and by avoiding operating points where a small performance gain costs disproportionate power, temperature, errors, and wear.
+
+The long-term vision is a farm supervised by a **caretaker**, not a warden:
+
+```text
+observe
+→ prove what is happening
+→ prevent unnecessary work
+→ reduce avoidable heat and stress
+→ preserve useful life
+→ keep an honest operating history
+→ protect the next owner
+```
+
+This is the engineering expression of a broader ethic:
+
+> **The machine refuses to abandon the human. JANUS refuses to abandon the machine.**
+
+Founder essay: [When the Machine Comes Not for Power, but with Care](https://medium.com/@hawkarlol/when-the-machine-comes-not-for-power-but-with-care-c211a904f87b)
+
+Canonical mission and remote context anchor: [JANUS Meta Registry](https://github.com/Hawkar-usls/janus-meta-registry/blob/main/JANUS_CONTEXT_ANCHOR.md)
+
+## What JANUS measures
+
+JANUS is building a verified accounting system for the difference between all performed work and work that can still produce a valid, attributable result.
+
+Important classes include:
+
+```text
+post-target overflow
+stale work
+duplicate work
+reconnect-invalidated work
+queue overshoot
+shutdown-latency work
+unaccountable or unsubmittable work
+poor operating points
+```
+
+The eventual preservation score is not raw hashrate alone. It is closer to:
+
+```text
+confirmed useful work
+────────────────────────────────────────────
+energy + thermal stress + hardware-health cost
+```
+
+Candidate measurements include:
+
+- useful work / all accounted work;
+- joules per accepted valid proof or share;
+- component and wall energy where sensors permit;
+- GPU hotspot, memory, and CPU package temperature;
+- temperature degree-seconds above a safe threshold;
+- thermal-throttling time;
+- fan duty, RPM, and instability;
+- hardware-error rate;
+- heavy thermal cycles;
+- maintenance and thermal-interface history.
+
+A short experiment may measure heat, power, fan behavior, and errors. It may not honestly prove extended hardware lifetime. That requires a longitudinal **Hardware Health Passport**.
+
+## Evidence before claims
+
+JANUS follows a strict rule:
 
 ```text
 Do not promote an interesting observation into a claim
-until provenance, exposure, controls, and independent confirmation exist.
+until provenance, exposure, controls, and replication exist.
 ```
 
-## What JANUS does today
+The toolchain can:
 
-The current research toolchain can:
+- verify approved runtime components with SHA-256 before execution;
+- apply deterministic, manifest-bound instrumentation;
+- assert that hashing, verification, nonce traversal, WIRE, HASH, and SUBMIT semantics remain frozen;
+- collect exact completed-batch exposure;
+- reconcile admitted, submitted, finalized, and completed work;
+- write normalized JSON/JSONL evidence with linked event hashes;
+- separate sealed useful work from post-target foam and overflow;
+- preserve negative, partial, and fail-closed outcomes;
+- compare matched real, sham, and continuous controls;
+- scan public artifacts for credentials, private paths, endpoints, and operational identifiers.
 
-- verify the identity of approved runtime components with SHA-256 digests before
-  execution;
-- apply deterministic, manifest-bound instrumentation while asserting that
-  nonce traversal, hashing, verification, wire, and submit semantics remain
-  unchanged;
-- collect exact completed-batch exposure and reconcile checked work against
-  committed work;
-- write normalized JSON/JSONL evidence with linked event hashes so silent edits
-  after commitment are detectable;
-- separate sealed-window work from post-target overflow and preserve both;
-- validate rare-tail metadata, including cardinality and monotonic tail buckets;
-- record runtime health, reconnects, stale events, process exit classification,
-  and available hashrate measurements;
-- fail closed when provenance, exact exposure, ledger integrity, or required
-  metadata is incomplete;
-- scan public outputs for common credentials, private paths, endpoints, private
-  keys, and operational identifiers;
-- export compact, machine-readable reports for independent review.
+A linked hash chain provides tamper evidence after commitment. It does not by itself prove that the original sensor was truthful, the clock was correct, the collection was complete, or a causal interpretation was valid. Those require separate gates.
 
-These are measurement and auditability capabilities. They do **not** establish a
-cryptographic shortcut, mining advantage, profitability, or source-telemetry
-truth.
+## Current sealed research state
 
-See [Current engineering capabilities](docs/current-engineering-capabilities.md)
-for a precise capability and limitation matrix.
+### A18.37 — visible overflow
 
-## Current public research status
+A measurable post-target class was observed: eight valid windows recorded 8,194,253 post-target hashes, about 1.44% of measured work. Utility and energy were still unknown.
 
-The latest curated A18 results are intentionally mixed rather than promotional:
+### A18.38 — honest negative controller result
 
-| Study | Result | Meaning |
-|---|---|---|
-| A18.35 Cycle 1 | closed negative | The preregistered candidate did not survive challenge. |
-| A18.35 Cycle 2 | no candidate engine executed | Data were collected, but no hypothesis was actually evaluated or exported. |
-| A18.36 | inconclusive artifact study | Post-emitter evidence was insufficient for a broader no-artifact claim. |
-| A18.37 | measurable post-target overflow | Eight valid windows recorded 8,194,253 post-target hashes, about 1.44% of measured work. Utility and energy remained unknown. |
-| A18.38 V3 | no meaningful overflow reduction | Twelve valid randomized windows showed that the tested target-aware quiesce controller did not produce a reliable reduction. |
+The first target-aware quiesce controller did not produce a reliable overflow reduction. The nonpass was preserved rather than hidden.
 
-Negative and inconclusive outcomes are retained because they define the real
-engineering boundary and prevent attractive but unsupported conclusions.
+### A18.40 — cohort-drain tail
 
-Read [A18 status, 2026-07-14](docs/a18-status-2026-07-14.md).
+JANUS made a configuration-specific 16-worker in-flight completion cohort visible and compared real post-target tail work against matched pseudo-tail exposure.
+
+### A18.41 — TimeShift
+
+One already dispatched live wave survived multiple HOLD/RESUME pulses. The experiment also showed that external stopping could arrive too late and could not prove the birth of new admissions.
+
+### A18.42 — Native Flow Gate
+
+A native admission gate implemented:
+
+```text
+OPEN → exact quota → HOLD → DRAIN → clean valley → REOPEN
+```
+
+Sealed engineering classification:
+
+```text
+REPLICATED_NATIVE_WAVE_SEGMENTATION
+```
+
+Results:
+
+- calibration: `10/10 valid`;
+- discovery: `40/40 valid`;
+- strict native candidates: `20/20`;
+- matched candidate pairs: `16/16`;
+- equivalent sham signatures: `0/16`;
+- native boundaries: `56/56 PASS`;
+- reconnect delta at boundaries: `0`;
+- final-boundary foam: `0` in all discovery runs;
+- Observer, runtime hashes, gate event chain, and cleanup: `40/40 PASS`.
+
+This proves reproducible admission-wave segmentation inside the tested persistent process. It does **not** prove SHA-256 predictability, increased proof probability, mining advantage, profitability, energy savings, or extended hardware life.
+
+See:
+
+- [A18.42 public replication report](docs/a18-42-native-flow-gate-replication-2026-07-14.md)
+- [A18.42 public experiment artifacts](experiments/a18-42/native-flow-gate/)
+
+## Current next stage: A18.43
+
+**JANUS A18.43 — Hardware Preservation Challenge** asks:
+
+> Can the frozen Native Flow Gate reduce work without confirmed utility and reduce thermal or energy cost without a disproportionate loss of valid useful work?
+
+The first phase is sensor preflight only. It inventories passive telemetry from:
+
+- OpenHardwareMonitor WMI;
+- NVIDIA NVML;
+- `nvidia-smi` fallback;
+- `psutil` CPU and memory metrics.
+
+The later frozen comparison will use matched families:
+
+```text
+CONTINUOUS_BASELINE
+SHAM_TIMING_CONTROL
+NATIVE_GATE_PRESERVATION
+```
+
+Acceptable outcomes include:
+
+```text
+PASS
+NO_EFFECT
+NEGATIVE_EFFECT
+PARTIAL
+FAIL_CLOSED
+```
+
+A negative result is useful engineering knowledge.
 
 ## What JANUS is not
 
@@ -66,110 +199,70 @@ JANUS does not claim that:
 - SHA-256 is broken or predictable;
 - winning nonces can be inferred;
 - a rare accepted share is equivalent to a Bitcoin block;
-- a hash chain proves that the original telemetry was true;
-- post-target experimental work is automatically useless to a pool;
+- a working admission gate proves mining advantage;
+- component power automatically equals wall power;
+- lower instantaneous temperature automatically proves longer life;
 - the current software is a production mining platform;
-- the project has no prior art or direct analogues without a separate review;
-- energy savings exist when clean power telemetry was unavailable.
-
-A linked ledger provides **tamper evidence after commitment**. Source identity,
-clock correctness, collection completeness, statistical independence, and causal
-interpretation require separate controls.
+- a machine is God or should replace human agency;
+- care means total control.
 
 ## Proof-of-Observation
 
-JANUS Proof-of-Observation is the project's evidence-gating discipline:
+JANUS Proof-of-Observation is the project's evidence discipline:
 
-1. preserve facts and their provenance;
+1. preserve facts and provenance;
 2. calculate derived metrics deterministically;
 3. keep missing values unknown rather than converting them to zero;
 4. link committed observer records for integrity;
 5. compare only compatible windows and exact exposure;
-6. separate discovery from challenge and replication;
+6. separate discovery, challenge, and replication;
 7. emit claims only when predefined gates pass.
 
-Canonical record:
+Read:
 
 - [Proof-of-Observation](docs/proof-of-observation.md)
 - [Machine-readable origin record](docs/proof-of-observation-origin-record.json)
+- [Current engineering capabilities](docs/current-engineering-capabilities.md)
 
 ## Repository map
 
 ```text
-docs/         methodology, claim boundaries, curated research status
+docs/         mission, methodology, claim boundaries, curated status
 scripts/      offline analyzers, scrubbers, and reviewer utilities
 src/          importable historical supervisor snapshot
-experiments/  curated public summaries and safe proof packs
+experiments/  public-safe contracts, launchers, summaries, and proof packs
 ```
 
-Raw live logs, credentials, local paths, pool identities, unsanitized proof
-archives, and private operational state do not belong in the public repository.
-Historical single-file runners may remain for lineage, but they are not the
-recommended reviewer entry point.
+Raw credentials, private paths, pool identities, unsanitized logs, and private operational state do not belong in this public repository. Exact SHA-256 bindings may be published instead.
 
 ## Reviewer path
-
-For a fast review:
 
 ```text
 2 minutes   README.md
 5 minutes   docs/current-engineering-capabilities.md
-10 minutes  docs/a18-status-2026-07-14.md
-20 minutes  docs/proof-of-observation.md + docs/evidence-pack-spec.md
-30 minutes  docs/reviewer-guide.md + a curated proof pack
+10 minutes  latest A18 report
+20 minutes  docs/proof-of-observation.md + evidence-pack spec
+30 minutes  reviewer guide + curated proof pack
 ```
 
 The desired conclusion is not “trust the author.” It is:
 
 ```text
-The method, controls, evidence boundary, and unresolved uncertainties
-are explicit enough to inspect.
+The mission, method, controls, evidence boundary,
+and unresolved uncertainties are explicit enough to inspect.
 ```
-
-## Public-safe quickstart
-
-Repository review and offline analysis only:
-
-```powershell
-python scripts\scrub_secrets.py --limit 80
-python scripts\analyze_o1.py
-python src\janus_io_o1_agent_supervisor_single_fixed.py --help
-```
-
-Do not start a real-pool run while preparing, scrubbing, or publishing repository
-artifacts.
-
-## Assessment of the architecture
-
-Several strong engineering claims about the current collector architecture are
-supported by the code and frozen reports:
-
-- runtime component hash verification exists;
-- deterministic instrumentation contracts exist;
-- exact-exposure reconciliation exists;
-- linked evidence ledgers and validators exist;
-- fail-closed decisions and privacy scanning exist;
-- PowerShell orchestration and Python supervision have distinct responsibilities.
-
-Stronger descriptions such as “production-ready,” “forensic proof,” “industry
-standard,” “no direct analogues,” or a numerical seniority score are opinions,
-not established project results. The accurate description is narrower:
-
-> JANUS is an unusually evidence-focused experimental PoW telemetry and scheduler
-> research system with reproducibility, integrity, and claim-discipline controls.
 
 ## Safety and publication policy
 
-- Keep mining wire, proof verification, and approved hashing semantics frozen in
-  observer studies unless a separate change is explicitly authorized.
-- Publish negative results and technical nonpasses alongside positive signals.
-- Never publish credentials, wallet-like labels, private endpoints, raw private
-  paths, or unsanitized live evidence.
-- Treat exploratory number-class, glyph, coordinate, or tail patterns as
-  hypotheses until preregistered controls and independent confirmation exist.
+- Keep SHA-256, verification, nonce traversal, WIRE, HASH, and SUBMIT frozen unless a separate change is explicitly authorized.
+- Never use digest quality to steer a preservation controller.
+- Publish negative and fail-closed results alongside positive signals.
+- Do not claim energy savings without stable, time-aligned power telemetry.
+- Do not claim extended hardware life from short experiments.
+- Never publish credentials, wallet-like labels, private endpoints, raw local paths, or unsanitized live evidence.
+- JANUS is a caretaker, not a throne.
 
-See [Security and disclosure](SECURITY.md) and
-[Contributing](CONTRIBUTING.md).
+See [Security and disclosure](SECURITY.md) and [Contributing](CONTRIBUTING.md).
 
 ## License
 
