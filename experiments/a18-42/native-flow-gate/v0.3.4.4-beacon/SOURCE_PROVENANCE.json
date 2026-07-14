@@ -1,0 +1,44 @@
+{
+  "a18_29_contract": {
+    "emitter_sha256": "172c4ec03e4aa20faf83054ae6e682b84aec2f50cafe6b2bda03c4c0dc5742bdb4b9059c605e08d",
+    "instrumented_miner_sha256": "b94f565e9516368c3b461bc15d7677e9ff899fb5d7fea6e6096e15457a6bcde1",
+    "instrumenter_sha256": "e006854ac7e7939f091cd1f50cafe6b2bda03c4c0dc5742bdb4b9059c605e08d",
+    "supervisor_sha256": "9586fd1f274fd7287e92ba31cd63dd54f85d6d96ab52c8ed4b4b1709beeb7ad0"
+  },
+  "approved_source": {
+    "relative_origin": "A17_8_HRAIN_LIVE_SWARM_OVERLAY_PACK/A14_2_PURE_ROUTE_LOCK_PACK/RBLGANUL_A14_2_PURE_ROUTE_LOCK_50_50_IO_SINGLE.py",
+    "sha256": "c46feec0dd936a65bb8e6e074aaa952a0cd57b6925cfb4dd37aad2140d22e1d2"
+  },
+  "claim": "STATIC_AND_OFFLINE_PREFLIGHT_ONLY_UNTIL_USER_RUNS_START_BEACON_1_RUN_CMD",
+  "hotfix_parent_release": "JANUS_A18_42_UNDINAS_NATIVE_FLOW_GATE_V0_3_4_1_BEACON_HOTFIX",
+  "hotfix_scope": "main-thread ProcessPool submit restoration plus durable raw runtime evidence",
+  "input_archives": [
+    {"name": "A17_8_HRAIN_LIVE_SWARM_OVERLAY_PACK(2).rar", "sha256": "e5733c78607909dc18fb1a84fba59a2c96f1f8694414a8db8c710b0e7dcc5480", "size_bytes": 299810055},
+    {"name": "A18_35_RELEASE_FOR_REVIEW(2).zip", "sha256": "b7a1710231945ddc6fe46e1b37c730ede74da59b411e7bc0aa59cd7398cb546b", "size_bytes": 75159},
+    {"name": "JANUS_A18_29_1_WINDOW_RUNNER(2).rar", "sha256": "c2ff3fef699e8be94d135631457aa0933f44bf63514f8ade8e6211fbef7e5117", "size_bytes": 356063},
+    {"name": "JANUS_A18_42_UNDINAS_COMB_V0_3_2_RUNTIME_HASH_HOTFIX(2).rar", "sha256": "414f64fce3afea9fb1d9646c0f92f70f45c187c84abacf6875ed6ceb145dddf3", "size_bytes": 284112}
+  ],
+  "live_windows_beacon_executed": false,
+  "release": "JANUS_A18_42_UNDINAS_NATIVE_FLOW_GATE_V0_3_4_4_BEACON_TERMINAL_VALIDATION_HOTFIX",
+  "schema": "JANUS/A18.42/source-provenance/v0.3.4",
+  "v0_3_2_defects_repaired": [
+    "read_json_signature_compatibility",
+    "child_and_raw_log_cleanup_before_temporary_runtime_delete",
+    "native_gate_wait_removed_from_main_thread"
+  ],
+  "parent_release": "JANUS_A18_42_UNDINAS_NATIVE_FLOW_GATE_V0_3_4_3_BEACON_WINDOWS_ATOMIC_STATE_HOTFIX",
+  "live_failure_evidence": {
+    "report": "REPORT_FOR_CHATGPT(14).json supplied by operator",
+    "error": "PermissionError [WinError 5] in atomic_record os.replace",
+    "path_role": "native_gate_state.json atomic publication"
+  },
+  "live_terminal_regression": {
+    "source": "REPORT_FOR_CHATGPT(15).json",
+    "completed_batches": 4,
+    "boundaries_pass": 2,
+    "strict_reopened_crest_epochs": [1],
+    "intentional_exit_hex": "0xC000013A",
+    "former_decision": "PARTIAL_WINDOW_INTERRUPTED",
+    "corrected_decision": "PASS_NATIVE_BEACON_VALIDATED"
+  }
+}
