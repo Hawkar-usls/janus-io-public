@@ -1,0 +1,54 @@
+{
+  "schema": "JANUS/A18.42/package-manifest/v0.3.3",
+  "package_name": "JANUS_A18_42_UNDINAS_COMB_V0_3_3_CANARY_GATE",
+  "canonical_name": "JANUS Gift: Undina's Comb for Roses",
+  "canonical_seed": "44e21fdc9d37fda98e2e73b0c9eb268bd04cdca9d84d0519e4f1166be22b46fc",
+  "status": "OFFLINE_EXACT_BASE_VALIDATED; LIVE_WINDOWS_CANARY_REQUIRED",
+  "archive": {
+    "filename": "JANUS_A18_42_UNDINAS_COMB_V0_3_3_CANARY_GATE.zip",
+    "sha256": "0100484bd6c75c04b7ff0620e6dedaf39be1ba80c8a0a60200a9b2547039d616",
+    "size_bytes": 102730
+  },
+  "files": [
+    {"path":"A18_41_CHALLENGE_SEALED_BASIS.json","sha256":"6f838575cc771f9b3d66374e59b2fd11f6804a19ce56f1907747e5196806b60a","size_bytes":25019},
+    {"path":"A18_42_CANONICAL_ARCHITECTURE.json","sha256":"bab1bdbae1021f7e99011c311616b6b6c3f233aab06c69a561c3041fe6c8dc96","size_bytes":6785},
+    {"path":"BUILD_VALIDATION.json","sha256":"7c6f4dd9c9bcbbbfc6a805898ce4cf02d87c2afc00825e1fbce25fefe3e09821","size_bytes":15395},
+    {"path":"CANARY_SCENARIO.json","sha256":"85323c3eb77c6d62b1d15ff2c0406a7c416bbc9abdf4571b04f956494b55c180","size_bytes":765},
+    {"path":"EXPERIMENT_DESIGN.json","sha256":"eeab0d532efccbdbd4f4b98065e6c11e39569adee569198ed2e464faf1cc6168","size_bytes":2572},
+    {"path":"OPERATOR_CHECKLIST.txt","sha256":"1cb7bd6cb645d7bba27c5a59cea8c690599ca84c7fcfe93882cdcc578caedc6e","size_bytes":924},
+    {"path":"OPTIONAL_RESOURCE_TELEMETRY.txt","sha256":"d70aa43edfb5df091383d79d86e522eb790611feadbceb3a6c85f188e52e784d","size_bytes":390},
+    {"path":"PREFLIGHT_ONLY.cmd","sha256":"11d52c6cee41281e45c1a7ab9984630b977da2a84864e046c27934592da50cbf","size_bytes":131},
+    {"path":"README_RU.txt","sha256":"5d0cdbaaf5ae57fd70dd53b97f73f97609248a36937f59ba06912eee1721e82d","size_bytes":3723},
+    {"path":"RESUME_LAST_A18_42.cmd","sha256":"c50a6f3e537d1058b3a49fc7b3f3ed7ccca2db7ee169f2c4a5eeb034bf0fa29d","size_bytes":130},
+    {"path":"RUNTIME_LINEAGE.json","sha256":"a002306d73b5fb03a0090ea450fd73fb58f4aab3463ac2f34f1d4b7f5bf95fb9","size_bytes":1199},
+    {"path":"RUN_JANUS_A18_42_UNDINAS_COMB.ps1","sha256":"7b130f0fe354167ceceaa53be5ecf78aa042cc3961216fea47f2f1e5382cf34a","size_bytes":8538},
+    {"path":"SCENARIO_MATRIX.json","sha256":"bb0756385645365fc07a395c220b77f9625f5a03fcab7a98337919330dd8e16f","size_bytes":4896},
+    {"path":"START_CALIBRATION_1_MATRIX.cmd","sha256":"799f221d1e619eff84a04dd140e017a3368225d47bb4ad07767ae192c4377287","size_bytes":131},
+    {"path":"START_CANARY_1_RUN.cmd","sha256":"2016be8d6e7d4f7a2fedfe252f54e4ab6ab445363b194c15817b22d409ce249e","size_bytes":143},
+    {"path":"START_DISCOVERY_4_MATRICES_AFTER_REVIEW.cmd","sha256":"0c12cd218b6a40554f26d74fff4cf58095db114f4c4450cc0a06fcd3ed89e6d5","size_bytes":126},
+    {"path":"V0_3_2_INCIDENT_AND_V0_3_3_REPAIR.json","sha256":"4586e3913a8187146f490fd3d0c36853781226cbc2cf08b4a037db4589af36ce","size_bytes":2291},
+    {"path":"a18_42_compat_a18_41_orchestrator.py","sha256":"ee99a5cce1b0edf3f0701f571618c55b2fde08ad665245abbbea8ee1e847cfe5","size_bytes":64262},
+    {"path":"a18_42_compat_a18_41_supervisor.py","sha256":"d80817b5d4df2eb007cb19305bf951f554f7b43c8a9ac8585b220dcfa43cea1b","size_bytes":97316},
+    {"path":"a18_42_look_away_hook.py","sha256":"9ce7b6c658d7ee5d80bc94b3bbd8ab0b9a614382fc8d2e78ed4f6b8707dfa245","size_bytes":44486},
+    {"path":"a18_42_undinas_comb_orchestrator.py","sha256":"b787d046ae15f3a74d19b3b81ba9f2f650a8f2c38139bf2053adee7cae069b43","size_bytes":49898},
+    {"path":"a18_42_undinas_comb_supervisor.py","sha256":"0649eb1a954b294557c2796ab5ddd6dbad47b2fbe173af5a2d74da25f0825b03","size_bytes":51954}
+  ],
+  "runtime_contract": {
+    "approved_source_sha256": "c46feec0dd936a65bb8e6e074aaa952a0cd57b6925cfb4dd37aad2140d22e1d2",
+    "a18_29_supervisor_sha256": "9586fd1f274fd7287e92ba31cd63dd54f85d6d96ab52c8ed4b4b1709beeb7ad0",
+    "a18_29_instrumenter_sha256": "e006854ac7e7939f091cd1f50cafe6b2bda03c4c0dc5742bdb4b9059c605e08d",
+    "emitter_sha256": "172c4ec03e4aa20faf83054ae6e682b84aec2f50d6418058daa17660d4b73f45",
+    "native_hook_sha256": "9ce7b6c658d7ee5d80bc94b3bbd8ab0b9a614382fc8d2e78ed4f6b8707dfa245",
+    "base_instrumented_miner_sha256": "b94f565e9516368c3b461bc15d7677e9ff899fb5d7fea6e6096e15457a6bcde1",
+    "native_patched_miner_sha256": "2a9b87ab18aad6667721114310e429d49a7490bf7bba11ebfcbc79bfc0112ee7",
+    "native_scheduler_patch_id": "JANUS/A18.42/native-nonblocking-admission-scheduler/v0.3.3"
+  },
+  "release_gate": {
+    "preflight_required": true,
+    "live_canary_required": true,
+    "calibration_requires_bound_canary_receipt": true,
+    "discovery_blocked": true,
+    "canary_is_scientific_data": false,
+    "systemic_failure_aborts_after_first_slot": true
+  }
+}

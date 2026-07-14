@@ -1,0 +1,42 @@
+{
+  "schema": "JANUS/A18.42/runtime-incident-and-repair/v0.3.3",
+  "stage": "A18.42 V0.3.2 to V0.3.3",
+  "v0_3_2_live_result": {
+    "planned_slots": 10,
+    "partial_slots": 10,
+    "completed_batches": 0,
+    "primary_exception": "TypeError: read_json() takes 1 positional argument but 2 were given",
+    "secondary_exception": "PermissionError WinError 32 on raw_runtime.log during temporary-directory cleanup",
+    "scientific_evidence_generated": false
+  },
+  "root_causes": [
+    {
+      "id": "API_ARITY",
+      "detail": "A18.42 supervisor guessed a default-argument API not present in inherited A18.29 read_json(path)."
+    },
+    {
+      "id": "HANDLE_CLEANUP",
+      "detail": "Supervisor exception unwound before child process and raw log lifecycle were fully reconciled."
+    },
+    {
+      "id": "BULK_FREEZE_DEADLOCK",
+      "detail": "Instrumented miner froze every task before bulk submit. A blocking gate inside freeze could wait for REOPEN before any admitted task had been submitted, making drain impossible."
+    }
+  ],
+  "repair": {
+    "read_json": "safe_read_json compatibility wrapper and AST arity audit",
+    "cleanup": "stop/wait process tree, close log handle, copy retained runtime log, ignore only final temp cleanup errors",
+    "scheduler": "exact hash-bound replacement of bulk-freeze/bulk-submit with nonblocking defer and immediate submit per admitted task",
+    "release": "one live canary required before calibration; systemic errors abort after first slot"
+  },
+  "exact_hashes": {
+    "approved_source": "c46feec0dd936a65bb8e6e074aaa952a0cd57b6925cfb4dd37aad2140d22e1d2",
+    "a18_29_supervisor": "9586fd1f274fd7287e92ba31cd63dd54f85d6d96ab52c8ed4b4b1709beeb7ad0",
+    "a18_29_instrumenter": "e006854ac7e7939f091cd1f50cafe6b2bda03c4c0dc5742bdb4b9059c605e08d",
+    "emitter": "172c4ec03e4aa20faf83054ae6e682b84aec2f50d6418058daa17660d4b73f45",
+    "native_hook": "9ce7b6c658d7ee5d80bc94b3bbd8ab0b9a614382fc8d2e78ed4f6b8707dfa245",
+    "base_instrumented_miner": "b94f565e9516368c3b461bc15d7677e9ff899fb5d7fea6e6096e15457a6bcde1",
+    "native_patched_miner": "2a9b87ab18aad6667721114310e429d49a7490bf7bba11ebfcbc79bfc0112ee7"
+  },
+  "claim_limit": "Offline validation cannot replace the operator's live Windows canary. Wave Pump remains unconfirmed."
+}

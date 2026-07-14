@@ -1,0 +1,31 @@
+{
+  "schema": "JANUS/A18.42/runtime-lineage/v0.3.3",
+  "canonical_seed": "44e21fdc9d37fda98e2e73b0c9eb268bd04cdca9d84d0519e4f1166be22b46fc",
+  "operator_archives": [
+    {
+      "name": "A18_35_RELEASE_FOR_REVIEW.zip",
+      "sha256": "b7a1710231945ddc6fe46e1b37c730ede74da59b411e7bc0aa59cd7398cb546b",
+      "size_bytes": 75159
+    },
+    {
+      "name": "JANUS_A18_29_1_WINDOW_RUNNER.rar",
+      "sha256": "c2ff3fef699e8be94d135631457aa0933f44bf63514f8ade8e6211fbef7e5117",
+      "size_bytes": 356063
+    },
+    {
+      "name": "JANUS_A18_42_UNDINAS_COMB_V0_3_2_RUNTIME_HASH_HOTFIX.rar",
+      "sha256": "414f64fce3afea9fb1d9646c0f92f70f45c187c84abacf6875ed6ceb145dddf3",
+      "size_bytes": 284112
+    },
+    {
+      "name": "A17_8_HRAIN_LIVE_SWARM_OVERLAY_PACK.rar",
+      "sha256": "e5733c78607909dc18fb1a84fba59a2c96f1f8694414a8db8c710b0e7dcc5480",
+      "size_bytes": 299810055
+    }
+  ],
+  "source_of_truth": {
+    "project_code_repository": "Hawkar-usls/janus-io-public",
+    "experiment_registry": "Hawkar-usls/janus-meta-registry",
+    "rule": "Use janus-io-public for complete source snapshots and janus-meta-registry for sealed reports, interpretations and exact result lineage."
+  }
+}

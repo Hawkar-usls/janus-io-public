@@ -1,0 +1,61 @@
+{
+  "schema": "JANUS/A18.42/native-flow-gate-design/v0.3.3",
+  "canonical_name": "JANUS Gift: Undina's Comb for Roses",
+  "primary_formula": "new admissions after reopen + epoch-mapped completion cluster + drained valley + absence in matched sham = candidate Wave Pump",
+  "scheduler_semantics": {
+    "old_failed_design": "blocking freeze before later bulk submit",
+    "failure": "quota exhaustion could deadlock before any admitted task reached executor.submit",
+    "new_design": "nonblocking admission decision followed by immediate submit for each admitted task",
+    "deferred_work": "not submitted; retried through a later scheduler round after REOPEN",
+    "approved_source_changed": false,
+    "staged_scheduler_admission_changed": true
+  },
+  "components": [
+    "NATIVE_ADMISSION_GATE",
+    "NONBLOCKING_ADMISSION_DEFER",
+    "IMMEDIATE_SUBMIT_AFTER_ADMISSION",
+    "AUTO_QUOTA_HOLD",
+    "DRAIN_TO_ZERO",
+    "TWO_PHASE_TIMESHIFT_COMMIT",
+    "ADMISSION_EPOCH_LEDGER",
+    "CONNECTION_CONTINUITY_PROXY",
+    "CANONICAL_SCENARIO_SOURCE",
+    "OBSERVER_DRAIN_HANDSHAKE",
+    "LIVE_CANARY_LOCK"
+  ],
+  "boundaries": {
+    "approved_source_file_changed": false,
+    "mine_task_algorithm_changed": false,
+    "per_admitted_task_nonce_traversal_changed": false,
+    "staged_scheduler_admission_changed": true,
+    "wire_hash_submit_changed": false,
+    "hash_quality_used_for_control": false,
+    "energy_claim": false,
+    "wave_pump_claim": false
+  },
+  "runtime_hash_contract": {
+    "native_gate_hook_sha256": "9ce7b6c658d7ee5d80bc94b3bbd8ab0b9a614382fc8d2e78ed4f6b8707dfa245",
+    "base_instrumented_miner_sha256": "b94f565e9516368c3b461bc15d7677e9ff899fb5d7fea6e6096e15457a6bcde1",
+    "native_patched_miner_sha256": "2a9b87ab18aad6667721114310e429d49a7490bf7bba11ebfcbc79bfc0112ee7",
+    "native_scheduler_patch_id": "JANUS/A18.42/native-nonblocking-admission-scheduler/v0.3.3",
+    "all_non_scheduler_checks_preserved": true,
+    "preflight_stages_compiles_import_smokes_and_hash_validates_exact_runtime": true,
+    "fail_before_first_slot_on_mismatch": true
+  },
+  "release_gate": {
+    "preflight_required": true,
+    "live_canary_required": true,
+    "canary_scenario": "CANARY_NATIVE_1_1",
+    "canary_is_scientific_data": false,
+    "canary_requirements": [
+      "runtime launched",
+      "at least 2 completed batches",
+      "at least 2 gate admissions",
+      "at least one reopened epoch",
+      "gate event chain PASS",
+      "observer barrier PASS",
+      "no runtime exception"
+    ],
+    "systemic_failure_aborts_after_first_slot": true
+  }
+}
