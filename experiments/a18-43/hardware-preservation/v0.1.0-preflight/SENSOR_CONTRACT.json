@@ -1,0 +1,47 @@
+{
+  "schema": "JANUS/A18.43/hardware-sensor-contract/v0.1.0",
+  "provider": "OpenHardwareMonitor",
+  "official_wmi_namespace": "root/OpenHardwareMonitor",
+  "official_wmi_class": "Sensor",
+  "fields": [
+    "Name",
+    "Identifier",
+    "Parent",
+    "SensorType",
+    "Value",
+    "Min",
+    "Max",
+    "Index"
+  ],
+  "required_for_thermal_challenge": [
+    "Temperature",
+    "Load"
+  ],
+  "required_for_direct_energy_claim": [
+    "Power"
+  ],
+  "useful_optional_types": [
+    "Fan",
+    "Control",
+    "Clock",
+    "Voltage",
+    "Data",
+    "SmallData",
+    "Flow",
+    "Level",
+    "Factor"
+  ],
+  "claim_rules": {
+    "no_temperature": "BLOCK_LIVE_CHALLENGE",
+    "no_load": "BLOCK_MATCHED_LOAD_VALIDATION",
+    "no_power": "ALLOW_THERMAL_ONLY_BUT_BLOCK_JOULE_CLAIM",
+    "no_fan": "ALLOW_BUT_BLOCK_FAN_WEAR_METRICS",
+    "sensor_identity_changed_mid_run": "FAIL_CLOSED"
+  },
+  "sampling": {
+    "default_duration_seconds": 15.0,
+    "default_interval_seconds": 0.5,
+    "minimum_samples": 20
+  },
+  "privacy": "Local sensor names and hardware identifiers remain local unless explicitly sanitized."
+}
