@@ -1,0 +1,85 @@
+{
+  "schema": "JANUS/A18.43/through-the-horizon-protocol-contract/v0.2.0",
+  "canonical_name": "JANUS A18.43 V0.2 — Through the Horizon",
+  "protocol_name": "Event-Horizon Airlock Protocol",
+  "internal_name": "UNDINA_TIMESHIFT_AIRLOCK",
+  "status": "OFFLINE_PROTOCOL_CORE_IMPLEMENTED; LIVE_ADAPTER_NOT_YET_AUTHORIZED",
+  "purpose": "Couple TimeShift freeze and Undina Native Admission Gate as two interlocked airlock hatches so control ordering is explicit, acknowledged, idempotent and fail-closed.",
+  "inspiration_note": "The name is inspired by the airlock/decompression imagery of the film Event Horizon and is recorded as a respectful cultural reference, not an endorsement or affiliation.",
+  "canonical_principle": "Asynchronous work inside each phase; a strict rendezvous barrier between phases.",
+  "airlock_mapping": {
+    "inlet_hatch": "Native Admission Gate",
+    "airlock_chamber": "current in-flight computational cohort",
+    "freeze_seal": "TimeShift whole-process FREEZE with quiescence proof",
+    "controlled_decompression": "THAW_TO_DRAIN while admissions remain closed",
+    "vacuum_valley": "two-phase stable in_flight=0 and queued=0",
+    "repressurization": "REOPEN exactly one new admission epoch"
+  },
+  "state_order": [
+    "OPEN",
+    "FREEZE_REQUESTED",
+    "FROZEN",
+    "SNAPSHOT_SEALED",
+    "GATE_CLOSE_REQUESTED",
+    "GATE_CLOSED",
+    "HORIZON_COMMITTED",
+    "THAWED_DRAINING",
+    "VACUUM_CANDIDATE",
+    "VACUUM_VALLEY_CONFIRMED",
+    "REOPENED"
+  ],
+  "alternate_terminal_states": [
+    "TOO_LATE_ABORTED",
+    "FAIL_CLOSED"
+  ],
+  "horizon_commit_requires": [
+    "FROZEN_ACK",
+    "SNAPSHOT_SEALED",
+    "GATE_CLOSED_ACK"
+  ],
+  "hard_interlocks": [
+    "no SNAPSHOT before FROZEN_ACK",
+    "no GATE_CLOSE before SNAPSHOT_SEALED",
+    "no THAW_TO_DRAIN before HORIZON_COMMIT",
+    "no new admissions during controlled decompression",
+    "no REOPEN before two stable zero observations",
+    "no stale control_epoch or wave_epoch acknowledgement",
+    "no PID, session or reconnect change across a boundary",
+    "duplicate action_id is idempotent; conflicting reuse is rejected"
+  ],
+  "two_phase_timeshift": {
+    "order": [
+      "freeze first",
+      "validate the frozen state",
+      "abort and thaw immediately if the latest-safe horizon was crossed",
+      "otherwise close admissions while frozen"
+    ],
+    "reason": "Eliminate snapshot-to-suspend lead debt by deciding from a motionless state."
+  },
+  "controlled_decompression_invariants": [
+    "admitted_total remains exactly equal to gate-close baseline",
+    "in_flight never increases",
+    "queued never increases",
+    "old epoch remains active until stable vacuum",
+    "all old completions are foam/drain, never a new crest"
+  ],
+  "fault_policy": "Any missing acknowledgement, identity drift, reconnect delta, new admission during drain, queue/in-flight increase or event-chain failure moves the coordinator to FAIL_CLOSED.",
+  "frozen_semantics": [
+    "SHA-256",
+    "verifier",
+    "nonce traversal",
+    "candidate selection",
+    "WIRE",
+    "HASH",
+    "SUBMIT",
+    "pool-valid proof semantics"
+  ],
+  "prohibited_claims": [
+    "confirmed Wave Pump",
+    "energy saving before matched live telemetry",
+    "hardware lifetime extension from a short run",
+    "SHA-256 prediction or weakness",
+    "mining advantage or profitability"
+  ],
+  "canonical_seed_sha256": "44e21fdc9d37fda98e2e73b0c9eb268bd04cdca9d84d0519e4f1166be22b46fc"
+}
