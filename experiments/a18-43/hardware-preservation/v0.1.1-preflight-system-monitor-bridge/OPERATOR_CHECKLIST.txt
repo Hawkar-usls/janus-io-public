@@ -1,0 +1,24 @@
+BEFORE PREFLIGHT
+[ ] OpenHardwareMonitor.exe runs as Administrator.
+[ ] CPU and GPU sensors are visible.
+[ ] Python psutil is installed (python -m pip install psutil).
+[ ] NVIDIA driver provides nvidia-smi; pynvml is optional.
+[ ] No game or benchmark intentionally changes load.
+
+RUN
+[ ] Start PREFLIGHT_ONLY.cmd.
+[ ] Do not start the miner during the 20-second sampling window.
+
+SEND BACK
+[ ] output/A18_43_PREFLIGHT_REPORT.json
+[ ] output/SENSOR_INVENTORY.json
+[ ] output/HARDWARE_SAMPLES.jsonl
+[ ] output/HARDWARE_BASELINE_SUMMARY.json
+[ ] output/SYSTEM_MONITOR_COMPATIBILITY.json
+[ ] output/PACKAGE_PREFLIGHT.json
+
+DO NOT CLAIM YET
+[ ] wall-energy saving from component power alone
+[ ] lower hardware wear
+[ ] longer device life
+[ ] mining profitability
