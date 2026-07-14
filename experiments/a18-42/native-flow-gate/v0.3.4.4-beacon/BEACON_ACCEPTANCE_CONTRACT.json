@@ -1,0 +1,28 @@
+{
+  "approval_file": "BEACON_APPROVAL.json",
+  "calibration_launcher": "START_CALIBRATION_1_MATRIX.cmd",
+  "calibration_unlock_rule": "approval.status == PASS AND approval.package_manifest_sha256 == current PACKAGE_MANIFEST.json SHA-256",
+  "discovery_locked": true,
+  "planned_live_runs": 1,
+  "required": {
+    "batch_completed": true,
+    "child_process_reaped": true,
+    "gate_event_chain_pass": true,
+    "miner_runtime_produced_real_job": true,
+    "native_gate_admission_registered": true,
+    "native_gate_startup_handshake_pass": true,
+    "observer_finished": true,
+    "parent_log_closed": true,
+    "reopen_epoch_completed": true,
+    "run_result_pass": true,
+    "runtime_hashes_pass": true,
+    "temporary_runtime_removed": true,
+    "two_phase_boundary_pass": true,
+    "native_beacon_terminal_validation_pass": true
+  },
+  "scenario_matrix": "BEACON_SCENARIO_MATRIX.json",
+  "schema": "JANUS/A18.42/beacon-acceptance-contract/v0.3.4.4",
+  "terminal_success_decision": "PASS_NATIVE_BEACON_VALIDATED",
+  "intentional_windows_exit_hex": "0xC000013A",
+  "terminal_override_rule": "Only after exact 4/4, two native boundaries PASS, completed reopen epoch, Observer/hash/cleanup PASS, no traceback, all epochs drained, and runner-initiated CTRL_BREAK."
+}

@@ -1,0 +1,23 @@
+JANUS A18.42 V0.3.4.4 — BEACON TERMINAL VALIDATION HOTFIX
+
+CONFIRMED LIVE STATE
+- target 4/4 completed
+- native boundaries 2/2 PASS
+- REOPEN epoch completed
+- same PID, reconnect delta 0
+- Observer PASS
+- runtime hashes PASS
+- cleanup PASS
+- no traceback
+- runner intentionally stopped persistent miner with Windows 0xC000013A
+
+FORMER MISCLASSIFICATION
+  PARTIAL_WINDOW_INTERRUPTED
+
+CORRECT DECISION
+  PASS_NATIVE_BEACON_VALIDATED
+
+The override is fail-closed and BEACON-specific. It cannot accept incomplete work,
+spontaneous nonzero exit, bad cleanup, bad hashes, bad Observer, missing boundary,
+or a REOPEN epoch without completed work. Miner scheduling and WIRE/HASH/SUBMIT
+are unchanged.

@@ -1,0 +1,26 @@
+{
+  "schema": "JANUS/A18.42/live-beacon-terminal-regression/v0.3.4.4",
+  "source_run_timestamp_utc": "2026-07-14T15:19:35Z",
+  "source_report_sha256_status": "OPERATOR_SUPPLIED_REPORT_FOR_CHATGPT_15",
+  "observed": {
+    "completed_batches": 4,
+    "overflow_batches": 0,
+    "native_admissions": 4,
+    "native_boundaries": 2,
+    "two_phase_boundaries_pass": 2,
+    "strict_reopened_crest_epochs": [1],
+    "same_process": true,
+    "reconnect_delta_at_boundaries": 0,
+    "observer_barrier": "PASS",
+    "runtime_hashes": "PASS",
+    "cleanup": "PASS",
+    "tracebacks": 0,
+    "targeted_stop_sent": true,
+    "process_exit_code": 3221225786,
+    "process_exit_code_hex": "0xC000013A",
+    "stop_reason": "all_native_epochs_drained",
+    "prior_incorrect_decision": "PARTIAL_WINDOW_INTERRUPTED",
+    "required_decision": "PASS_NATIVE_BEACON_VALIDATED"
+  },
+  "scientific_claim_guard": "This validates one local native reopened-crest candidate only. Matched sham and replication remain required before a Wave Pump claim."
+}
