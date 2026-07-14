@@ -4,11 +4,15 @@ __pycache__/
 *.pyd
 
 .env
+.env.*
+!.env.example
 *.key
 *.pem
 *.tmp
 *.bak
+*.swp
 .DS_Store
+Thumbs.db
 
 .venv/
 venv/
@@ -17,12 +21,26 @@ dist/
 *.egg-info/
 .pytest_cache/
 .mypy_cache/
+.ruff_cache/
 .coverage
 htmlcov/
+.idea/
+.vscode/
+
+# Local transcripts, crash dumps, and launcher outputs.
+*.transcript.log
+*.stackdump
+REPORT_FOR_CHATGPT.json
+REPORT_FOR_CHATGPT_COMPACT.json
+_cleanup_reports/
+_backups/
+JANUS_A18_*/output/
+JANUS_A18_*/runtime/
 
 # Janus Io raw experiment logs and proof archives can be large and may contain
 # local paths or operational identifiers. Commit them intentionally with
-# `git add -f` after review; existing tracked evidence remains tracked.
+# `git add -f` only after sanitization and review. Existing tracked evidence
+# remains tracked until it is deliberately moved into a curated proof pack.
 janus_io_o1_runs/**/*.log
 janus_io_o1_runs/**/raw_log.txt
 janus_io_o1_runs/**/proofs/
