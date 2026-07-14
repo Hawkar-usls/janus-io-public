@@ -1,0 +1,19 @@
+{
+  "schema": "JANUS/A18.43/through-the-horizon-build-validation/v0.2.0",
+  "status": "PASS",
+  "python_compile": "PASS_2_OF_2",
+  "fault_injection": "PASS_22_OF_22",
+  "delay_matrix_ms": [
+    0,
+    10,
+    25,
+    50,
+    100,
+    250
+  ],
+  "network_used": false,
+  "miner_launched": false,
+  "hardware_control_performed": false,
+  "live_windows_runtime_tested": false,
+  "claim_boundary": "OFFLINE_PROTOCOL_CORE_ONLY"
+}
