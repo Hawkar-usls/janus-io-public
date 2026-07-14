@@ -1,0 +1,17 @@
+{
+  "schema": "JANUS/A18.43/source-lineage/v0.1.0",
+  "created_from": "A18.42 replicated Native Flow Gate result",
+  "a18_42_merge_commits": {
+    "janus_meta_registry": "838758660c60a61bfd2d27ec4c01ceb0a8d233c9",
+    "janus_io_public": "cc54c9ec0d3eb9f34041d58a8d09d5dc925f6683"
+  },
+  "openhardwaremonitor_contract": {
+    "namespace": "root/OpenHardwareMonitor",
+    "class": "Sensor",
+    "read_only": true,
+    "source_note": "The upstream WMI provider publishes Sensor instances with Name, Identifier, Parent, SensorType, Value, Min, Max and Index."
+  },
+  "runtime_included": false,
+  "miner_included": false,
+  "live_challenge_authorized": false
+}
