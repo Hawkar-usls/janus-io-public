@@ -1,0 +1,30 @@
+{
+  "schema": "JANUS/A18.42/public-source-lineage/v0.3.4.5",
+  "release": "JANUS_A18_42_UNDINAS_NATIVE_FLOW_GATE_V0_3_4_5_MATRIX_TERMINAL_VALIDATION_HOTFIX",
+  "archive_sha256": "fdf4a0e0dbacc600cdd63eb18bf8820a74d8feaf1fdb10ba386b1a5009f34921",
+  "archive_size_bytes": 113414,
+  "package_manifest_sha256": "e8b330bc5bfc663d54ef826a523294b1a312c31c528409bb389102ffd7654895",
+  "approved_source_sha256": "c46feec0dd936a65bb8e6e074aaa952a0cd57b6925cfb4dd37aad2140d22e1d2",
+  "a18_29_instrumented_sha256": "b94f565e9516368c3b461bc15d7677e9ff899fb5d7fea6e6096e15457a6bcde1",
+  "native_gate_hook_sha256": "0f83878b0d2fd891528a56e1052164c712accccb8c2efcb9439cf2d719f43a75",
+  "native_dispatch_instrumenter_sha256": "67ae761bf7a76cd0d0f58948f5f3118c957e4e5614cac7c377ffcd16d542f448",
+  "changed_active_python": [
+    {
+      "path": "a18_42_undinas_comb_supervisor.py",
+      "sha256": "3a8961ea9c9442e735fa7dd1e1104b619879aff6a7a5de2ec22623239a7404fe"
+    },
+    {
+      "path": "a18_42_undinas_comb_orchestrator.py",
+      "sha256": "8807e1febf4ad8be170ee458586f33bce3409466905ffe8a053618abb14a6329"
+    }
+  ],
+  "frozen": {
+    "approved_miner": true,
+    "native_gate_hook": true,
+    "native_dispatch_instrumenter": true,
+    "scenario_matrix": true,
+    "sha256_verifier": true,
+    "nonce_traversal": true,
+    "wire_hash_submit": true
+  }
+}
