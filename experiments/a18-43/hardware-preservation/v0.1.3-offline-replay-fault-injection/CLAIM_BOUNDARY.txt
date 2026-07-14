@@ -1,0 +1,13 @@
+A18.42 is frozen as REPLICATED_NATIVE_WAVE_SEGMENTATION.
+A18.43 V0.1.3 validates analysis behavior only.
+
+It does not emit claims of:
+- physical energy saving;
+- reduced hardware wear;
+- extended hardware life;
+- a useful Wave Pump;
+- SHA-256 predictability;
+- mining advantage;
+- profitability.
+
+The future live matched CONTINUOUS / SHAM / NATIVE run is required to test physical preservation benefit.
