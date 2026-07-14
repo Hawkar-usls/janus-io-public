@@ -1,0 +1,39 @@
+{
+  "schema": "JANUS/A18.42/public-beacon-result/v1.0.0",
+  "canonical_name": "JANUS Gift: Undina's Comb for Roses",
+  "experiment_id": "A18_42_UNDINAS_COMB_20260714_154638Z_0489159ae6",
+  "generated_at_utc": "2026-07-14T15:46:43.540151Z",
+  "execution_mode": "BEACON",
+  "result": "PASS",
+  "decision": "PASS_NATIVE_BEACON_VALIDATED",
+  "completed_batches": 4,
+  "sealed_batches": 4,
+  "gate_admissions_total": 4,
+  "epochs": [
+    {"epoch": 0, "admissions": 2, "completions": 2, "planned_quota": 2},
+    {"epoch": 1, "admissions": 2, "completions": 2, "planned_quota": 2, "preceding_native_valley_pass": true, "strict_reopened_crest": true}
+  ],
+  "boundaries": [
+    {"closed_epoch": 0, "two_phase_validation_pass": true, "process_pid_unchanged": true, "reconnect_delta": 0, "reopened_epoch": 1},
+    {"closed_epoch": 1, "two_phase_validation_pass": true, "process_pid_unchanged": true, "reconnect_delta": 0}
+  ],
+  "observer": {"status": "PASS", "exposure_events": 4, "finalized_envelopes": 4, "native_outcomes": 4, "orphans": 0, "prepared_remaining": 0},
+  "runtime_integrity": {"status": "PASS", "mismatches": [], "approved_source_changed": false, "hash_quality_used_for_control": false},
+  "cleanup": {"status": "PASS", "temporary_runtime_removed": true, "raw_runtime_log_preserved": true, "forced_kill_used": false},
+  "terminal_validation": {"status": "PASS", "intentional_windows_exit": "0xC000013A", "stop_reason": "all_native_epochs_drained"},
+  "scientific_status": {
+    "strict_local_candidate": true,
+    "confirmed_wave_pump": false,
+    "matched_sham_completed": false,
+    "replication_completed": false,
+    "calibration": "AUTHORIZED; RESULT PENDING",
+    "discovery": "BLOCKED PENDING CALIBRATION REVIEW"
+  },
+  "evidence_hashes": {
+    "private_report_sha256": "27ee4fb3c3de2d2b93bad660ac043c456f5c870cfd77fd4e5b8bb998c219c83d",
+    "suite_state_sha256": "d62d338daf834f51ca7c04921a1f8a826855c7b8aa7f90e516282663838c8f56",
+    "package_archive_sha256": "852f509c2178e8824ccb00c2c0a7b966f7a4fdd2c20742bb2fbb91ebbe479493",
+    "package_manifest_sha256": "fa97b4432841bec71d0ac852c5feac44bca963fec9a3770b542d4e17b180247e"
+  },
+  "privacy_boundary": "Raw report and runtime log are not published because they contain local paths and operational pool context."
+}

@@ -1,0 +1,18 @@
+{
+  "beacon_only": true,
+  "canonical_name": "JANUS Gift: Undina's Comb for Roses — one-run beacon",
+  "canonical_seed": "44e21fdc9d37fda98e2e73b0c9eb268bd04cdca9d84d0519e4f1166be22b46fc",
+  "matrix_runs": 1,
+  "scenarios": [
+    {
+      "control_role": "NATIVE_GATE_BEACON",
+      "final_seal_target": 4,
+      "matched_family": "BEACON_2_2",
+      "mode": "NATIVE_GATE",
+      "scenario_id": "NATIVE_BEACON_2_2",
+      "waves": [{"quota": 2, "valley_ms": 100}, {"quota": 2, "valley_ms": 100}]
+    }
+  ],
+  "schema": "JANUS/A18.42/native-scenario-matrix/v0.3",
+  "single_canonical_runtime_source": true
+}
