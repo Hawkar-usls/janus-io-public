@@ -1,0 +1,54 @@
+{
+  "schema": "JANUS/A18.43/build-validation/v0.1.2",
+  "status": "PASS",
+  "phase": "PREFLIGHT_ONLY",
+  "python_compile": "PASS",
+  "self_tests": [
+    {
+      "script": "a18_43_preservation_metrics.py",
+      "exit_code": 0,
+      "stdout": "{\"schema\": \"JANUS/A18.43/preservation-metrics/v0.1.2\", \"status\": \"PASS\", \"tests\": 7}",
+      "stderr": "",
+      "pass": true
+    },
+    {
+      "script": "a18_43_system_monitor_bridge.py",
+      "exit_code": 0,
+      "stdout": "{\"schema\": \"JANUS/A18.43/system-monitor-bridge/v0.1.2\", \"status\": \"PASS\", \"tests\": 5}",
+      "stderr": "",
+      "pass": true
+    },
+    {
+      "script": "a18_43_hardware_sensor_probe.py",
+      "exit_code": 0,
+      "stdout": "{\"schema\": \"JANUS/A18.43/hardware-sensor-probe/v0.1.2\", \"status\": \"PASS\", \"tests\": 2}",
+      "stderr": "",
+      "pass": true
+    },
+    {
+      "script": "a18_43_preflight.py",
+      "exit_code": 0,
+      "stdout": "{\"schema\": \"JANUS/A18.43/preflight/v0.1.2\", \"status\": \"PASS\", \"tests\": 1}",
+      "stderr": "",
+      "pass": true
+    }
+  ],
+  "operator_mapping_replay": {
+    "status": "PASS",
+    "source": "operator SENSOR_INVENTORY.json",
+    "expected": {
+      "cpu_package_power": "/amdcpu/0/power/0",
+      "gpu_power": null,
+      "system_total_power": null
+    },
+    "actual": {
+      "cpu_package_power": "/amdcpu/0/power/0",
+      "gpu_power": null,
+      "system_total_power": null
+    }
+  },
+  "network_used_during_tests": false,
+  "miner_launched_during_tests": false,
+  "hardware_control_performed_during_tests": false,
+  "live_probe_required_on_operator_machine": true
+}
