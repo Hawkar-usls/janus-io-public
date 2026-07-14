@@ -1,0 +1,27 @@
+{
+  "schema": "JANUS/A18.42/calibration-result-sanitized/v0.3.4.5",
+  "canonical_name": "JANUS Gift: Undina's Comb for Roses",
+  "experiment_id": "A18_42_UNDINAS_COMB_20260714_163456Z_0489159ae6",
+  "generated_at_utc": "2026-07-14T16:36:27.681539Z",
+  "result": {
+    "planned_runs": 10,
+    "completed_runs": 10,
+    "valid_runs": 10,
+    "partial_runs": 0,
+    "failed_slots": [],
+    "strict_local_native_candidate_runs": 5,
+    "candidate_matched_pairs": 4,
+    "matched_sham_equivalent_signatures": 0
+  },
+  "integrity": {
+    "observer_barrier_pass_runs": 10,
+    "native_gate_event_chain_pass_runs": 10,
+    "runtime_hashes_pass_runs": 10,
+    "cleanup_pass_runs": 10
+  },
+  "evidence": {
+    "report_sha256": "36f150529dcbb0a4db19a13bd89a0a62d8d405bc938e9a39a5ee18c111dbdb2a",
+    "suite_state_sha256": "ae20e6bbab27ac07c2955edb851396353cda2f537c96abbc3a676bc9887934bd"
+  },
+  "claim_boundary": "Calibration authorizes replication discovery; it does not confirm a cryptographic or energy advantage."
+}
