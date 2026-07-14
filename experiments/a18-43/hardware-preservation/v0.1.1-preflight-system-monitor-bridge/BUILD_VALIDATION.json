@@ -1,0 +1,41 @@
+{
+  "schema": "JANUS/A18.43/build-validation/v0.1.1",
+  "status": "PASS",
+  "phase": "PREFLIGHT_ONLY",
+  "python_compile": "PASS",
+  "self_tests": [
+    {
+      "script": "a18_43_preservation_metrics.py",
+      "exit_code": 0,
+      "stdout": "{\"schema\": \"JANUS/A18.43/preservation-metrics/v0.1.1\", \"status\": \"PASS\", \"tests\": 6}",
+      "stderr": "",
+      "pass": true
+    },
+    {
+      "script": "a18_43_system_monitor_bridge.py",
+      "exit_code": 0,
+      "stdout": "{\"schema\": \"JANUS/A18.43/system-monitor-bridge/v0.1.1\", \"status\": \"PASS\", \"tests\": 3}",
+      "stderr": "",
+      "pass": true
+    },
+    {
+      "script": "a18_43_hardware_sensor_probe.py",
+      "exit_code": 0,
+      "stdout": "{\"schema\": \"JANUS/A18.43/hardware-sensor-probe/v0.1.1\", \"status\": \"PASS\", \"tests\": 2}",
+      "stderr": "",
+      "pass": true
+    },
+    {
+      "script": "a18_43_preflight.py",
+      "exit_code": 0,
+      "stdout": "{\"schema\": \"JANUS/A18.43/preflight/v0.1.1\", \"status\": \"PASS\", \"tests\": 1}",
+      "stderr": "",
+      "pass": true
+    }
+  ],
+  "network_used_during_tests": false,
+  "miner_launched_during_tests": false,
+  "hardware_control_performed_during_tests": false,
+  "windows_live_probe_tested_here": false,
+  "live_probe_required_on_operator_machine": true
+}

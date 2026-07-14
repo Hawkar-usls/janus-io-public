@@ -1,0 +1,64 @@
+{
+  "schema": "JANUS/A18.43/hardware-preservation-experiment-contract/v0.1.1",
+  "canonical_name": "JANUS A18.43 Hardware Preservation Challenge",
+  "phase": "PREFLIGHT_ONLY",
+  "mission_en": "JANUS I0 develops auditable measurement and control methods for reducing unnecessary Proof-of-Work computation, thermal stress, energy waste, and hardware wear while preserving standard SHA-256 verification and valid proof semantics.",
+  "mission_ru": "JANUS I0 разрабатывает проверяемые методы измерения и управления, направленные на сокращение ненужных PoW-вычислений, тепловой нагрузки, расхода энергии и износа оборудования без изменения стандартной проверки SHA-256 и правил валидного доказательства работы.",
+  "primary_question": "Can the frozen Native Flow Gate reduce work without confirmed utility and reduce thermal or component-energy cost without disproportionate loss of valid useful work?",
+  "system_monitor_lineage": {
+    "repository": "Hawkar-usls/Janus-Demiurge",
+    "path": "system_monitor.py",
+    "source_blob_sha": "7deec130091d3fe8c62375e32472326887159f42",
+    "reused_patterns": [
+      "OpenHardwareMonitor WMI",
+      "NVML",
+      "nvidia-smi fallback",
+      "psutil"
+    ],
+    "excluded_active_features": [
+      "CacheProbe",
+      "TachyonicRegulator",
+      "load_scale control",
+      "audio/screen/input monitoring"
+    ]
+  },
+  "frozen_lineage": {
+    "a18_42_result": "REPLICATED_NATIVE_WAVE_SEGMENTATION",
+    "a18_42_package_sha256": "fdf4a0e0dbacc600cdd63eb18bf8820a74d8feaf1fdb10ba386b1a5009f34921",
+    "a18_42_discovery_report_sha256": "3ac6a18764361d133b74264960e9730d9ff2e677167967d91fc9ef775e198355",
+    "a18_42_discovery_suite_state_sha256": "39a96f20761ce7a819799575b8997b13aa65c59dcf7e37be883310368723011b",
+    "canonical_seed_sha256": "44e21fdc9d37fda98e2e73b0c9eb268bd04cdca9d84d0519e4f1166be22b46fc"
+  },
+  "frozen_semantics": [
+    "SHA-256",
+    "verifier",
+    "nonce traversal",
+    "candidate selection",
+    "WIRE",
+    "HASH",
+    "SUBMIT",
+    "pool-valid proof semantics"
+  ],
+  "preflight_prohibitions": [
+    "NO_MINER_LAUNCH",
+    "NO_LIVE_GATE_CONTROL",
+    "NO_ENERGY_SAVING_CLAIM",
+    "NO_HARDWARE_LIFETIME_CLAIM",
+    "NO_AUTOMATIC_OVERCLOCK_OR_UNDERVOLT",
+    "NO_FAN_CONTROL"
+  ],
+  "allowed_preflight_actions": [
+    "read OpenHardwareMonitor WMI sensors",
+    "read NVML or nvidia-smi telemetry",
+    "read psutil telemetry",
+    "write local JSON and JSONL evidence",
+    "evaluate claim readiness"
+  ],
+  "acceptable_final_outcomes": [
+    "PASS",
+    "PARTIAL",
+    "FAIL_CLOSED",
+    "NO_EFFECT",
+    "NEGATIVE_EFFECT"
+  ]
+}
