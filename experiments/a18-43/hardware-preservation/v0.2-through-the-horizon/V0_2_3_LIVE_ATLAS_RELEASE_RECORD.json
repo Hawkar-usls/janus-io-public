@@ -1,0 +1,113 @@
+{
+  "schema": "JANUS/A18.43/through-the-horizon-live-atlas-release/v0.2.3",
+  "canonical_name": "JANUS A18.43 V0.2.3 — Through the Horizon Live Atlas Pilot",
+  "protocol": "Event-Horizon Airlock Protocol",
+  "status": "OFFLINE_AND_FRESH_EXTRACTION_VALIDATED; LIVE_BEACON_PENDING",
+  "package": {
+    "archive": "JANUS_A18_43_V0_2_3_THROUGH_THE_HORIZON_LIVE_ATLAS_PILOT.zip",
+    "archive_sha256": "3109897410f994cb1d107474fed22e7d98fd251f556202dcdd1db28419f39b0e",
+    "archive_size_bytes": 206314,
+    "package_manifest_sha256": "9238a9b6de20957b697f9f416f6dd90f6a2176047ec14d987313f4cf92e511f6",
+    "manifest_bound_files": 38
+  },
+  "operator_goals": [
+    "Measure exact configuration-specific hidden runtime capacity and the work cardinality crossing admission, submission and completion horizons.",
+    "Measure calibration-only bypass budgets without activating a live bypass controller.",
+    "Test whether a fixed probe wave quota=3 depends on previous persistent-process epochs, primer shape or clean-valley duration.",
+    "Map and repeat intervention triggers 0 through 16.",
+    "Record controlled-decompression shape as Horizon Echo / Foam Fingerprint."
+  ],
+  "default_full_plan": {
+    "mandatory_live_beacon": 1,
+    "horizon_intervention_points": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+    "horizon_repetitions_per_point": 2,
+    "persistent_wave_memory_scenarios": 8,
+    "memory_repetitions_per_scenario": 2,
+    "total_live_runs": 51,
+    "resumable": true
+  },
+  "airlock_refinement": {
+    "sequence": [
+      "PROCESS_TREE_FREEZE",
+      "INITIAL_FROZEN_SNAPSHOT",
+      "STAGE_NATIVE_GATE_HOLD",
+      "ROOT_ONLY_GATE_ACK_PULSE_WHILE_WORKERS_REMAIN_SUSPENDED",
+      "POST_ACK_RESEAL",
+      "HORIZON_COMMIT",
+      "THAW_TO_DRAIN",
+      "STABLE_VACUUM_VALLEY",
+      "OPTIONAL_REOPEN"
+    ],
+    "ack_rule": "Admissions and submissions must not advance. Already-buffered worker completions may settle only if finalized and exposure advance consistently, prepared does not increase, the process tree is unchanged, and a stable post-ACK snapshot is resealed. The post-ACK snapshot is authoritative.",
+    "fail_closed": true
+  },
+  "hidden_capacity_metrics": [
+    "commit_admitted",
+    "commit_submitted",
+    "commit_finalized",
+    "hidden_in_flight_capacity_at_commit",
+    "queued_capacity_at_commit",
+    "old_completions_after_horizon_commit",
+    "admissions_crossed_before_gate_close",
+    "submissions_crossed_before_gate_close",
+    "completion_overshoot_after_requested_trigger",
+    "lead_debt_batches"
+  ],
+  "memory_scenarios": [
+    "Q1_TO_PROBE_Q3",
+    "Q3_TO_PROBE_Q3",
+    "Q7_TO_PROBE_Q3",
+    "Q16_TO_PROBE_Q3",
+    "Q8_VALLEY_Q8_TO_PROBE_Q3",
+    "Q4_VALLEY_Q4_VALLEY_Q4_VALLEY_Q4_TO_PROBE_Q3",
+    "Q16_SHORT_25MS_VALLEY_TO_PROBE_Q3",
+    "Q16_LONG_1000MS_VALLEY_TO_PROBE_Q3"
+  ],
+  "horizon_echo_metrics": [
+    "time_to_half_in_flight_ms",
+    "time_to_first_zero_ms",
+    "in_flight_area_batch_ms",
+    "queued_area_batch_ms",
+    "completion_burst_count",
+    "completion_burst_sizes",
+    "inter_completion_burst_ms",
+    "plateau_fraction"
+  ],
+  "offline_validation": {
+    "package_manifest": "PASS_38_OF_38",
+    "master_preflight": "PASS_13_OF_13",
+    "fresh_extraction_preflight": "PASS_13_OF_13",
+    "python_compile": "PASS_ALL_RUNTIME_SCRIPTS",
+    "adapter_fault_injection": "PASS_17_OF_17",
+    "a18_42_native_gate_supervisor_self_test": "PASS_26",
+    "a18_42_orchestrator_self_test": "PASS_14",
+    "horizon_supervisor_self_test": "PASS_9",
+    "network_used": false,
+    "miner_launched": false,
+    "hardware_control_performed": false
+  },
+  "activation_gates": [
+    "One live Event-Horizon BEACON must pass before the intervention matrix.",
+    "The complete horizon stage must pass before persistent-memory tests.",
+    "Any interlock failure stops the master suite.",
+    "Measured bypass recipes remain calibration-only and require a frozen held-out challenge."
+  ],
+  "claim_limits": [
+    "The apparent capacity is configuration-specific; 16 is not universal and is not a physical-core claim.",
+    "Wave memory means possible runtime carryover, never memory in SHA-256.",
+    "Two repetitions are exploratory and do not prove a shaping recipe.",
+    "No energy saving or hardware-life extension is claimed.",
+    "No SHA-256 weakness, valid-proof advantage, mining advantage or profitability is claimed."
+  ],
+  "frozen_semantics": [
+    "SHA-256",
+    "verifier",
+    "nonce traversal",
+    "candidate selection",
+    "WIRE",
+    "HASH",
+    "SUBMIT",
+    "pool-valid proof semantics"
+  ],
+  "canonical_seed_sha256": "44e21fdc9d37fda98e2e73b0c9eb268bd04cdca9d84d0519e4f1166be22b46fc"
+}

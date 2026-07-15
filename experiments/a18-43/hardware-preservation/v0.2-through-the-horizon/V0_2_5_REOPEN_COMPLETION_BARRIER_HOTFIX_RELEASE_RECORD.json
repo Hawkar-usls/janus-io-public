@@ -1,0 +1,87 @@
+{
+  "schema": "JANUS/A18.43/through-the-horizon-v0.2.5-release-record/v1",
+  "release": "JANUS_A18_43_V0_2_5_THROUGH_THE_HORIZON_REOPEN_COMPLETION_BARRIER_HOTFIX",
+  "status": "OFFLINE_VALIDATED; NEW_LIVE_BEACON_REQUIRED",
+  "source_live_archive": {
+    "experiment_id": "A18_43_HORIZON_ATLAS_20260715_004007Z_4671c403c7",
+    "archive_sha256": "fa734f8a02121901292fdfb9e97c67d8fb7bd35237412dd9b6eaa78fdb56aa98",
+    "decision": "FAIL_CLOSED_EVENT_HORIZON_AIRLOCK"
+  },
+  "confirmed_live_passes": {
+    "freeze_snapshot_stable": true,
+    "gate_watcher_hold_consumed": true,
+    "ack_pulse_zero_admission_submission_finalized_advance": true,
+    "horizon_commit_pass": true,
+    "first_epoch_admissions": 16,
+    "first_epoch_completions": 16,
+    "old_completions_after_horizon_commit": 13,
+    "vacuum_valley_pass": true,
+    "reopened_epoch_admissions": 2,
+    "reopened_epoch_submit_registered": 2,
+    "same_process_and_connection": true
+  },
+  "exact_failure": {
+    "classification": "REOPEN_FALSE_POSITIVE_BASELINE_OMISSION",
+    "first_vacuum_baseline": {
+      "admitted": 16,
+      "submitted": 16,
+      "finalized": 16,
+      "exposure": 16
+    },
+    "false_positive_state": {
+      "admitted": 18,
+      "submitted": 16,
+      "finalized": 16,
+      "exposure": 16,
+      "queued": 2,
+      "in_flight": 0,
+      "gate": "HOLD_QUOTA_EXHAUSTED"
+    },
+    "cause": "V0.2.4 checked stale absolute total equality submitted==finalized==exposure instead of exact progress from the first-vacuum baseline. After 100 ms it stopped the runtime before the two reopened tasks completed."
+  },
+  "v0_2_5_fix": {
+    "required_exact_deltas": [
+      "admitted_delta == reopen_quota",
+      "submitted_delta == reopen_quota",
+      "finalized_delta == reopen_quota",
+      "exposure_delta == reopen_quota"
+    ],
+    "terminal_requirements": [
+      "prepared=0",
+      "in_flight=0",
+      "queued=0",
+      "gate=HOLD_QUOTA_EXHAUSTED"
+    ],
+    "stable_confirmation_ms": 100,
+    "counter_regression_or_quota_excess": "FAIL_CLOSED_WITH_EXACT_REASON",
+    "old_v0_2_4_resume_forbidden": true
+  },
+  "offline_validation": {
+    "package_manifest": "PASS_40_OF_40",
+    "fresh_zip_crc_and_manifest": "PASS",
+    "fresh_master_preflight": "PASS_13_OF_13",
+    "horizon_project_preflight": "PASS",
+    "horizon_supervisor_self_test": "PASS_16",
+    "horizon_orchestrator_self_test": "PASS_5",
+    "a18_42_native_supervisor_self_test": "PASS_26",
+    "a18_42_orchestrator_self_test": "PASS_14",
+    "adapter_fault_injection": "PASS_17_OF_17",
+    "airlock_extended_audit": "PASS_27_OF_27",
+    "persistent_airlock_cycles": 1000,
+    "illegal_transition_fuzz_cases": 5000,
+    "network_used": false,
+    "miner_launched": false,
+    "hardware_control_performed": false
+  },
+  "distribution": {
+    "zip_sha256": "cb6262536432665b07fff9dc2bb1cf1723876dac749a0d7752156121f051ba34",
+    "package_manifest_sha256": "2129ededfb3c74935a41ec08f132f51d38ebe986cd533840af967703a5929d5d"
+  },
+  "claim_limits": [
+    "A new live BEACON is still required.",
+    "The value 16 is configuration-specific.",
+    "No bypass recipe is activated.",
+    "No wave-memory, energy-saving, hardware-lifetime, SHA-256 weakness, valid-proof advantage, mining advantage or profitability claim is emitted."
+  ],
+  "canonical_seed_sha256": "44e21fdc9d37fda98e2e73b0c9eb268bd04cdca9d84d0519e4f1166be22b46fc"
+}

@@ -1,0 +1,66 @@
+{
+  "schema": "JANUS/A18.43/through-the-horizon-gate-watcher-hotfix-release/v0.2.4",
+  "release": "JANUS_A18_43_V0_2_4_THROUGH_THE_HORIZON_GATE_WATCHER_HOTFIX",
+  "status": "OFFLINE_VALIDATED; LIVE_BEACON_REQUIRED",
+  "source_live_failure": {
+    "experiment_id": "A18_43_THROUGH_HORIZON_LIVE_PILOT_20260715_000950Z",
+    "scenario_id": "THROUGH_HORIZON_BEACON_T0_REOPEN_2",
+    "decision": "FAIL_CLOSED_EVENT_HORIZON_AIRLOCK",
+    "exact_failure": "GATE HOLD command_seq=2 was staged but native gate state remained OPEN command_seq=1 for 351.5702 ms",
+    "root_cause": "NativeAdmissionGate consumed commands only during await_admission(); all 16 admissions had already completed, so no admission path remained to consume HOLD during the root-only ACK pulse.",
+    "measured_state": {
+      "admitted": 16,
+      "submitted": 16,
+      "finalized": 3,
+      "hidden_in_flight": 13,
+      "ack_admission_advance": 0,
+      "ack_submission_advance": 0,
+      "ack_finalized_advance": 0
+    }
+  },
+  "hotfix": {
+    "independent_root_process_control_watcher": true,
+    "watch_interval_ms": 2,
+    "ack_timeout_ms": 1000,
+    "idle_hold_ack_without_new_admission_regression": "PASS",
+    "exact_interlock_failure_reporting": true,
+    "sensor_baseline_seconds": 30,
+    "old_v0_2_3_resume_forbidden": true
+  },
+  "offline_validation": {
+    "package_manifest": "PASS_39_OF_39",
+    "fresh_archive_crc_and_manifest": "PASS",
+    "horizon_supervisor_self_tests": "PASS_9",
+    "horizon_orchestrator_plan_tests": "PASS_5",
+    "adapter_fault_injection": "PASS_17_OF_17",
+    "airlock_extended_audit": "PASS_27_OF_27",
+    "persistent_airlock_cycles": 1000,
+    "illegal_transition_fuzz_cases": 5000,
+    "a18_42_native_gate_supervisor": "PASS_26",
+    "a18_42_orchestrator": "PASS_14",
+    "network_used": false,
+    "miner_launched": false,
+    "hardware_control_performed": false
+  },
+  "distribution": {
+    "zip_sha256": "cf40510197b26d65078db81ddeded7e6519d3ac726e96c345461d586004906be",
+    "package_manifest_sha256": "17b64e033ccf8cca516764f2f97b1d30aa764bd96907a674231cdf23f7917f6e"
+  },
+  "claim_limits": [
+    "The hotfix is not live-proven until the next mandatory BEACON passes.",
+    "The observed 16-unit cohort is configuration-specific and not universal.",
+    "No bypass recipe is activated live.",
+    "No energy saving, hardware-lifetime extension, SHA-256 weakness, valid-proof advantage, mining advantage or profitability is claimed."
+  ],
+  "frozen_semantics": [
+    "SHA-256",
+    "verifier",
+    "nonce traversal",
+    "candidate selection",
+    "WIRE",
+    "HASH",
+    "SUBMIT",
+    "pool-valid proof semantics"
+  ],
+  "canonical_seed_sha256": "44e21fdc9d37fda98e2e73b0c9eb268bd04cdca9d84d0519e4f1166be22b46fc"
+}

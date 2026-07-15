@@ -1,0 +1,51 @@
+{
+  "schema": "JANUS/A18.43/through-the-horizon-package-manifest/v0.2.0",
+  "package": "JANUS_A18_43_V0_2_THROUGH_THE_HORIZON_EVENT_HORIZON_AIRLOCK_PROTOCOL",
+  "phase": "OFFLINE_PROTOCOL_CORE",
+  "status": "SOURCE_AND_EVIDENCE_COMMITTED; LIVE_ADAPTER_NOT_YET_AUTHORIZED",
+  "git_blob_bindings": [
+    {
+      "path": "PROTOCOL_CONTRACT.json",
+      "git_blob_sha1": "fde25b2529139b28f341b510119e27189592c935"
+    },
+    {
+      "path": "README_RU.md",
+      "git_blob_sha1": "2565839bb7c728b1d4afdde5fbb2bc2df4054b68"
+    },
+    {
+      "path": "BUILD_VALIDATION.json",
+      "git_blob_sha1": "7c58581fdcbde66c5402940537179ab724b6ef94"
+    },
+    {
+      "path": "FAULT_INJECTION_RESULTS.json",
+      "git_blob_sha1": "ebf64659203a492d28e688342bef01ddf079265c"
+    },
+    {
+      "path": "a18_43_event_horizon_airlock.py",
+      "git_blob_sha1": "5bfc1195f072f71e03f218f9ce00c7b8b61204b8"
+    },
+    {
+      "path": "a18_43_airlock_fault_injection.py",
+      "git_blob_sha1": "c1f46253c7592fd62efdd9bbd12f95c45bd9a239"
+    }
+  ],
+  "offline_validation": {
+    "python_compile": "PASS_2_OF_2",
+    "fault_injection": "PASS_22_OF_22",
+    "delay_matrix_ms": [0, 10, 25, 50, 100, 250],
+    "network_used": false,
+    "miner_launched": false,
+    "hardware_control_performed": false
+  },
+  "frozen_semantics": [
+    "SHA-256",
+    "verifier",
+    "nonce traversal",
+    "candidate selection",
+    "WIRE",
+    "HASH",
+    "SUBMIT",
+    "pool-valid proof semantics"
+  ],
+  "canonical_seed_sha256": "44e21fdc9d37fda98e2e73b0c9eb268bd04cdca9d84d0519e4f1166be22b46fc"
+}
