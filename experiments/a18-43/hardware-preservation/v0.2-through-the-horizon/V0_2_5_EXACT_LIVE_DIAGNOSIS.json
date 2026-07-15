@@ -1,0 +1,76 @@
+{
+  "schema": "JANUS/A18.43/v0.2.5-exact-live-diagnosis-public/v1",
+  "canonical_seed_sha256": "44e21fdc9d37fda98e2e73b0c9eb268bd04cdca9d84d0519e4f1166be22b46fc",
+  "release": "JANUS_A18_43_V0_2_5_THROUGH_THE_HORIZON_REOPEN_COMPLETION_BARRIER_HOTFIX",
+  "status": "FAIL_CLOSED_DIAGNOSED",
+  "decision": "FAIL_CLOSED_EVENT_HORIZON_AIRLOCK",
+  "direct_cause": "The supervisor sampled exact exposure, finalized outcomes and PREPARED state from live append-only sources while reading submitted from a stale shadow-hook checkpoint. Both reopened SUBMIT_REGISTERED records were durable, but the checkpoint still reported the pre-reopen total. The first reopened exposure therefore appeared to exceed submissions and triggered a targeted fail-closed stop.",
+  "first_violated_invariant": {
+    "invariant": "ALL_REOPEN_COUNTERS_MUST_SHARE_A_COHERENT_AUTHORITATIVE_TIMELINE",
+    "reported_reason": "REOPEN_EXPOSURE_EXCEEDS_SUBMISSIONS",
+    "correct_reason": "FAIL_CLOSED_REOPEN_STALE_CHECKPOINT_SUBMISSION_AUTHORITY",
+    "timestamp_utc": "2026-07-15T01:14:48.582245Z"
+  },
+  "reopen_timeline": {
+    "epoch": 1,
+    "admission_granted": 2,
+    "submit_registered": 2,
+    "completed_before_targeted_stop": 1,
+    "unfinished_at_targeted_stop": 1,
+    "first_admission_utc": "2026-07-15T01:14:48.098853Z",
+    "second_admission_utc": "2026-07-15T01:14:48.101601Z",
+    "first_submission_utc": "2026-07-15T01:14:48.119616Z",
+    "second_submission_utc": "2026-07-15T01:14:48.122161Z",
+    "first_completion_utc": "2026-07-15T01:14:48.552278Z"
+  },
+  "violating_sample": {
+    "admitted_total": 18,
+    "submitted_checkpoint": 16,
+    "submitted_native_ledger": 18,
+    "finalized_before_observer_barrier": 16,
+    "exact_exposure_events": 17,
+    "prepared": 1
+  },
+  "authoritative_reconciliation": {
+    "equation": "18 submitted = 17 completed + 0 completed ineligible + 1 unfinished",
+    "exact_checked_total": 2244000,
+    "committed_exact_total": 2244000,
+    "unique_completed_batch_ids": 17,
+    "reconciliation": "PASS"
+  },
+  "termination": {
+    "initiator": "supervisor",
+    "targeted_stop_sent": true,
+    "process_exit_code": "0xC000013A",
+    "interpretation": "INTENTIONAL_TARGETED_CTRL_BREAK; NOT_A_SPONTANEOUS_RUNTIME_CRASH",
+    "python_tracebacks": 0,
+    "broken_process_pool_evidence": false,
+    "cancelled_future_evidence": false
+  },
+  "excluded_alternatives": [
+    "spontaneous runtime crash",
+    "reconnect or session loss",
+    "emitter failure",
+    "exact-exposure arithmetic corruption",
+    "duplicate completed batch ID",
+    "natural root-loop exit"
+  ],
+  "evidence_bindings": {
+    "horizon_airlock_manifest_sha256": "d320ca2bf5f7f03ea8d517a66e9e01eec7d30f355cac36ebbf6c230619d8b371",
+    "horizon_point_report_sha256": "85ed7223d17f7bb07cba286004ef0a7e396b9fbb426986b26cf6fb75c009156e",
+    "decompression_trace_sha256": "36db2bd2fc1c0cececdb23a5141ea97e47b2ee2738b04273dd523dacfc486e99",
+    "native_gate_events_sha256": "c7e877a0620e24b53f6971e18772edcfdf1784323f568334a71c22bdf8f2418c",
+    "completed_batch_ledger_sha256": "664f9a84c620804bef20a9a4194035c34286d549b1acff2119ed55d9bafcaeb5",
+    "completion_outcome_ledger_sha256": "501c8adabc839ae9e74e328c002c48960f5a1f4f20f4333acc4e8c6b2e342a11",
+    "observer_finalization_barrier_sha256": "318c6f693ba75df61bd9dea5fdedde0b317c62a904b5ca9c5c3ce516d5c3c16b",
+    "exposure_reconciliation_sha256": "9d1f93ed7cc896929cc3d7a4183e778f34f4b434c38a16d9e4de2c0432574edb",
+    "raw_runtime_log_sha256": "669562083c50ca4666480c7bb64695a9fdabc3b3054707ee32823e038b3285a2"
+  },
+  "privacy": {
+    "raw_runtime_log_published": false,
+    "pool_data_published": false,
+    "credentials_published": false,
+    "absolute_user_paths_published": false
+  },
+  "claim_boundary": "This is an operational counter-authority defect. It is not evidence of SHA-256 memory, prediction, valid-proof advantage, mining advantage, profitability, whole-system energy saving or hardware-lifetime extension."
+}

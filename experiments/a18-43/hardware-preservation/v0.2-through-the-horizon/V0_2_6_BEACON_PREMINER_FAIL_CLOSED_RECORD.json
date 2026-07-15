@@ -1,0 +1,62 @@
+{
+  "schema": "JANUS/A18.43/v0.2.6-beacon-preminer-fail-closed-record/v1",
+  "study": "A18.43 Through the Horizon",
+  "revision": "V0.2.6",
+  "recorded_at_utc": "2026-07-15T02:31:00Z",
+  "status": "FAIL_CLOSED_PRE_MINER_POLICY_VALIDATOR",
+  "pre_live_gates": {
+    "status": "PASS",
+    "passed": 23,
+    "total": 23,
+    "fresh_offline_tests_passed": 17,
+    "fresh_offline_tests_total": 17,
+    "canonical_manifest_entries_verified": 57,
+    "fresh_manifest_entries_verified": 57
+  },
+  "attempt": {
+    "attempt_id": "A18_43_V026_BEACON_ONLY_001",
+    "authorization_consumed": true,
+    "live_master_invoked": false,
+    "live_beacon_started": false,
+    "pool_contacted": false,
+    "miner_launched": false,
+    "automatic_retry_started": false,
+    "live_output_files": 0
+  },
+  "failure": {
+    "reported_reason": "A18_43_LIVE_POLICY_EXCEPTION_NOT_FOUND_OR_NOT_UNIQUE",
+    "classification": "PRE_MINER_POLICY_VALIDATOR_BINDING_BUG",
+    "direct_cause": "POWERSHELL_5_1_SELECT_STRING_SIMPLEMATCH_DOES_NOT_POPULATE_MATCHES_COLLECTION",
+    "first_violated_invariant": "VALID_POLICY_EXCEPTION_MUST_BE_COUNTED_BY_A_VERSION_STABLE_PRIMITIVE",
+    "launcher_matchinfo_matches_count": 0,
+    "authoritative_regex_count": 1,
+    "authoritative_line_hit_count": 1,
+    "failure_boundary": "BEFORE_LIVE_MASTER_INVOCATION"
+  },
+  "bindings": {
+    "approved_miner_sha256": "c46feec0dd936a65bb8e6e074aaa952a0cd57b6925cfb4dd37aad2140d22e1d2",
+    "package_manifest_sha256": "e44940579361b10ffd71a0cd87cd90780e42157996e46840dbeee6db627819b5",
+    "release_zip_sha256": "53c4c986fef35f7b40e59ced27b8211988f9ec9986be561bbdbd8b73620fb175",
+    "public_source_commit": "10e7ca2803cad96471f4cdfd15e85fd127821741"
+  },
+  "evidence_hashes": {
+    "attempt_events_sha256": "1fbcefe9c3ca028e4273488e9114129e848e9980c91f10f69166135346ad8c5b",
+    "live_launch_result_sha256": "71ae9bb521a9f6518e6fa2600f618ceb81d8ee500c712c95cf20f1cfb42bbd50",
+    "policy_validator_failure_analysis_sha256": "06f8905fe938c4ea33330d294a389bb25340aa986f97a2e43f8d87bc2f6cb1fb",
+    "pre_live_gate_summary_sha256": "40e52f6dd591c75a1406d26f2d12acd9f9329c22e8fafb0ee03778135921d6c0"
+  },
+  "prohibited_follow_on": {
+    "second_attempt_without_new_policy_gate": true,
+    "capacity_runs": 0,
+    "memory_runs": 0,
+    "bypass_activated": false
+  },
+  "claim_boundaries": {
+    "beacon_result_available": false,
+    "reopened_lineage_available": false,
+    "sha256_claim_eligible": false,
+    "mining_advantage_claim_eligible": false,
+    "whole_system_energy_claim_eligible": false
+  },
+  "future_repair_status": "PROPOSED_NOT_APPLIED"
+}

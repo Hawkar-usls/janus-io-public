@@ -92,3 +92,24 @@ FROZEN_ACK
 Следующий подэтап — привязать этот проверенный протокол к frozen A18.42 runtime через отдельные адаптеры, сохранив возможность fail-closed до первого живого BEACON.
 
 Название вдохновлено образом шлюза и управляемой разгерметизации из фильма **Event Horizon** и используется как уважительная культурная отсылка; связи или одобрения со стороны создателей фильма и Сэма Нилла не подразумевается.
+
+## V0.2.5: сохранённый отрицательный live-результат
+
+Первый нарушенный interlock установлен по полному набору локальных журналов. Обе reopened-задачи получили `ADMISSION_GRANTED` и `SUBMIT_REGISTERED`, но supervisor смешал authoritative append-only submission ledger со stale checkpoint. После первой reopened completion это создало ложное состояние `exposure > submitted` и привело к намеренному targeted stop с кодом `0xC000013A`.
+
+Это не runtime crash и не нарушение exact-exposure arithmetic. Полная реконструкция:
+
+```text
+18 submitted = 17 completed + 0 ineligible + 1 unfinished
+2,244,000 checked = 2,244,000 committed exact exposure
+```
+
+Санитизированная доказательная запись: `V0_2_5_EXACT_LIVE_DIAGNOSIS.json`.
+
+## V0.2.6: единая submission authority
+
+V0.2.6 использует validated `SUBMIT_REGISTERED` records native gate ledger как authoritative submission source, оставляя checkpoint только диагностическим snapshot. Дополнительно введены true pre-open T0, полная lineage для каждой reopened-задачи, минимум две terminal observations за не менее 100 ms и staged запуск `BEACON -> capacity -> memory` без автоматического перехода.
+
+Офлайн-валидация прошла полностью: 17/17 gates, 35 supervisor self-tests, 19 regressions реального V0.2.5 timeline, 1000 persistent cycles и 5000 illegal-transition attempts. Fresh ZIP extraction повторно прошёл 17/17.
+
+Live BEACON V0.2.6 не запускался: текущая root policy не содержит отдельного A18.43 live exception. Capacity и memory stages также не запускались. Это `OFFLINE_VALIDATED; LIVE_BEACON_POLICY_BLOCKED`, а не live PASS.

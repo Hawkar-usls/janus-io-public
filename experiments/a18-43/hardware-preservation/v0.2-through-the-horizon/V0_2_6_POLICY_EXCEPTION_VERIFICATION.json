@@ -1,0 +1,33 @@
+{
+  "schema": "JANUS/A18.43/v0.2.6-policy-exception-verification-public/v1",
+  "status": "PASS_HASH_BOUND_POLICY_RECORD",
+  "exception_name": "A18_43_V0_2_6_THROUGH_THE_HORIZON_EXCEPTION",
+  "exception_count": 1,
+  "active_root_agents_sha256": "324f04b76dadb7a68f49640a60ae1e9a2012cd43acb447f41fc800eb60a48e71",
+  "pre_amendment_agents_sha256": "039032a1997c1193d4083ec106871431b43207bdcb9e30b9c0b13ad62ea55376",
+  "pre_amendment_backup_sha256": "039032a1997c1193d4083ec106871431b43207bdcb9e30b9c0b13ad62ea55376",
+  "policy_diff_sha256": "6b896dd83b3deef716a19404b935060aae3ea1b23e7ea3e30e3e448f716e00ef",
+  "policy_validation_report_sha256": "a0f8b4186c13919bc9fa1e5ee2328af9238a842c8b9fbc3cb784dcdd193ef9db",
+  "old_policy_bytes_preserved_as_prefix": true,
+  "root_git_present": false,
+  "root_git_reinitialized": false,
+  "durable_commit_binding": "THIS_FILE_IN_PUBLIC_V0_2_6_BRANCH",
+  "public_source_commit": "10e7ca2803cad96471f4cdfd15e85fd127821741",
+  "release": "JANUS_A18_43_V0_2_6_THROUGH_THE_HORIZON_SUBMISSION_AUTHORITY_HOTFIX",
+  "approved_miner_sha256": "c46feec0dd936a65bb8e6e074aaa952a0cd57b6925cfb4dd37aad2140d22e1d2",
+  "package_manifest_sha256": "e44940579361b10ffd71a0cd87cd90780e42157996e46840dbeee6db627819b5",
+  "release_zip_sha256": "53c4c986fef35f7b40e59ced27b8211988f9ec9986be561bbdbd8b73620fb175",
+  "authorized_scope": "EXACTLY_ONE_FUTURE_V0_2_6_LIVE_BEACON",
+  "accepted_live_start_phrase": "APPROVE A18.43 V0.2.6 BEACON START: ONE LIVE BEACON ONLY; STOP BEFORE CAPACITY, BYPASS AND MEMORY.",
+  "capacity_authorized": false,
+  "bypass_authorized": false,
+  "memory_authorized": false,
+  "protected_runtime_or_miner_changed": false,
+  "policy_amendment_step": {
+    "offline_preflight": "PASS_14_OF_14",
+    "network_used": false,
+    "pool_contacted": false,
+    "miner_launched": false
+  },
+  "claim_boundary": "This record authorizes no live result claim. It records only the reviewed policy gate and exact hash bindings."
+}

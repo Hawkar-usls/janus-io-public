@@ -1,0 +1,80 @@
+{
+  "schema": "JANUS/A18.43/through-the-horizon-v0.2.6-release-record/v1",
+  "canonical_seed_sha256": "44e21fdc9d37fda98e2e73b0c9eb268bd04cdca9d84d0519e4f1166be22b46fc",
+  "release": "JANUS_A18_43_V0_2_6_THROUGH_THE_HORIZON_SUBMISSION_AUTHORITY_HOTFIX",
+  "status": "OFFLINE_VALIDATED; LIVE_BEACON_POLICY_BLOCKED",
+  "source_failure_record": "V0_2_5_EXACT_LIVE_DIAGNOSIS.json",
+  "repair": {
+    "submission_authority": "validated unique SUBMIT_REGISTERED records from the native gate event hash chain",
+    "checkpoint_role": "diagnostic liveness snapshot only",
+    "true_t0_states": [
+      "T0_EXTERNAL_OBSERVED_LEGACY",
+      "T0_PREOPEN_GATE_CLOSED_TRUE_ZERO"
+    ],
+    "reopen_terminal_requirements": [
+      "admitted_delta == reopen_quota",
+      "submitted_delta == reopen_quota",
+      "finalized_delta == reopen_quota",
+      "exposure_delta == reopen_quota",
+      "prepared == 0",
+      "in_flight == 0",
+      "queued == 0",
+      "gate == HOLD_QUOTA_EXHAUSTED",
+      "wave_epoch == baseline_epoch + 1",
+      "at least two stable terminal observations",
+      "terminal state stable for at least 100 ms"
+    ],
+    "reopen_lineage": "admission -> submission -> worker result/PREPARED -> exact exposure -> native outcome -> FINALIZED",
+    "observer_finalization_before_cleanup": true,
+    "early_process_stop_forbidden": true,
+    "capacity_auto_start_after_beacon": false,
+    "memory_auto_start_after_capacity": false
+  },
+  "offline_validation": {
+    "status": "PASS",
+    "tests_passed": 17,
+    "tests_total": 17,
+    "supervisor_self_tests": 35,
+    "real_v0_2_5_timeline_regressions": 19,
+    "adapter_fault_injection": "PASS_17_OF_17",
+    "hardened_airlock_audit": "PASS_27_OF_27",
+    "persistent_cycles": 1000,
+    "illegal_transition_attempts": 5000,
+    "a18_42_supervisor_self_tests": 26,
+    "a18_42_orchestrator_self_tests": 14,
+    "fresh_zip_manifest_files_verified": 57,
+    "fresh_zip_tests_passed": 17,
+    "fresh_zip_tests_total": 17,
+    "approved_miner_hash_gate": "PASS",
+    "pool_contacted": false,
+    "miner_launched": false,
+    "network_used_by_tests": false,
+    "hardware_control_performed": false
+  },
+  "protected_surfaces": {
+    "approved_miner_changed": false,
+    "wire_hash_submit_changed": false,
+    "nonce_traversal_changed": false,
+    "candidate_selection_changed": false,
+    "scheduler_or_allocator_changed": false,
+    "pool_configuration_changed": false
+  },
+  "distribution": {
+    "zip_sha256": "53c4c986fef35f7b40e59ced27b8211988f9ec9986be561bbdbd8b73620fb175",
+    "package_manifest_sha256": "e44940579361b10ffd71a0cd87cd90780e42157996e46840dbeee6db627819b5"
+  },
+  "live_gate": {
+    "beacon_executed": false,
+    "capacity_runs_executed": 0,
+    "memory_runs_executed": 0,
+    "reason": "The root policy contains no narrowly scoped A18.43 V0.2.6 live exception. The package fails closed until a reviewed policy amendment and a fresh explicit operator authorization exist.",
+    "required_policy_marker": "A18_43_V0_2_6_THROUGH_THE_HORIZON_EXCEPTION"
+  },
+  "claim_limits": [
+    "V0.2.6 is offline-ready, not live-validated.",
+    "The V0.2.5 failed BEACON remains preserved as a negative operational result.",
+    "The value 16 is configuration-specific.",
+    "No bypass is activated.",
+    "No wave-memory, energy-saving, hardware-lifetime, SHA-256 weakness, valid-proof advantage, mining-advantage or profitability claim is emitted."
+  ]
+}
