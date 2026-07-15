@@ -1,0 +1,42 @@
+{
+  "schema": "JANUS/A18.43/v0.2.6-offline-validation-public/v1",
+  "status": "PASS",
+  "tests_passed": 17,
+  "tests_total": 17,
+  "gates": {
+    "python_compile_all_package_scripts": "PASS",
+    "supervisor_self_test": "PASS_35",
+    "real_timeline_regression": "PASS_19_OF_19",
+    "horizon_orchestrator_self_test": "PASS_6",
+    "master_staging_self_test": "PASS_2",
+    "adapter_fault_injection": "PASS_17_OF_17",
+    "offline_adapter_beacon": "PASS",
+    "hardened_airlock_audit": "PASS_27_OF_27",
+    "a18_42_supervisor_self_test": "PASS_26",
+    "a18_42_orchestrator_self_test": "PASS_14",
+    "wave_memory_analyzer_self_test": "PASS_3",
+    "hardware_sensor_self_test": "PASS_2",
+    "system_monitor_self_test": "PASS_5",
+    "preservation_metrics_self_test": "PASS_7",
+    "powershell_parser": "PASS",
+    "json_parse": "PASS_29_FILES",
+    "stress_requirements": "PASS_1000_CYCLES_AND_5000_ILLEGAL_TRANSITIONS"
+  },
+  "fresh_archive": {
+    "status": "PASS",
+    "manifest_files_verified": 57,
+    "tests_passed": 17,
+    "tests_total": 17,
+    "zip_sha256": "53c4c986fef35f7b40e59ced27b8211988f9ec9986be561bbdbd8b73620fb175",
+    "package_manifest_sha256": "e44940579361b10ffd71a0cd87cd90780e42157996e46840dbeee6db627819b5"
+  },
+  "safety": {
+    "pool_contacted": false,
+    "miner_launched": false,
+    "network_used_by_tests": false,
+    "nas_touched": false,
+    "docker_touched": false,
+    "wire_hash_submit_changed": false
+  },
+  "live_result": "NOT_RUN_POLICY_BLOCKED"
+}
