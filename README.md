@@ -3,11 +3,16 @@
 # JANUS I0
 ### Proof-of-Work measurement & hardware-preservation experiments
 
+![Status](https://img.shields.io/badge/status-active%20experimental%20research-2f81f7)
+![Scope](https://img.shields.io/badge/evidence-tested%20configurations-6e7681)
+
 `measure first` · `preserve negative results` · `do not infer beyond the tested scope`
 
 </div>
 
-JANUS I0 studies whether avoidable computation, queue overshoot and thermal load can be measured and reduced **without changing standard SHA-256 verification semantics**.
+## Abstract
+
+JANUS I0 studies whether avoidable computation, queue overshoot, and thermal load can be measured and reduced **without changing standard SHA-256 verification semantics**.
 
 The project is experimental. Its evidence concerns the tested software/process configurations only.
 
@@ -55,8 +60,8 @@ It does **not** establish lower wall energy, longer hardware life, better mining
 The public toolchain is designed to account for classes such as:
 
 - post-target overflow and queue overshoot;
-- stale, duplicate, reconnect-invalidated or otherwise unusable work;
-- admitted, submitted, finalized and completed work;
+- stale, duplicate, reconnect-invalidated, or otherwise unusable work;
+- admitted, submitted, finalized, and completed work;
 - power/thermal telemetry when a stable sensor path is available;
 - hardware errors and operating-point quality.
 
@@ -72,17 +77,26 @@ SHAM_TIMING_CONTROL
 NATIVE_GATE_PRESERVATION
 ```
 
-with stable, time-aligned power and thermal telemetry. `NO_EFFECT`, `NEGATIVE_EFFECT` and `FAIL_CLOSED` are valid outcomes.
+with stable, time-aligned power and thermal telemetry. `NO_EFFECT`, `NEGATIVE_EFFECT`, and `FAIL_CLOSED` are valid outcomes.
 
 ## Evidence discipline
 
-- Keep SHA-256, verification, target math and submit semantics fixed unless a separate experiment explicitly changes them.
-- Preserve null, negative and failed runs.
+- Keep SHA-256, verification, target math, and submit semantics fixed unless a separate experiment explicitly changes them.
+- Preserve null, negative, and failed runs.
 - Keep missing measurements unknown rather than silently treating them as zero.
 - Treat hash chains as integrity evidence, not proof that a sensor or clock was truthful.
 - Do not promote component telemetry into wall-power claims without a validated measurement path.
 
 Read: [Proof-of-Observation](docs/proof-of-observation.md) · [Current capabilities](docs/current-engineering-capabilities.md)
+
+## Reviewer path
+
+1. [`PROJECT_STATUS.json`](PROJECT_STATUS.json)
+2. [A18.42 report](docs/a18-42-native-flow-gate-replication-2026-07-14.md)
+3. [A18.42 artifacts](experiments/a18-42/native-flow-gate/)
+4. [Proof-of-Observation](docs/proof-of-observation.md)
+5. [Security / disclosure](SECURITY.md)
+6. [Portfolio maturity/visibility](https://github.com/Hawkar-usls/Janus/blob/main/portfolio-visibility.json)
 
 ## Repository map
 
@@ -93,14 +107,8 @@ scripts/      analyzers, scrubbers and reviewer utilities
 src/          historical/importable supervisor snapshot
 ```
 
-## Reviewer path
-
-1. [`PROJECT_STATUS.json`](PROJECT_STATUS.json)
-2. [A18.42 report](docs/a18-42-native-flow-gate-replication-2026-07-14.md)
-3. [A18.42 artifacts](experiments/a18-42/native-flow-gate/)
-4. [Proof-of-Observation](docs/proof-of-observation.md)
-5. [Security / disclosure](SECURITY.md)
-
 ## License
 
 Apache-2.0. See [LICENSE](LICENSE).
+
+Presentation follows the account's [public repository standard](https://github.com/Hawkar-usls/Janus/blob/main/docs/PUBLIC_REPOSITORY_PRESENTATION_STANDARD.md). No affiliation with MIT is implied by the presentation style.
