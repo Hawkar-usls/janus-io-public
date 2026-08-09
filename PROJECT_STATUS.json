@@ -1,0 +1,37 @@
+{
+  "schema_id": "hawkar.project-status.v1",
+  "project": "JANUS I0",
+  "repository": "https://github.com/Hawkar-usls/janus-io-public",
+  "portfolio_class": "flagship_research_engineering",
+  "last_reviewed": "2026-08-09",
+  "summary": "Controlled measurement and admission-gating experiments around Proof-of-Work work accounting while preserving standard SHA-256 verification semantics.",
+  "current_public_result": {
+    "id": "A18.42",
+    "name": "Native Flow Gate",
+    "status": "observed_in_repeated_project_runs",
+    "project_classification": "REPLICATED_NATIVE_WAVE_SEGMENTATION",
+    "tested_scope": "one persistent experimental process and the published A18.42 protocol",
+    "reported_counts": {
+      "calibration_valid": "10/10",
+      "discovery_valid": "40/40",
+      "strict_native_candidates": "20/20",
+      "matched_candidate_pairs": "16/16",
+      "equivalent_sham_signatures": "0/16",
+      "native_boundaries_pass": "56/56"
+    },
+    "report": "https://github.com/Hawkar-usls/janus-io-public/blob/main/docs/a18-42-native-flow-gate-replication-2026-07-14.md",
+    "artifacts": "https://github.com/Hawkar-usls/janus-io-public/tree/main/experiments/a18-42/native-flow-gate"
+  },
+  "not_established": [
+    "SHA-256 predictability or weakness",
+    "increased proof probability",
+    "mining advantage or profitability",
+    "wall-energy savings",
+    "extended hardware lifetime",
+    "production mining-platform readiness"
+  ],
+  "current_validation_target": "Matched continuous-baseline, sham-timing-control and native-gate preservation measurements with stable power and thermal telemetry.",
+  "methodology": "https://github.com/Hawkar-usls/janus-io-public/blob/main/docs/proof-of-observation.md",
+  "capabilities": "https://github.com/Hawkar-usls/janus-io-public/blob/main/docs/current-engineering-capabilities.md",
+  "security": "https://github.com/Hawkar-usls/janus-io-public/blob/main/SECURITY.md"
+}
