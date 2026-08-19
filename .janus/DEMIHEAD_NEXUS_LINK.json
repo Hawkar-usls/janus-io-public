@@ -1,0 +1,43 @@
+{
+  "schema": "janus.nexus.reciprocal_source_edge.v1",
+  "link_id": "I0_MEASUREMENT_DEMIHEAD_NEXUS_V2_4_RECIPROCAL_EDGE",
+  "status": "PROPOSED_RECIPROCAL_SOURCE_MARKER",
+  "repository": "Hawkar-usls/janus-io-public",
+  "source_head": "I0_MEASUREMENT",
+  "source_role": "CONTROLLED_MEASUREMENT_AND_PROOF_OF_OBSERVATION_SOURCE",
+  "source_baseline_sha": "7d02fb08fa9defd71297f8c5c4c9ac9d6be76316",
+  "demihead": {
+    "repository": "Hawkar-usls/Demi_Head",
+    "contract_id": "NEXUS_V2_4_I0_MEASUREMENT_RECEIPT_FROZEN_CONTRACT",
+    "contract_path": "contracts/NEXUS_V2_4_I0_MEASUREMENT_RECEIPT_FROZEN_CONTRACT.json",
+    "contract_blob_sha": "fec60cfa1440bd148492a25535a4fbf0ddf45539",
+    "target_head": "MEASUREMENT_BROKER"
+  },
+  "edge": {
+    "payload": "MEASUREMENT_RECEIPT",
+    "route": ["I0_MEASUREMENT", "MEASUREMENT_BROKER", "MEASUREMENT_RECEIPT"],
+    "direction": "SOURCE_TO_DEMIHEAD",
+    "live_cross_repository_transport": false,
+    "route_receipt_is_delivery": false
+  },
+  "reciprocity_checks": {
+    "demihead_contract_must_name_this_repository": true,
+    "demihead_contract_source_sha_must_equal_source_baseline_sha": true,
+    "demihead_contract_route_must_equal_edge_route": true,
+    "measurement_semantics_or_status_drift_requires_revalidation": true,
+    "promotion_must_not_rewrite_source_baseline_history": true
+  },
+  "authority_boundary": {
+    "measurement_receipt_is_evidence_admission": false,
+    "integrity_is_truth": false,
+    "source_mutation_allowed": false,
+    "external_effect_authority": false,
+    "authority_delta": 0,
+    "mass_effect_budget_delta": 0,
+    "write_back_default": "DENY"
+  },
+  "topology_health": {
+    "validator": "Hawkar-usls/Demi_Head:tools/janus_demihead_topology_health.py",
+    "central_ci_receipt_required": true
+  }
+}
