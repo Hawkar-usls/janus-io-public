@@ -3,7 +3,7 @@
   "project": "JANUS I0",
   "repository": "https://github.com/Hawkar-usls/janus-io-public",
   "portfolio_class": "flagship_research_engineering",
-  "last_reviewed": "2026-08-09",
+  "last_reviewed": "2026-08-20",
   "maturity": "ACTIVE_EXPERIMENTAL_RESEARCH",
   "completion_status": "ONGOING_VALIDATION",
   "summary": "Controlled measurement and admission-gating experiments around Proof-of-Work work accounting while preserving standard SHA-256 verification semantics.",
@@ -23,6 +23,14 @@
     },
     "report": "https://github.com/Hawkar-usls/janus-io-public/blob/main/docs/a18-42-native-flow-gate-replication-2026-07-14.md",
     "artifacts": "https://github.com/Hawkar-usls/janus-io-public/tree/main/experiments/a18-42/native-flow-gate"
+  },
+  "strict_results": {
+    "a18_43_wall_energy_thermal": {
+      "status": "FAIL_CLOSED_REQUIRED_LIVE_TELEMETRY_ABSENT",
+      "claim_status": "NOT_ESTABLISHED",
+      "artifact": "https://github.com/Hawkar-usls/janus-io-public/blob/main/results/a18-43/JANUS-I0-A18_43-WALL-ENERGY-THERMAL-STRICT-RESULT-2026-08-20-v1.0.json",
+      "interpretation": "Offline/preflight readiness is supported, but matched live power/thermal evidence required for an energy or thermal claim is absent."
+    }
   },
   "not_established": [
     "SHA-256 predictability or weakness",
