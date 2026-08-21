@@ -1,0 +1,27 @@
+{
+  "schema":"janus.io_public.one_voice_two_faces_link.v1",
+  "status":"BOUND_PUBLIC_FACE",
+  "principle_ref":"Hawkar-usls/janus-meta-registry:data/JANUS-ONE-VOICE-TWO-FACES-PRINCIPLE-2026-08-21-v1.0.json",
+  "repository":"Hawkar-usls/janus-io-public",
+  "visibility":"PUBLIC",
+  "role":"SCRUBBED_AUDITABLE_I0_PUBLIC_PROJECTION",
+  "full_internal_state_allowed":false,
+  "raw_private_evidence_allowed":false,
+  "public_claim_requires_publicly_auditable_evidence":true,
+  "public_receipt_is_full_internal_state":false,
+  "external_voice_count":1,
+  "source_private_repository":"Hawkar-usls/janus-io",
+  "publication_gate":[
+    "SCRUB_PRIVATE_OR_OPERATIONAL_FIELDS",
+    "BOUND_CLAIM_TO_EVIDENCE",
+    "VERIFY_PROVENANCE",
+    "PUBLIC_AUDITABILITY_CHECK",
+    "EMIT_SINGLE_JSON_OR_RECEIPT"
+  ],
+  "laws":[
+    "PUBLIC_RECEIPT != FULL_INTERNAL_STATE",
+    "HIDDEN_SIDE != SECRET_TRUTH",
+    "PRIVATE_DATA_MAY_INFORM_ANALYSIS_BUT_PUBLIC_CLAIM_REQUIRES_PUBLICLY_AUDITABLE_EVIDENCE",
+    "PUBLIC_I0 = SANITIZED_PROJECTION_OF_BIDIRECTIONAL_I0"
+  ]
+}
