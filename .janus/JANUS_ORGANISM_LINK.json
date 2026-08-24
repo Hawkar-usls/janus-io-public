@@ -1,0 +1,16 @@
+{
+  "schema": "janus.organism.member_link.v1",
+  "organism_id": "JANUS_FEDERATED_ORGANISM",
+  "canonical_manifest": "Hawkar-usls/Janus:organism/JANUS_ORGANISM_v1.json",
+  "member_repository": "Hawkar-usls/janus-io-public",
+  "organ_key": "measurement_bench",
+  "class": "CORE",
+  "role": "PROOF_OF_OBSERVATION_AND_MEASUREMENT_BENCH",
+  "consumes": ["RAW_TELEMETRY", "EXPERIMENT_CONTRACT", "CONTROL", "CALIBRATION"],
+  "emits": ["MEASUREMENT_RECEIPT", "MATCHED_CONTROL_RESULT", "NEGATIVE_RESULT", "OBSERVATION"],
+  "routes_to": ["causal_witness", "guardian_cortex", "memory", "proof_spine"],
+  "authority": "MEASURED_CONFIGURATION_SCOPE",
+  "authority_delta": 0,
+  "cross_repo_write_default": "DENY",
+  "claim_boundary": ["MEASUREMENT != MECHANISM", "COMPONENT_TELEMETRY != WALL_POWER", "NEGATIVE_RESULT_IS_VALID_OUTPUT"]
+}
