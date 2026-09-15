@@ -1,0 +1,31 @@
+{
+  "schema": "JANUS/A18.43/source-lineage/v0.1.1",
+  "created_from": "A18.42 replicated Native Flow Gate result plus Janus-Demiurge passive SystemMonitor patterns",
+  "a18_42_merge_commits": {
+    "janus_meta_registry": "838758660c60a61bfd2d27ec4c01ceb0a8d233c9",
+    "janus_io_public": "cc54c9ec0d3eb9f34041d58a8d09d5dc925f6683"
+  },
+  "janus_demiurge_system_monitor": {
+    "repository": "Hawkar-usls/Janus-Demiurge",
+    "path": "system_monitor.py",
+    "blob_sha": "7deec130091d3fe8c62375e32472326887159f42",
+    "passive_patterns_reused": [
+      "OpenHardwareMonitor WMI CPU temperature",
+      "NVML GPU metrics",
+      "nvidia-smi fallback",
+      "psutil CPU and memory metrics"
+    ],
+    "active_or_unrelated_patterns_excluded": [
+      "CacheProbe",
+      "audio",
+      "screen",
+      "keyboard",
+      "mouse",
+      "TachyonicRegulator",
+      "JanusVault control loop"
+    ]
+  },
+  "runtime_included": false,
+  "miner_included": false,
+  "live_challenge_authorized": false
+}

@@ -1,0 +1,2 @@
+A18.42 is frozen, not retired.
+Its Native Flow Gate and wave/crest/valley/foam/tail semantics are required inputs to A18.43.

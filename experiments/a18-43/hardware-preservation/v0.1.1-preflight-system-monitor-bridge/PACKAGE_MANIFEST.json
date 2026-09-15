@@ -1,0 +1,85 @@
+{
+  "schema": "JANUS/A18.43/package-manifest/v0.1.1",
+  "package": "JANUS_A18_43_HARDWARE_PRESERVATION_PREFLIGHT_V0_1_1_SYSTEM_MONITOR_BRIDGE",
+  "phase": "PREFLIGHT_ONLY",
+  "files": [
+    {
+      "path": "BUILD_VALIDATION.json",
+      "sha256": "5b324eff177140dacb3f6b41db559f1ed1e4e9f180af3ebc6e61cfafab40d2d1",
+      "size_bytes": 1312
+    },
+    {
+      "path": "CLAIM_GATES.json",
+      "sha256": "4891979b7410de384f882bf21be820940c35db59ee894603447ef14b04a74001",
+      "size_bytes": 1788
+    },
+    {
+      "path": "EXPERIMENT_CONTRACT.json",
+      "sha256": "9ec692960a7c1cb87a76b19695cc94d38d52f085570ef50546f12fd5e0b12863",
+      "size_bytes": 2809
+    },
+    {
+      "path": "OPERATOR_CHECKLIST.txt",
+      "sha256": "00c174afbf2e9789761c1d6943a2536acffc61c489f00531090f5d3989de1798",
+      "size_bytes": 759
+    },
+    {
+      "path": "PREFLIGHT_ONLY.cmd",
+      "sha256": "414a31600bf24f4d8f02b29405f009669682e67650c38063a98384002c7252d5",
+      "size_bytes": 131
+    },
+    {
+      "path": "README_RU.txt",
+      "sha256": "47f927e453ce4f82e22e03ad68b0049db845f71c1aead90e156d1210f8a360c4",
+      "size_bytes": 3500
+    },
+    {
+      "path": "RUN_A18_43_PREFLIGHT.ps1",
+      "sha256": "5a8b91e2b56bdfef1129f554ab22e489b51a3499aed6671a5172a4656b80ed7c",
+      "size_bytes": 1180
+    },
+    {
+      "path": "SCENARIO_MATRIX_DRAFT.json",
+      "sha256": "6b05bd44bfdeaf7328a5beceed69b8171e16c33078b4f4c6b00fd106c967643a",
+      "size_bytes": 1976
+    },
+    {
+      "path": "SENSOR_CONTRACT.json",
+      "sha256": "df2e3906ca378460c1703893b8c069cb22308015ecb708a14a40815d41495ba1",
+      "size_bytes": 2074
+    },
+    {
+      "path": "SOURCE_LINEAGE.json",
+      "sha256": "4d96f055c61022139bf8ca278e4af7237cd4aea27a05fbab5e6be4cdd50b12b1",
+      "size_bytes": 993
+    },
+    {
+      "path": "a18_43_hardware_sensor_probe.py",
+      "sha256": "0dfd859fed4b7c6703fb7a64fc7ce673a43a194b6c2bc5f98027993874e8a9bc",
+      "size_bytes": 7251
+    },
+    {
+      "path": "a18_43_preflight.py",
+      "sha256": "0c4c4b7cdf677ca1d5fa2b7d06cf24bab73f64e83a4328274df910541452f4fd",
+      "size_bytes": 2774
+    },
+    {
+      "path": "a18_43_preservation_metrics.py",
+      "sha256": "ef0cf3198ef404c92eea7a804043e009900232afabf623aa07c62692436600d1",
+      "size_bytes": 5023
+    },
+    {
+      "path": "a18_43_system_monitor_bridge.py",
+      "sha256": "ca79cabd4ca138f2bfc5b4958b366a7f67afb96d717462ebc399731c93b991d4",
+      "size_bytes": 9618
+    },
+    {
+      "path": "requirements-preflight.txt",
+      "sha256": "0842db4013d7efa1ece0f97a60f725a1fc0e5ceba488db245141b75e542c6d4b",
+      "size_bytes": 127
+    }
+  ],
+  "miner_included": false,
+  "network_required": false,
+  "hardware_writes": false
+}

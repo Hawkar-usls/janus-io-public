@@ -1,0 +1,32 @@
+{
+  "schema": "JANUS/A18.43/wave-fault-matrix/v0.1.3",
+  "planned": 15,
+  "expected_matched": 15,
+  "scenarios": [
+    "CLEAN_NATIVE_2_2",
+    "FOAM_MISLABELLED_AS_CREST",
+    "VALLEY_NOT_DRAINED",
+    "NO_NEW_ADMISSIONS_AFTER_REOPEN",
+    "EPOCH_COMPLETION_MISMATCH",
+    "PROCESS_PID_CHANGED",
+    "RECONNECT_DELTA_NONZERO",
+    "GATE_EVENT_CHAIN_BROKEN",
+    "TAIL_ACCOUNTING_MISSING",
+    "FINAL_BOUNDARY_FOAM_NONZERO",
+    "SHAM_EQUIVALENT_SIGNATURE",
+    "DUPLICATE_EPOCH_ID",
+    "ADMISSION_QUOTA_OVERSHOOT",
+    "SHAM_CONTROL_NO_CREST",
+    "CONTINUOUS_CONTROL_NO_CREST"
+  ],
+  "interpretation_rules": [
+    "old in-flight completions after reopen are foam, not a crest",
+    "a strict reopened crest requires a drained native valley",
+    "a strict reopened crest requires genuinely new admissions and epoch-mapped completions",
+    "same-process continuity and zero reconnect delta are required",
+    "tail accounting and gate event-chain integrity are required",
+    "a matched sham equivalent blocks uniqueness",
+    "final-boundary foam may preserve segmentation validity while blocking a clean preservation boundary"
+  ],
+  "physical_claim_emitted": false
+}

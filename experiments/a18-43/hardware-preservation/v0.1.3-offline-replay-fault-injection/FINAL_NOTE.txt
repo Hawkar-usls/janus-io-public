@@ -1,0 +1,3 @@
+The wave was not abandoned.
+A18.42 finished the admission-control proof.
+A18.43 tests whether that control preserves useful hardware life by reducing unnecessary work, energy, and thermal stress.

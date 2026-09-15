@@ -1,0 +1,83 @@
+{
+  "schema": "JANUS/A18.43/hardware-sensor-contract/v0.1.1",
+  "providers": [
+    {
+      "name": "OpenHardwareMonitor",
+      "role": "primary sensor inventory",
+      "namespace": "root/OpenHardwareMonitor",
+      "class": "Sensor",
+      "fields": [
+        "Name",
+        "Identifier",
+        "Parent",
+        "SensorType",
+        "Value",
+        "Min",
+        "Max",
+        "Index"
+      ]
+    },
+    {
+      "name": "NVML",
+      "role": "NVIDIA GPU telemetry supplement",
+      "fields": [
+        "gpu_util_percent",
+        "memory_util_percent",
+        "temperature_c",
+        "power_w",
+        "fan_percent"
+      ]
+    },
+    {
+      "name": "nvidia-smi",
+      "role": "NVML fallback",
+      "fields": [
+        "gpu_util_percent",
+        "memory_used_mb",
+        "memory_total_mb",
+        "temperature_c",
+        "power_w",
+        "fan_percent",
+        "graphics_clock_mhz",
+        "memory_clock_mhz"
+      ]
+    },
+    {
+      "name": "psutil",
+      "role": "CPU and memory telemetry",
+      "fields": [
+        "cpu_percent_total",
+        "cpu_percent_per_core",
+        "cpu_frequency_mhz",
+        "memory_percent"
+      ]
+    }
+  ],
+  "canonical_metrics": [
+    "cpu_package_temp_c",
+    "gpu_core_temp_c",
+    "gpu_power_w",
+    "cpu_package_power_w",
+    "system_total_power_w",
+    "gpu_load_percent",
+    "cpu_load_percent",
+    "gpu_fan_rpm",
+    "gpu_fan_percent",
+    "gpu_memory_used_mb",
+    "gpu_memory_total_mb"
+  ],
+  "claim_rules": {
+    "no_temperature": "BLOCK_LIVE_CHALLENGE",
+    "no_load": "BLOCK_MATCHED_LOAD_VALIDATION",
+    "gpu_or_cpu_component_power_only": "ALLOW_COMPONENT_JOULES_BUT_BLOCK_WHOLE_SYSTEM_ENERGY_CLAIM",
+    "no_power": "ALLOW_THERMAL_ONLY_BUT_BLOCK_JOULE_CLAIM",
+    "no_fan": "ALLOW_BUT_BLOCK_FAN_WEAR_METRICS",
+    "sensor_identity_changed_mid_run": "FAIL_CLOSED"
+  },
+  "sampling": {
+    "default_duration_seconds": 20.0,
+    "default_interval_seconds": 0.5,
+    "minimum_samples": 30
+  },
+  "privacy": "Local sensor names and hardware identifiers remain local unless explicitly sanitized."
+}

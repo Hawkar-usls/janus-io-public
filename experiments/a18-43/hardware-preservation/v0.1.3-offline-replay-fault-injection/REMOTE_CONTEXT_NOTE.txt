@@ -1,0 +1,3 @@
+A18.42 wave/crest/valley/foam/tail semantics remain active and are not retired.
+A18.43 uses Undina's Comb as the admission-control mechanism whose preservation benefit must be tested against hardware telemetry.
+Read UNDINAS_COMB_BRIDGE.md and V0_1_3_RELEASE_RECORD.json before continuing this stage.

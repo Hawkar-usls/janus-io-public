@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "source": "operator SENSOR_INVENTORY.json",
+  "expected": {
+    "cpu_package_power": "/amdcpu/0/power/0",
+    "gpu_power": null,
+    "system_total_power": null
+  },
+  "actual": {
+    "cpu_package_power": "/amdcpu/0/power/0",
+    "gpu_power": null,
+    "system_total_power": null
+  }
+}
