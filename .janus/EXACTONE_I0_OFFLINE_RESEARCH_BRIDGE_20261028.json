@@ -1,0 +1,49 @@
+{
+  "schema": "janus.i0.exactone_paired_proof_control_link.v1",
+  "artifact_id": "JANUS-I0-PUBLIC-EXACTONE-MATCHED-CONTROL-20261028",
+  "created_at": "2026-10-28",
+  "status": "DRAFT_READ_ONLY_OFFLINE_PROVENANCE",
+  "source_repo": "Hawkar-usls/janus-io-public",
+  "source_commit": "41b1c9b6af6629a551d2814aa69c5dfcac042620",
+  "shared_offline_analyzer": {
+    "path": "scripts/butterfly_director.py",
+    "git_blob_sha1": "697ef1b46d6253f034e3c7b33783836e99c96052",
+    "execution": "ONLY_OFFLINE_SELF_TEST"
+  },
+  "control_protocol": {
+    "path": "docs/structured-traversal-and-random-control.md",
+    "git_blob_sha1": "5d4cc973e68f26a956e6de5be402621edc177be7",
+    "transfer": "MEASUREMENT_DISCIPLINE_ONLY"
+  },
+  "target": {
+    "repo": "Hawkar-usls/Janus-Fundamentum",
+    "draft_pr": "https://github.com/Hawkar-usls/Janus-Fundamentum/pull/571",
+    "operator": "research/exactone_i0_paired_control_audit.py",
+    "implementation_ci": "https://github.com/Hawkar-usls/Janus-Fundamentum/actions/workflows/exactone-io-offline-control.yml",
+    "source_validity": "Independent original Exact-One SAT/UNSAT certificates",
+    "interface": "OFFLINE_SYNTHETIC_CASES_NO_HASH_OR_NONCE_IMPORT"
+  },
+  "restrictions": {
+    "raw_private_logs_copy": false,
+    "private_miner_code_copy": false,
+    "real_mining_prohibited": true,
+    "stratum_or_pool_connection_prohibited": true,
+    "frozen_wire_unchanged": true,
+    "source_repository_main_unchanged": true,
+    "expected_discovery": "INDEPENDENT_PER_CASE_PROOF_COVERAGE_NOT_SPEEDUP",
+    "energy_claim_from_sat": false,
+    "sha256_break_claim": false,
+    "universal_polynomial_sat_claim": false,
+    "p_vs_np": "OPEN"
+  },
+  "external_dependencies": {
+    "aifc": "Hawkar-usls/AIFC@86bf957815911658edad330d5948e1bea2ea59b1",
+    "lapis": "Hawkar-usls/janus-lapis@72daf0b4dce0467afad4f5f3ceaa813503923b30",
+    "aifc_authoritative_for_sat": false,
+    "lapis_authoritative_for_sat": false,
+    "rowan_job_count": 0
+  },
+  "privacy_profile": "PUBLIC_SANITIZED_METADATA_ONLY",
+  "role": "PUBLIC_SCOPED_REPLICATION_AND_CLAIM_CEILING",
+  "publication_gate": "DRAFT_CI_REVIEW_REQUIRED"
+}
